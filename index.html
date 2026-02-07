@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow - Intelligent Technology Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Flytande menyknappar (bara knapparna följer med) -->
+    <nav class="floating-nav">
+        <button class="nav-btn nav-btn-left" id="menu-toggle">
+            <span class="hamburger"></span>
+            <span class="btn-text">LEARN MORE</span>
+        </button>
+        <button class="nav-btn nav-btn-right">
+            GET STARTED
+        </button>
+    </nav>
+
+    <!-- Dropdown Meny -->
+    <div class="dropdown-menu" id="dropdown-menu">
+        <div class="dropdown-content">
+            <div class="menu-item menu-item-features">
+                <div class="menu-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <div class="menu-text">
+                    <span class="menu-title">Features</span>
+                    <span class="menu-desc">Explore what makes TechFlow so special</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </div>
+                <div class="menu-text">
+                    <span class="menu-title">For You</span>
+                    <span class="menu-desc">Complete technology control.</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div class="menu-text">
+                    <span class="menu-title">For Teams</span>
+                    <span class="menu-desc">Affordable, effective solutions.</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                    </svg>
+                </div>
+                <div class="menu-text">
+                    <span class="menu-title">For Developers</span>
+                    <span class="menu-desc">Putting productivity first.</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="8" x2="12" y2="12"/>
+                        <line x1="12" y1="16" x2="12.01" y2="16"/>
+                    </svg>
+                </div>
+                <div class="menu-text">
+                    <span class="menu-title">Why TechFlow</span>
+                    <span class="menu-desc">Why the world needs intelligent tech</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1 class="site-title">Lars Asplund</h1>
+        <div class="hero-bg-layers">
+            <div class="bg-layer layer-1"></div>
+            <div class="bg-layer layer-2"></div>
+            <div class="bg-layer layer-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="logo-icon">
+                <svg viewBox="0 0 60 60" class="logo-svg">
+                    <circle cx="30" cy="30" r="25" fill="#6366f1"/>
+                    <path d="M20 25 L30 15 L40 25 L40 40 L20 40 Z" fill="white"/>
+                    <circle cx="30" cy="32" r="5" fill="#6366f1"/>
+                </svg>
+            </div>
+            <span class="hero-badge">Introducing TechFlow</span>
+            <h1>Finally, Really<br>Intelligent Technology</h1>
+            <p class="hero-description">
+                Subscription-based intelligent solutions by the Really Smart Tech people,
+                because traditional software is out of touch, out of date, and out of time
+            </p>
+        </div>
+    </header>
+
+    <!-- Telefoner Section -->
+    <section class="phones-section">
+        <div class="phones-container">
+            <div class="phone phone-left">
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <div class="phone-header">ANALYTICS</div>
+                        <div class="phone-content">
+                            <div class="stat-card">
+                                <span class="stat-label">Revenue</span>
+                                <span class="stat-value">$42.8K</span>
+                            </div>
+                            <div class="chart-placeholder">
+                                <div class="chart-bar" style="height: 40%"></div>
+                                <div class="chart-bar" style="height: 65%"></div>
+                                <div class="chart-bar" style="height: 50%"></div>
+                                <div class="chart-bar" style="height: 80%"></div>
+                                <div class="chart-bar" style="height: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="phone phone-center">
+                <div class="phone-frame">
+                    <div class="phone-screen phone-screen-main">
+                        <div class="phone-header-main">
+                            <span class="brand">techflow</span>
+                        </div>
+                        <div class="main-stats">
+                            <div class="stat-circle">
+                                <span class="stat-number">2,847</span>
+                                <span class="stat-text">Active Users</span>
+                            </div>
+                            <div class="progress-ring">
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="#e0e0e0" stroke-width="8"/>
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="#6366f1" stroke-width="8"
+                                            stroke-dasharray="283" stroke-dashoffset="42" class="progress-circle"/>
+                                </svg>
+                                <span class="progress-text">98%</span>
+                            </div>
+                        </div>
+                        <div class="comparison-chart">
+                            <div class="chart-rainbow">
+                                <div class="rainbow-arc arc-1"></div>
+                                <div class="rainbow-arc arc-2"></div>
+                                <div class="rainbow-arc arc-3"></div>
+                                <div class="rainbow-arc arc-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="phone phone-right">
+                <div class="phone-frame">
+                    <div class="phone-screen phone-screen-alt">
+                        <div class="phone-header">PERFORMANCE</div>
+                        <div class="phone-content">
+                            <div class="metric">
+                                <div class="metric-icon"></div>
+                                <div class="metric-info">
+                                    <span class="metric-value">520<small>ms</small></span>
+                                    <span class="metric-label">Response Time</span>
+                                </div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-icon green"></div>
+                                <div class="metric-info">
+                                    <span class="metric-value">99.9<small>%</small></span>
+                                    <span class="metric-label">Uptime</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: The end of... -->
+    <section class="end-section">
+        <div class="end-content">
+            <span class="section-badge">Subscriptions, not licenses</span>
+            <h2>The end of Traditional<br>Enterprise Software?</h2>
+            <p>
+                Traditional enterprise software is decades out of date, too expensive,
+                and doesn't give you the solutions you need. We're building
+                the intelligent tech platform of the future that works for you
+                all the time, not just when you already know something's wrong.
+            </p>
+        </div>
+        <div class="floating-profiles">
+            <!-- SVG Linjer som kopplar cirkeln till korten -->
+            <svg class="connection-lines" viewBox="0 0 500 600">
+                <path class="connection-line line-1" d="M120 280 Q200 180 320 60" />
+                <path class="connection-line line-2" d="M120 280 Q220 200 340 130" />
+                <path class="connection-line line-3" d="M120 280 Q240 260 360 220" />
+                <path class="connection-line line-4" d="M120 280 Q220 320 340 320" />
+                <path class="connection-line line-5" d="M120 280 Q200 380 320 420" />
+                <path class="connection-line line-6" d="M120 280 Q180 440 300 520" />
+            </svg>
+
+            <div class="profile-node main-node">
+                <svg viewBox="0 0 100 100" class="node-logo">
+                    <circle cx="50" cy="50" r="45" fill="#6366f1"/>
+                    <path d="M35 40 L50 25 L65 40 L65 65 L35 65 Z" fill="white"/>
+                </svg>
+            </div>
+            <div class="profile-card card-1">
+                <div class="profile-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2)">
+                    <span>SE</span>
+                </div>
+                <div class="profile-info">
+                    <span class="profile-name">Sarah Eriksson</span>
+                    <span class="profile-role">TECH LEAD</span>
+                </div>
+            </div>
+            <div class="profile-card card-2">
+                <div class="profile-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c)">
+                    <span>MJ</span>
+                </div>
+                <div class="profile-info">
+                    <span class="profile-name">Marcus Johnson</span>
+                    <span class="profile-role">DEVELOPER</span>
+                </div>
+            </div>
+            <div class="profile-card card-3">
+                <div class="profile-avatar company" style="background: linear-gradient(135deg, #4facfe, #00f2fe)">
+                    <span>AC</span>
+                </div>
+                <div class="profile-info">
+                    <span class="profile-name">Acme Corp.</span>
+                    <span class="profile-role">COMPANY</span>
+                </div>
+            </div>
+            <div class="profile-card card-4">
+                <div class="profile-avatar" style="background: linear-gradient(135deg, #43e97b, #38f9d7)">
+                    <span>LN</span>
+                </div>
+                <div class="profile-info">
+                    <span class="profile-name">Lisa Nordberg</span>
+                    <span class="profile-role">CTO</span>
+                </div>
+            </div>
+            <div class="profile-card card-5">
+                <div class="profile-avatar company" style="background: linear-gradient(135deg, #fa709a, #fee140)">
+                    <span>S&C</span>
+                </div>
+                <div class="profile-info">
+                    <span class="profile-name">Startup & Co.</span>
+                    <span class="profile-role">COMPANY</span>
+                </div>
+            </div>
+            <div class="profile-card card-6">
+                <div class="profile-avatar" style="background: linear-gradient(135deg, #a8edea, #fed6e3)">
+                    <span>DP</span>
+                </div>
+                <div class="profile-info">
+                    <span class="profile-name">Dr. Petersson</span>
+                    <span class="profile-role">ADVISOR</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Caring about you -->
+    <section class="caring-section">
+        <div class="caring-cards">
+            <div class="user-card card-bob">
+                <div class="user-avatar">
+                    <div class="avatar-circle" style="background: linear-gradient(135deg, #667eea, #764ba2)">
+                        <span>OL</span>
+                    </div>
+                </div>
+                <h3 class="user-name">Oscar Lindqvist</h3>
+                <div class="user-stats">
+                    <div class="user-stat">
+                        <span class="stat-val">28</span>
+                        <span class="stat-lbl">PROJECTS</span>
+                    </div>
+                    <div class="user-stat">
+                        <span class="stat-val">156</span>
+                        <span class="stat-lbl">COMMITS</span>
+                    </div>
+                    <div class="user-stat">
+                        <span class="stat-val">4.2K</span>
+                        <span class="stat-lbl">LINES</span>
+                    </div>
+                </div>
+                <div class="user-tags">
+                    <span class="tag tag-blue">Full Stack</span>
+                    <span class="tag tag-green">Team Player</span>
+                    <span class="tag tag-orange">Agile Expert</span>
+                </div>
+            </div>
+            <div class="user-card card-violet">
+                <div class="user-avatar">
+                    <div class="avatar-circle" style="background: linear-gradient(135deg, #f093fb, #f5576c)">
+                        <span>EN</span>
+                    </div>
+                </div>
+                <h3 class="user-name">Emma Nyström</h3>
+                <div class="user-stats">
+                    <div class="user-stat">
+                        <span class="stat-val">32</span>
+                        <span class="stat-lbl">PROJECTS</span>
+                    </div>
+                    <div class="user-stat">
+                        <span class="stat-val">170</span>
+                        <span class="stat-lbl">COMMITS</span>
+                    </div>
+                    <div class="user-stat">
+                        <span class="stat-val">5.1K</span>
+                        <span class="stat-lbl">LINES</span>
+                    </div>
+                </div>
+                <div class="user-tags">
+                    <span class="tag tag-purple">UX Designer</span>
+                    <span class="tag tag-teal">Creative</span>
+                    <span class="tag tag-pink">Mentor</span>
+                </div>
+            </div>
+        </div>
+        <div class="caring-content">
+            <span class="section-badge">Technology that cares</span>
+            <h2>Caring about you<br>thousands of times<br>a day</h2>
+            <p>
+                TechFlow cares about your success all the time. It collects billions of
+                data points and uses advanced machine intelligence to learn
+                about your workflow and your needs, predicting issues before
+                they become problems, and giving you the right tools at the right
+                time to stop a small issue from becoming a big one.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section: Designed by... (Circuit) -->
+    <section class="circuit-section">
+        <div class="circuit-content">
+            <span class="section-badge">By the Really Smart people</span>
+            <h2>Designed and<br>built by Really<br>Intelligent people</h2>
+            <p>
+                TechFlow is being built by Really Intelligent, an AI-native,
+                Stockholm-based technology company. Traditional enterprise software
+                isn't right for future-facing businesses, and we want to
+                consign it to the history books where it belongs.
+            </p>
+        </div>
+        <div class="circuit-animation">
+            <div class="circuit-board">
+                <div class="chip">
+                    <div class="chip-face">
+                        <svg viewBox="0 0 80 80" class="chip-icon">
+                            <circle cx="40" cy="25" r="12" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M28 45 Q40 35 52 45 Q40 55 28 45" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="32" cy="22" r="2" fill="currentColor"/>
+                            <circle cx="48" cy="22" r="2" fill="currentColor"/>
+                        </svg>
+                        <span class="chip-text">Really Intelligent</span>
+                    </div>
+                    <div class="chip-pins top">
+                        <div class="pin"></div><div class="pin"></div><div class="pin"></div>
+                    </div>
+                    <div class="chip-pins bottom">
+                        <div class="pin"></div><div class="pin"></div><div class="pin"></div>
+                    </div>
+                    <div class="chip-pins left">
+                        <div class="pin"></div><div class="pin"></div>
+                    </div>
+                    <div class="chip-pins right">
+                        <div class="pin"></div><div class="pin"></div>
+                    </div>
+                </div>
+                <div class="circuit-lines">
+                    <svg viewBox="0 0 400 300" class="circuit-svg">
+                        <!-- Linjer från chipet -->
+                        <path class="circuit-path path-1" d="M200 50 L200 20 L280 20" />
+                        <path class="circuit-path path-2" d="M200 50 L200 10 L320 10" />
+                        <path class="circuit-path path-3" d="M250 150 L320 150 L320 80" />
+                        <path class="circuit-path path-4" d="M250 150 L350 150" />
+                        <path class="circuit-path path-5" d="M150 150 L80 150 L80 80" />
+                        <path class="circuit-path path-6" d="M150 150 L50 150" />
+                        <path class="circuit-path path-7" d="M200 250 L200 280" />
+                        <path class="circuit-path path-8" d="M200 250 L200 290 L120 290" />
+                        <!-- Noder/punkter -->
+                        <circle class="circuit-node node-1" cx="280" cy="20" r="6" />
+                        <circle class="circuit-node node-2" cx="320" cy="10" r="6" />
+                        <circle class="circuit-node node-3" cx="320" cy="80" r="6" />
+                        <circle class="circuit-node node-4" cx="350" cy="150" r="6" />
+                        <circle class="circuit-node node-5" cx="80" cy="80" r="6" />
+                        <circle class="circuit-node node-6" cx="50" cy="150" r="6" />
+                        <circle class="circuit-node node-7" cx="200" cy="280" r="6" />
+                        <circle class="circuit-node node-8" cx="120" cy="290" r="6" />
+                        <!-- Elektriska pulser -->
+                        <circle class="pulse pulse-1" r="4" />
+                        <circle class="pulse pulse-2" r="4" />
+                        <circle class="pulse pulse-3" r="4" />
+                        <circle class="pulse pulse-4" r="4" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Multiple layers -->
+    <section class="layers-section">
+        <div class="layers-header">
+            <span class="section-badge">Intelligent Platform</span>
+            <h2>Multiple layers of<br>intelligent technology</h2>
+            <p>
+                TechFlow has multiple layers of seamlessly connected intelligent technology,
+                all built on the foundation of an intelligent platform that uses billions of data
+                points and AI to learn about you and identify your current and future needs.
+            </p>
+        </div>
+        <div class="data-cards-grid">
+            <div class="data-card card-graph">
+                <div class="card-header">
+                    <span class="card-icon">?</span>
+                </div>
+                <div class="mini-chart">
+                    <svg viewBox="0 0 100 50" class="line-chart">
+                        <polyline class="chart-line animated-line" points="0,40 20,35 40,38 60,20 80,25 100,15" />
+                    </svg>
+                </div>
+                <div class="card-labels">
+                    <span>14</span><span>15</span><span>16</span><span>17</span>
+                </div>
+            </div>
+            <div class="data-card card-heart">
+                <div class="card-title">System Health</div>
+                <div class="heart-icon animated-heart">
+                    <svg viewBox="0 0 50 50">
+                        <path d="M25 45 L10 28 Q0 15 12 8 Q25 0 25 15 Q25 0 38 8 Q50 15 40 28 Z" fill="#ef4444"/>
+                    </svg>
+                </div>
+                <div class="heart-stats">
+                    <span class="heart-value">206<small>/m</small></span>
+                    <span class="heart-label">MAX RATE</span>
+                </div>
+            </div>
+            <div class="data-card card-resting">
+                <div class="card-title">API Latency</div>
+                <div class="resting-display">
+                    <div class="resting-circle">
+                        <span class="resting-value">64</span>
+                        <span class="resting-unit">ms</span>
+                    </div>
+                    <span class="resting-label">Average Today</span>
+                </div>
+                <div class="resting-chart">
+                    <svg viewBox="0 0 120 40" class="area-chart">
+                        <path class="area-fill" d="M0,35 Q30,30 60,25 T120,20 L120,40 L0,40 Z" />
+                        <path class="area-line animated-area" d="M0,35 Q30,30 60,25 T120,20" />
+                    </svg>
+                </div>
+            </div>
+            <div class="data-card card-intensity">
+                <div class="card-title">Throughput</div>
+                <div class="intensity-ring">
+                    <svg viewBox="0 0 80 80">
+                        <circle cx="40" cy="40" r="35" fill="none" stroke="#e0f2fe" stroke-width="6"/>
+                        <circle cx="40" cy="40" r="35" fill="none" stroke="#0ea5e9" stroke-width="6"
+                                stroke-dasharray="220" stroke-dashoffset="55" class="intensity-progress"/>
+                    </svg>
+                    <div class="intensity-value">
+                        <span class="big">429</span>
+                        <span class="small">150</span>
+                    </div>
+                </div>
+                <div class="intensity-bars">
+                    <div class="bar-item"><span>T</span></div>
+                    <div class="bar-item"><span>W</span></div>
+                    <div class="bar-item"><span>T</span></div>
+                    <div class="bar-item active"><span>F</span></div>
+                    <div class="bar-item"><span>S</span></div>
+                    <div class="bar-item"><span>S</span></div>
+                    <div class="bar-item"><span>M</span></div>
+                </div>
+            </div>
+            <div class="data-card card-time">
+                <div class="card-title">Time Active</div>
+                <div class="time-grid">
+                    <div class="time-stat">
+                        <span class="zone zone-1"></span>
+                        <span class="time-val">520<small>min</small></span>
+                    </div>
+                    <div class="time-stat">
+                        <span class="zone zone-2"></span>
+                        <span class="time-val">360<small>min</small></span>
+                    </div>
+                    <div class="time-stat">
+                        <span class="zone zone-3"></span>
+                        <span class="time-val">68<small>min</small></span>
+                    </div>
+                    <div class="time-stat">
+                        <span class="zone zone-4"></span>
+                        <span class="time-val">22<small>min</small></span>
+                    </div>
+                </div>
+            </div>
+            <div class="data-card card-body">
+                <div class="card-title">Memory Usage</div>
+                <div class="body-gauge">
+                    <svg viewBox="0 0 100 60">
+                        <path d="M10 55 A40 40 0 0 1 90 55" fill="none" stroke="#e5e7eb" stroke-width="8" stroke-linecap="round"/>
+                        <path d="M10 55 A40 40 0 0 1 90 55" fill="none" stroke="url(#gaugeGradient)" stroke-width="8"
+                              stroke-linecap="round" stroke-dasharray="126" stroke-dashoffset="50" class="gauge-fill"/>
+                        <defs>
+                            <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#22c55e"/>
+                                <stop offset="50%" stop-color="#eab308"/>
+                                <stop offset="100%" stop-color="#ef4444"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="gauge-needle"></div>
+                </div>
+            </div>
+
+            <!-- Nya datakort-exempel -->
+            <div class="data-card card-cpu">
+                <div class="card-title">CPU Load</div>
+                <div class="cpu-bars">
+                    <div class="cpu-bar">
+                        <div class="cpu-fill" style="height: 65%"></div>
+                        <span>Core 1</span>
+                    </div>
+                    <div class="cpu-bar">
+                        <div class="cpu-fill" style="height: 82%"></div>
+                        <span>Core 2</span>
+                    </div>
+                    <div class="cpu-bar">
+                        <div class="cpu-fill" style="height: 45%"></div>
+                        <span>Core 3</span>
+                    </div>
+                    <div class="cpu-bar">
+                        <div class="cpu-fill" style="height: 78%"></div>
+                        <span>Core 4</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-card card-network">
+                <div class="card-title">Network Traffic</div>
+                <div class="network-stats">
+                    <div class="network-stat">
+                        <span class="net-arrow up"></span>
+                        <span class="net-value">1.2<small>GB/s</small></span>
+                        <span class="net-label">Upload</span>
+                    </div>
+                    <div class="network-stat">
+                        <span class="net-arrow down"></span>
+                        <span class="net-value">3.8<small>GB/s</small></span>
+                        <span class="net-label">Download</span>
+                    </div>
+                </div>
+                <div class="network-wave">
+                    <svg viewBox="0 0 100 30">
+                        <path class="wave-path wave-1" d="M0 15 Q25 5 50 15 T100 15" />
+                        <path class="wave-path wave-2" d="M0 15 Q25 25 50 15 T100 15" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="data-card card-storage">
+                <div class="card-title">Storage</div>
+                <div class="storage-ring">
+                    <svg viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#e5e7eb" stroke-width="12"/>
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#8b5cf6" stroke-width="12"
+                                stroke-dasharray="251" stroke-dashoffset="75" stroke-linecap="round"
+                                transform="rotate(-90 50 50)" class="storage-progress"/>
+                    </svg>
+                    <div class="storage-text">
+                        <span class="storage-percent">70%</span>
+                        <span class="storage-used">Used</span>
+                    </div>
+                </div>
+                <div class="storage-details">
+                    <span>140 GB / 200 GB</span>
+                </div>
+            </div>
+
+            <div class="data-card card-requests">
+                <div class="card-title">Requests/min</div>
+                <div class="requests-number">
+                    <span class="req-value">8,429</span>
+                    <span class="req-trend up">+12.5%</span>
+                </div>
+                <div class="requests-sparkline">
+                    <svg viewBox="0 0 100 30">
+                        <polyline class="sparkline" points="0,25 10,22 20,18 30,20 40,15 50,12 60,14 70,8 80,10 90,5 100,3" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="data-card card-users">
+                <div class="card-title">Active Users</div>
+                <div class="users-display">
+                    <div class="users-avatars">
+                        <div class="mini-avatar" style="background: #6366f1; z-index: 5;"></div>
+                        <div class="mini-avatar" style="background: #ec4899; z-index: 4;"></div>
+                        <div class="mini-avatar" style="background: #14b8a6; z-index: 3;"></div>
+                        <div class="mini-avatar" style="background: #f59e0b; z-index: 2;"></div>
+                        <div class="mini-avatar more">+86</div>
+                    </div>
+                    <div class="users-count">
+                        <span class="count-number">1,247</span>
+                        <span class="count-label">online now</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Five vertically integrated layers -->
+    <section class="stack-section">
+        <div class="stack-content">
+            <span class="section-badge">Full stack platform</span>
+            <h2>Five vertically<br>integrated layers</h2>
+            <p>
+                With TechFlow, you'll get five layers of full-stack, vertically
+                integrated technology. Four are dynamic subscription-based,
+                covering pretty much everything you'll ever need, including
+                most enterprise solutions. Only the top layer is traditional - that's for
+                those rare "once or twice in a lifetime" problems. TechFlow
+                covers all your technology needs from the little stuff to the really
+                big stuff, all in one place.
+            </p>
+        </div>
+        <div class="stack-animation">
+            <!-- Isometriska staplade kort -->
+            <div class="isometric-stack">
+                <div class="iso-bg-circle"></div>
+                <div class="iso-card iso-card-1">
+                    <div class="iso-card-content">
+                        <svg viewBox="0 0 40 40" class="iso-icon">
+                            <path d="M20 5 L35 15 V30 L20 40 L5 30 V15 Z" fill="none" stroke="#6366f1" stroke-width="2"/>
+                            <circle cx="20" cy="22" r="6" fill="#6366f1"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="iso-card iso-card-2">
+                    <div class="iso-card-content">
+                        <svg viewBox="0 0 40 40" class="iso-icon">
+                            <circle cx="20" cy="12" r="8" fill="none" stroke="#10b981" stroke-width="2"/>
+                            <path d="M8 28 Q20 20 32 28" fill="none" stroke="#10b981" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="iso-card iso-card-3">
+                    <div class="iso-card-content">
+                        <svg viewBox="0 0 40 40" class="iso-icon">
+                            <rect x="8" y="8" width="24" height="24" rx="4" fill="none" stroke="#f59e0b" stroke-width="2"/>
+                            <line x1="8" y1="16" x2="32" y2="16" stroke="#f59e0b" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="iso-card iso-card-4">
+                    <div class="iso-card-content">
+                        <svg viewBox="0 0 40 40" class="iso-icon">
+                            <path d="M20 8 L32 32 H8 Z" fill="none" stroke="#ec4899" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="iso-card iso-card-5">
+                    <div class="iso-card-content brand-card">
+                        <svg viewBox="0 0 40 40" class="iso-icon">
+                            <rect x="5" y="5" width="30" height="30" rx="6" fill="#1e1b4b"/>
+                            <path d="M15 18 L20 13 L25 18 V26 H15 Z" fill="white"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-logo">
+                <svg viewBox="0 0 60 60">
+                    <circle cx="30" cy="30" r="25" fill="#6366f1"/>
+                    <path d="M20 25 L30 15 L40 25 L40 40 L20 40 Z" fill="white"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Predictive, preventive... -->
+    <section class="predictive-section">
+        <div class="predictive-phones">
+            <div class="pred-phone pred-phone-1">
+                <div class="phone-frame small">
+                    <div class="phone-screen">
+                        <div class="mini-dashboard">
+                            <div class="mini-stat">Today</div>
+                            <div class="mini-cards">
+                                <div class="mini-card">
+                                    <span class="mc-label">Deployments</span>
+                                    <span class="mc-value">52</span>
+                                </div>
+                                <div class="mini-card">
+                                    <span class="mc-label">Status</span>
+                                    <span class="mc-status">Balanced</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pred-phone pred-phone-2">
+                <div class="phone-frame small">
+                    <div class="phone-screen phone-screen-main">
+                        <div class="phone-header-main">
+                            <span class="brand small">techflow</span>
+                        </div>
+                        <div class="dashboard-preview">
+                            <div class="dp-stat">
+                                <span class="dp-num">2,820</span>
+                                <span class="dp-label">Users</span>
+                            </div>
+                            <div class="dp-chart">
+                                <div class="dp-bar" style="height: 30%"></div>
+                                <div class="dp-bar" style="height: 50%"></div>
+                                <div class="dp-bar" style="height: 70%"></div>
+                                <div class="dp-bar" style="height: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pred-phone pred-phone-3">
+                <div class="phone-frame small">
+                    <div class="phone-screen phone-screen-alt">
+                        <div class="map-preview">
+                            <div class="map-header">GLOBAL STATUS</div>
+                            <div class="map-placeholder">
+                                <div class="map-dot dot-1"></div>
+                                <div class="map-dot dot-2"></div>
+                                <div class="map-dot dot-3"></div>
+                            </div>
+                            <div class="map-stats">
+                                <span>72 <small>Regions</small></span>
+                                <span>9 <small>Servers</small></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="predictive-content">
+            <span class="section-badge">Keeping you productive</span>
+            <h2>Predictive, preventive,<br>proactive technology</h2>
+            <p>
+                Traditional software isn't right for modern, future-facing businesses, as we
+                all encounter problems now and then. With TechFlow, you'll get a rolling
+                multi-year subscription that covers almost all the technology
+                you'll ever need, and you can even reduce the amount you pay
+                for showing you're improving. How's that for intelligent? It's
+                technology that moves with you, not against you.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-cta">
+            <p>If you want to get your name on the waiting list, click on the link and leave your details.</p>
+            <button class="cta-button">JOIN THE WAITING LIST</button>
+        </div>
+        <div class="footer-phones">
+            <div class="footer-phone fp-1">
+                <div class="phone-frame">
+                    <div class="phone-screen" style="background: linear-gradient(135deg, #fce7f3, #fdf2f8)">
+                        <div class="fp-content">COMPARE</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-phone fp-2">
+                <div class="phone-frame">
+                    <div class="phone-screen phone-screen-main">
+                        <div class="phone-header-main">
+                            <span class="brand">techflow</span>
+                        </div>
+                        <div class="rainbow-section">
+                            <div class="rainbow-arcs">
+                                <div class="r-arc r-1"></div>
+                                <div class="r-arc r-2"></div>
+                                <div class="r-arc r-3"></div>
+                                <div class="r-arc r-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-phone fp-3">
+                <div class="phone-frame">
+                    <div class="phone-screen phone-screen-alt">
+                        <div class="fp-content">PERFORMANCE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="#">PRIVACY POLICY</a>
+            <span>&copy; Copyright TechFlow 2026. All rights reserved.</span>
+            <a href="#">TERMS & CONDITIONS</a>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         CHART LIBRARIES DEMO SECTIONS
+         ============================================ -->
+
+    <!-- Section: Chart.js Demo -->
+    <section class="chart-demo-section chartjs-section">
+        <div class="chart-demo-header">
+            <span class="section-badge">Chart Library #1</span>
+            <h2>Chart.js</h2>
+            <p>
+                Det enklaste biblioteket att börja med. Perfekt för stapel-, linje- och cirkeldiagram.
+                Endast ~60KB och MIT-licensierat.
+            </p>
+            <a href="https://www.chartjs.org/" target="_blank" class="chart-link">chartjs.org</a>
+        </div>
+        <div class="chart-demo-content">
+            <div class="chart-container">
+                <canvas id="chartjs-demo"></canvas>
+            </div>
+            <div class="chart-info">
+                <h3>Fördelar</h3>
+                <ul>
+                    <li>Enkel att komma igång</li>
+                    <li>Responsiv och animerad</li>
+                    <li>8 inbyggda diagramtyper</li>
+                    <li>Bra dokumentation</li>
+                </ul>
+                <h3>Användning</h3>
+                <code>&lt;script src="chart.js"&gt;&lt;/script&gt;</code>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: D3.js Demo -->
+    <section class="chart-demo-section d3-section">
+        <div class="chart-demo-header">
+            <span class="section-badge">Chart Library #2</span>
+            <h2>D3.js</h2>
+            <p>
+                Det mest kraftfulla visualiseringsbiblioteket. Fullständig kontroll över varje pixel.
+                Används av New York Times, BBC och NASA.
+            </p>
+            <a href="https://d3js.org/" target="_blank" class="chart-link">d3js.org</a>
+        </div>
+        <div class="chart-demo-content">
+            <div class="chart-container">
+                <svg id="d3-demo" viewBox="0 0 400 250"></svg>
+            </div>
+            <div class="chart-info">
+                <h3>Fördelar</h3>
+                <ul>
+                    <li>Oändlig flexibilitet</li>
+                    <li>SVG-baserat</li>
+                    <li>Kraftfulla övergångar</li>
+                    <li>Databindning</li>
+                </ul>
+                <h3>Nackdelar</h3>
+                <ul>
+                    <li>Brant inlärningskurva</li>
+                    <li>Mer kod krävs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: ApexCharts Demo -->
+    <section class="chart-demo-section apex-section">
+        <div class="chart-demo-header">
+            <span class="section-badge">Chart Library #3</span>
+            <h2>ApexCharts</h2>
+            <p>
+                Moderna, interaktiva grafer med minimal konfiguration.
+                Snyggast "out of the box" med zoom, pan och export inbyggt.
+            </p>
+            <a href="https://apexcharts.com/" target="_blank" class="chart-link">apexcharts.com</a>
+        </div>
+        <div class="chart-demo-content">
+            <div class="chart-container">
+                <div id="apex-demo"></div>
+            </div>
+            <div class="chart-info">
+                <h3>Fördelar</h3>
+                <ul>
+                    <li>Professionellt utseende</li>
+                    <li>Interaktiv (zoom, pan)</li>
+                    <li>Exportera till PNG/SVG</li>
+                    <li>Dark mode inbyggt</li>
+                </ul>
+                <h3>Användning</h3>
+                <code>&lt;script src="apexcharts.js"&gt;&lt;/script&gt;</code>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Frappe Charts Demo -->
+    <section class="chart-demo-section frappe-section">
+        <div class="chart-demo-header">
+            <span class="section-badge">Chart Library #4</span>
+            <h2>Frappe Charts</h2>
+            <p>
+                Lättviktigt (~25KB) med GitHub-inspirerad design.
+                Perfekt för dashboards och enkla visualiseringar.
+            </p>
+            <a href="https://frappe.io/charts" target="_blank" class="chart-link">frappe.io/charts</a>
+        </div>
+        <div class="chart-demo-content">
+            <div class="chart-container">
+                <div id="frappe-demo"></div>
+            </div>
+            <div class="chart-info">
+                <h3>Fördelar</h3>
+                <ul>
+                    <li>Minsta filstorleken</li>
+                    <li>Heatmaps (GitHub-stil)</li>
+                    <li>Inga beroenden</li>
+                    <li>MIT-licens</li>
+                </ul>
+                <h3>Perfekt för</h3>
+                <ul>
+                    <li>Enkla dashboards</li>
+                    <li>Prestandakritiska appar</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chart Libraries Comparison -->
+    <section class="chart-comparison-section">
+        <div class="comparison-header">
+            <h2>Jämförelse</h2>
+        </div>
+        <div class="comparison-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bibliotek</th>
+                        <th>Storlek</th>
+                        <th>Svårighetsgrad</th>
+                        <th>Flexibilitet</th>
+                        <th>Bäst för</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Chart.js</strong></td>
+                        <td>~60KB</td>
+                        <td>Lätt</td>
+                        <td>Medium</td>
+                        <td>Nybörjare</td>
+                    </tr>
+                    <tr>
+                        <td><strong>D3.js</strong></td>
+                        <td>~250KB</td>
+                        <td>Svår</td>
+                        <td>Maximal</td>
+                        <td>Avancerade</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ApexCharts</strong></td>
+                        <td>~450KB</td>
+                        <td>Medium</td>
+                        <td>Hög</td>
+                        <td>Professionella</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Frappe</strong></td>
+                        <td>~25KB</td>
+                        <td>Lätt</td>
+                        <td>Låg</td>
+                        <td>Enkla dashboards</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Chart Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.6.2/dist/frappe-charts.min.umd.js"></script>
+    <script src="script.js"></script>
+    <script src="charts-demo.js"></script>
+</body>
+</html>

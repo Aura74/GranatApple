@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:pomegranate.health)",
+      "Bash(dir \"C:\\\\HEMSIDOR\\\\GranatApple\" /b)"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+# Bilder och inspiration (ska inte laddas upp)
+Bilder för Claude Ai att titta på och ta inspiration från/
+
+# OS-filer
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor-filer
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node modules (om du använder npm senare)
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temp-filer
+*.tmp
+*.temp
