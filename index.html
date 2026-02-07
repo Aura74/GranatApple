@@ -823,6 +823,113 @@
     </footer>
 
     <!-- ============================================
+         RIVE ANIMATION DEMO
+         ============================================ -->
+    <section class="rive-demo-section">
+        <div class="rive-demo-header">
+            <span class="section-badge">Animation Technology</span>
+            <h2>Rive Animationer</h2>
+            <p>
+                Rive är tekniken som pomegranate.health använder för sina animerade telefoner.
+                Interaktiva vektoranimationer som kan reagera på hover, klick och scroll.
+            </p>
+            <a href="https://rive.app/" target="_blank" class="chart-link rive-link">Skapa egna på rive.app</a>
+        </div>
+
+        <div class="rive-demo-grid">
+            <!-- Rive Animation 1 -->
+            <div class="rive-card">
+                <div class="rive-container">
+                    <canvas id="rive-animation-1" width="400" height="400"></canvas>
+                </div>
+                <div class="rive-card-info">
+                    <h3>Interaktiv Animation</h3>
+                    <p>Hovra över animationen!</p>
+                </div>
+            </div>
+
+            <!-- Rive Animation 2 -->
+            <div class="rive-card">
+                <div class="rive-container">
+                    <canvas id="rive-animation-2" width="400" height="400"></canvas>
+                </div>
+                <div class="rive-card-info">
+                    <h3>State Machine</h3>
+                    <p>Klicka för att interagera!</p>
+                </div>
+            </div>
+
+            <!-- Rive Animation 3 -->
+            <div class="rive-card">
+                <div class="rive-container">
+                    <canvas id="rive-animation-3" width="400" height="400"></canvas>
+                </div>
+                <div class="rive-card-info">
+                    <h3>Looping Animation</h3>
+                    <p>Kontinuerlig rörelse</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="rive-info-box">
+            <h3>Hur skapar man Rive-animationer?</h3>
+            <div class="rive-steps">
+                <div class="rive-step">
+                    <span class="step-number">1</span>
+                    <div class="step-content">
+                        <strong>Skapa konto</strong>
+                        <p>Gå till <a href="https://rive.app/" target="_blank">rive.app</a> - gratis att använda</p>
+                    </div>
+                </div>
+                <div class="rive-step">
+                    <span class="step-number">2</span>
+                    <div class="step-content">
+                        <strong>Designa i editorn</strong>
+                        <p>Rita former, lägg till bones, skapa animationer</p>
+                    </div>
+                </div>
+                <div class="rive-step">
+                    <span class="step-number">3</span>
+                    <div class="step-content">
+                        <strong>Exportera .riv</strong>
+                        <p>Ladda ner din animation som .riv-fil</p>
+                    </div>
+                </div>
+                <div class="rive-step">
+                    <span class="step-number">4</span>
+                    <div class="step-content">
+                        <strong>Lägg till på webben</strong>
+                        <p>Använd @rive-app/canvas för att visa den</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-example">
+                <h4>Kod-exempel:</h4>
+                <pre><code>&lt;script src="https://unpkg.com/@rive-app/canvas"&gt;&lt;/script&gt;
+&lt;canvas id="rive-canvas"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  new rive.Rive({
+    src: "animation.riv",
+    canvas: document.getElementById("rive-canvas"),
+    autoplay: true
+  });
+&lt;/script&gt;</code></pre>
+            </div>
+        </div>
+
+        <!-- Alternativ: Lottie -->
+        <div class="lottie-alternative">
+            <h3>Alternativ: Lottie</h3>
+            <p>Om du redan använder After Effects kan <strong>Lottie</strong> vara enklare. Exportera animationer som JSON.</p>
+            <div class="lottie-demo">
+                <div id="lottie-animation"></div>
+            </div>
+            <a href="https://lottiefiles.com/" target="_blank" class="chart-link lottie-link">Gratis animationer på LottieFiles</a>
+        </div>
+    </section>
+
+    <!-- ============================================
          CHART LIBRARIES DEMO SECTIONS
          ============================================ -->
 
@@ -1001,6 +1108,10 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Rive Runtime -->
+    <script src="https://unpkg.com/@rive-app/canvas@2.7.0"></script>
+    <!-- Lottie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
     <!-- Chart Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
@@ -1008,5 +1119,6 @@
     <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.6.2/dist/frappe-charts.min.umd.js"></script>
     <script src="script.js"></script>
     <script src="charts-demo.js"></script>
+    <script src="rive-demo.js"></script>
 </body>
 </html>
