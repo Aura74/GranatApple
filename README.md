@@ -10,6 +10,7 @@ En modern landningssida inspirerad av [pomegranate.health](https://pomegranate.h
 | `styles.css` | Alla stilar, färger och layout |
 | `script.js` | GSAP + ScrollTrigger animationer |
 | `charts-demo.js` | Demo-kod för 4 chart-bibliotek |
+| `rive-demo.js` | Rive och Lottie animationsinitiering |
 | `.gitignore` | Filer som inte ska laddas upp till GitHub |
 
 ## Teknik som pomegranate.health använder
@@ -39,6 +40,8 @@ En modern landningssida inspirerad av [pomegranate.health](https://pomegranate.h
 | Flytande menyknappar | CSS `position: fixed` + Vanilla JS |
 | Dropdown-meny | CSS + GSAP-animationer |
 | Chart-demos | Chart.js, D3.js, ApexCharts, Frappe Charts |
+| Rive-demo | Rive Runtime (@rive-app/canvas) |
+| Lottie-demo | Lottie-web (alternativ till Rive) |
 
 ## Färgschema
 
@@ -65,6 +68,8 @@ En modern landningssida inspirerad av [pomegranate.health](https://pomegranate.h
 10. **Hover-effekter på telefoner** - Blir större när man hovrar
 11. **Footer-telefoner** - Åker upp från botten
 12. **Chart-bibliotek demos** - Interaktiva diagram med 4 olika bibliotek
+13. **Rive-demo** - Visar hur man använder Rive-animationer
+14. **Lottie-alternativ** - Visar Lottie som alternativ till Rive
 
 ## Sektioner på sidan
 
@@ -82,6 +87,8 @@ En modern landningssida inspirerad av [pomegranate.health](https://pomegranate.h
 12. **ApexCharts Demo** - Grupperat stapeldiagram
 13. **Frappe Charts Demo** - Veckostatistik
 14. **Jämförelsetabell** - Översikt av alla chart-bibliotek
+15. **Rive Demo** - Tre Rive-animationer + instruktioner
+16. **Lottie Alternativ** - Lottie-animation som alternativ
 
 ## Beroenden (CDN)
 
@@ -97,6 +104,10 @@ En modern landningssida inspirerad av [pomegranate.health](https://pomegranate.h
 - [D3.js v7](https://cdn.jsdelivr.net/npm/d3@7)
 - [ApexCharts](https://cdn.jsdelivr.net/npm/apexcharts)
 - [Frappe Charts](https://cdn.jsdelivr.net/npm/frappe-charts@1.6.2)
+
+### Animationsbibliotek
+- [Rive Runtime](https://unpkg.com/@rive-app/canvas@2.7.0) - Spelar upp .riv-filer
+- [Lottie-web](https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js) - Spelar upp Lottie JSON-animationer
 
 ## Datavisualisering
 
@@ -167,6 +178,27 @@ Pomegranate.health använder **Rive** för sina animerade telefon-innehåll. Om 
 - **Rive Runtime**: JavaScript-bibliotek för att spela upp .riv-filer
 - **Alternativ**: Lottie (After Effects → JSON) är enklare men mindre interaktivt
 
+### Så här använder du Rive på din webbplats
+
+1. **Skapa animation** i [Rive Editor](https://rive.app/editor)
+2. **Exportera** som .riv-fil
+3. **Ladda in** med Rive Runtime:
+
+```javascript
+const riveInstance = new rive.Rive({
+    src: 'path/to/animation.riv',
+    canvas: document.getElementById('canvas'),
+    autoplay: true,
+    onLoad: () => {
+        riveInstance.resizeDrawingSurfaceToCanvas();
+    }
+});
+```
+
+### Gratis Rive-animationer
+
+Hitta färdiga animationer på [Rive Community](https://rive.app/community/) - alla är gratis att använda.
+
 ## Webbläsarstöd
 
 - Chrome (rekommenderad)
@@ -175,6 +207,12 @@ Pomegranate.health använder **Rive** för sina animerade telefon-innehåll. Om 
 - Edge
 
 ## Ändringslogg
+
+### Version 1.3
+- Lade till Rive demo-sektion med 3 animationer
+- Lade till Lottie som alternativ till Rive
+- Skapade `rive-demo.js` för att initiera animationer
+- Lade till instruktioner för hur man skapar egna Rive-animationer
 
 ### Version 1.2
 - Lade till 4 chart-bibliotek demo-sektioner
