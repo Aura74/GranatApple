@@ -3,8 +3,77 @@
    Inspired by pomegranate.health
    ============================================ */
 
-// Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
+// Register GSAP plugins
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+// ============================================
+// DARK MODE TOGGLE
+// ============================================
+function initDarkModeToggle() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+
+    // Check for saved preference
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+        btn.textContent = 'LIGHT MODE';
+    }
+
+    btn.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark-mode');
+        btn.textContent = isDark ? 'LIGHT MODE' : 'DARK MODE';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+}
+
+// ============================================
+// NAV VISIBILITY ON SCROLL PAST SPLASH
+// ============================================
+function initNavVisibility() {
+    const nav = document.querySelector('.floating-nav');
+    const splash = document.querySelector('.splash-header');
+    if (!nav || !splash) return;
+
+    ScrollTrigger.create({
+        trigger: splash,
+        start: 'bottom 10%',
+        onEnterBack: () => nav.classList.remove('nav-visible'),
+        onLeave: () => nav.classList.add('nav-visible')
+    });
+}
+
+// ============================================
+// ONE-TICK SPLASH → HERO SCROLL
+// ============================================
+function initSplashSnap() {
+    const splash = document.querySelector('.splash-header');
+    const hero = document.querySelector('.hero');
+    if (!splash || !hero) return;
+
+    let isAnimating = false;
+
+    window.addEventListener('wheel', function(e) {
+        // Only act when we're within the splash area
+        if (window.scrollY > splash.offsetHeight * 0.8) return;
+        if (isAnimating) {
+            e.preventDefault();
+            return;
+        }
+
+        if (e.deltaY > 0 && window.scrollY < splash.offsetHeight * 0.5) {
+            // Scrolling down while on splash - jump to hero
+            e.preventDefault();
+            isAnimating = true;
+            gsap.to(window, {
+                scrollTo: { y: hero, offsetY: 0 },
+                duration: 0.8,
+                ease: 'power2.inOut',
+                onComplete: () => { isAnimating = false; }
+            });
+        }
+    }, { passive: false });
+}
 
 // ============================================
 // 1. TELEFONER SOM ÅKER UPP (Hero Section)
@@ -725,12 +794,175 @@ function initDropdownMenu() {
 // 14. SMOOTH SCROLL FOR NAV
 // ============================================
 function initSmoothScroll() {
-    document.querySelectorAll('.nav-btn-right').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            // Scrolla till footer
-            document.querySelector('.footer').scrollIntoView({ behavior: 'smooth' });
+    // Dark mode button handles its own click - no scroll needed
+}
+
+// ============================================
+// CAFE-STYLE INTERACTIVE CARDS
+// ============================================
+function initCafeCards() {
+    const containers = document.querySelectorAll('.cafe-container');
+    if (!containers.length) return;
+
+    // Scroll-in animation
+    gsap.set('.cafe-container', { opacity: 0, y: 80, rotationY: 90 });
+    gsap.set('.cafe-information', { yPercent: -100 });
+
+    containers.forEach((container, i) => {
+        gsap.to(container, {
+            opacity: 1,
+            y: 0,
+            rotationY: 0,
+            duration: 1,
+            delay: i * 0.25,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.cafe-wrapper',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
         });
     });
+
+    // Hover animation per card
+    containers.forEach((container) => {
+        let info = container.querySelector('.cafe-information'),
+            pics = container.querySelector('.cafe-pics svg') || container.querySelector('.cafe-pics img'),
+            tl = gsap.timeline({ paused: true });
+
+        tl.to(info, { yPercent: 0, ease: 'back.out' })
+          .to(pics, { duration: 0.6, y: -90, rotationY: 360, opacity: 1, zIndex: '10', ease: 'power2.inOut' }, 0.2);
+
+        container.addEventListener('mouseenter', () => tl.play());
+        container.addEventListener('mouseleave', () => tl.reverse());
+    });
+}
+
+// ============================================
+// TRIO FEATURE CARDS
+// ============================================
+function initTrioCards() {
+    const trioCards = document.querySelectorAll('.trio-card');
+    if (!trioCards.length) return;
+
+    // Scroll-in animation
+    gsap.set('.trio-card', { opacity: 0, y: 60 });
+
+    trioCards.forEach((card, i) => {
+        gsap.to(card, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: i * 0.15,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.trio-holder',
+                start: 'top 80%',
+                toggleActions: 'play none none none'
+            }
+        });
+    });
+
+    // Hover animation per card
+    trioCards.forEach((card) => {
+        let circle = card.querySelector('.trio-circle'),
+            icon = card.querySelector('.trio-icon'),
+            title = card.querySelector('.trio-title'),
+            desc = card.querySelector('.trio-desc'),
+            tl = gsap.timeline({ paused: true });
+
+        tl.to(card, { y: -12, scale: 1.03, duration: 0.35, ease: 'power2.out' }, 0)
+          .to(circle, { scale: 1.15, duration: 0.4, ease: 'back.out(2)' }, 0)
+          .to(icon, { rotation: 360, scale: 1.2, duration: 0.6, ease: 'power2.inOut' }, 0)
+          .to(title, { y: -4, letterSpacing: '2.5px', duration: 0.3, ease: 'power2.out' }, 0.05)
+          .to(desc, { y: -2, duration: 0.3, ease: 'power2.out' }, 0.1);
+
+        card.addEventListener('mouseenter', () => tl.play());
+        card.addEventListener('mouseleave', () => tl.reverse());
+    });
+}
+
+// ============================================
+// SHOWCASE PRODUCT CARDS
+// ============================================
+function initShowcaseCards() {
+    const cards = document.querySelectorAll('.showcase-card');
+    if (!cards.length) return;
+
+    gsap.set('.showcase-card', { opacity: 0, y: 60, scale: 0.9 });
+
+    cards.forEach((card, i) => {
+        gsap.to(card, {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.7,
+            delay: i * 0.2,
+            ease: 'back.out(1.4)',
+            scrollTrigger: {
+                trigger: '.showcase-grid',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    });
+}
+
+// ============================================
+// CURVED GRADIENT CARDS
+// ============================================
+function initCurvedCards() {
+    const cards = document.querySelectorAll('.curved-card');
+    if (!cards.length) return;
+
+    gsap.set('.curved-card', { opacity: 0, y: 100, rotationX: 15 });
+
+    cards.forEach((card, i) => {
+        gsap.to(card, {
+            opacity: 1,
+            y: 0,
+            rotationX: 0,
+            duration: 0.9,
+            delay: i * 0.2,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.curved-wrapper',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    });
+}
+
+// ============================================
+// BOTTOM FOOTER SCROLL-IN
+// ============================================
+function initBottomFooter() {
+    const footer = document.querySelector('.bottom-footer');
+    if (!footer) return;
+
+    const brand = footer.querySelector('.bottom-footer-brand');
+    const tagline = footer.querySelector('.bottom-footer-tagline');
+    const icons = footer.querySelectorAll('.bottom-footer-icons li');
+    const links = footer.querySelector('.bottom-footer-links');
+    const copy = footer.querySelector('.bottom-footer-copy');
+
+    gsap.set([brand, tagline, links, copy], { opacity: 0, y: 30 });
+    gsap.set(icons, { opacity: 0, scale: 0, rotation: -180 });
+
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.bottom-footer',
+            start: 'top 85%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+
+    tl.to(brand, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' })
+      .to(tagline, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.15)
+      .to(icons, { opacity: 1, scale: 1, rotation: 0, duration: 0.5, ease: 'back.out(2)', stagger: 0.1 }, 0.3)
+      .to(links, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.7)
+      .to(copy, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.85);
 }
 
 // ============================================
@@ -739,6 +971,9 @@ function initSmoothScroll() {
 document.addEventListener('DOMContentLoaded', () => {
     // Vänta lite för att säkerställa att allt laddats
     setTimeout(() => {
+        initDarkModeToggle();
+        initNavVisibility();
+        initSplashSnap();
         initHeroAnimations();
         initPhoneAnimations();
         initProfileCardAnimations();
@@ -753,6 +988,11 @@ document.addEventListener('DOMContentLoaded', () => {
         initHoverEffects();
         initDropdownMenu();
         initSmoothScroll();
+        initCafeCards();
+        initTrioCards();
+        initShowcaseCards();
+        initCurvedCards();
+        initBottomFooter();
 
         // Refresh ScrollTrigger after all animations are set up
         ScrollTrigger.refresh();
