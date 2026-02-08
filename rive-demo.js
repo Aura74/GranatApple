@@ -1,5 +1,5 @@
 // Rive Demo JavaScript
-// Laddar och visar Rive-animationer från Rive Community
+// Laddar och visar Rive-animationer + Lottie
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -22,32 +22,31 @@ document.addEventListener('DOMContentLoaded', function() {
 // Initiera Rive-animationer
 function initRiveAnimations() {
 
-    // Animation 1: Simple shapes/loader (gratis från Rive Community)
+    // Animation 1: Vehicles (officiell Rive demo - fordon med väder)
     try {
         const riveInstance1 = new rive.Rive({
-            src: 'https://public.rive.app/community/runtime-files/2244-4463-animated-icon-set.riv',
-            canvas: document.getElementById('rive-canvas-1'),
+            src: 'https://cdn.rive.app/animations/vehicles.riv',
+            canvas: document.getElementById('rive-animation-1'),
             autoplay: true,
-            stateMachines: 'State Machine 1',
             onLoad: () => {
                 console.log('Rive animation 1 loaded');
                 riveInstance1.resizeDrawingSurfaceToCanvas();
             },
             onLoadError: (e) => {
                 console.log('Could not load Rive animation 1:', e);
-                showPlaceholder('rive-canvas-1', 'Animerade ikoner');
+                showPlaceholder('rive-animation-1', 'Fordon');
             }
         });
     } catch (e) {
         console.log('Error initializing Rive 1:', e);
-        showPlaceholder('rive-canvas-1', 'Animerade ikoner');
+        showPlaceholder('rive-animation-1', 'Fordon');
     }
 
-    // Animation 2: Heart/health animation
+    // Animation 2: Off-road truck (officiell Rive demo)
     try {
         const riveInstance2 = new rive.Rive({
-            src: 'https://public.rive.app/community/runtime-files/2195-4376-heart.riv',
-            canvas: document.getElementById('rive-canvas-2'),
+            src: 'https://cdn.rive.app/animations/off_road_car.riv',
+            canvas: document.getElementById('rive-animation-2'),
             autoplay: true,
             onLoad: () => {
                 console.log('Rive animation 2 loaded');
@@ -55,19 +54,19 @@ function initRiveAnimations() {
             },
             onLoadError: (e) => {
                 console.log('Could not load Rive animation 2:', e);
-                showPlaceholder('rive-canvas-2', 'Hjärtanimation');
+                showPlaceholder('rive-animation-2', 'Terrängbil');
             }
         });
     } catch (e) {
         console.log('Error initializing Rive 2:', e);
-        showPlaceholder('rive-canvas-2', 'Hjärtanimation');
+        showPlaceholder('rive-animation-2', 'Terrängbil');
     }
 
-    // Animation 3: Loading/spinner animation
+    // Animation 3: Juice/loader (officiell Rive demo)
     try {
         const riveInstance3 = new rive.Rive({
-            src: 'https://public.rive.app/community/runtime-files/2063-4104-loader.riv',
-            canvas: document.getElementById('rive-canvas-3'),
+            src: 'https://cdn.rive.app/animations/juice.riv',
+            canvas: document.getElementById('rive-animation-3'),
             autoplay: true,
             onLoad: () => {
                 console.log('Rive animation 3 loaded');
@@ -75,20 +74,20 @@ function initRiveAnimations() {
             },
             onLoadError: (e) => {
                 console.log('Could not load Rive animation 3:', e);
-                showPlaceholder('rive-canvas-3', 'Laddningsanimation');
+                showPlaceholder('rive-animation-3', 'Juice');
             }
         });
     } catch (e) {
         console.log('Error initializing Rive 3:', e);
-        showPlaceholder('rive-canvas-3', 'Laddningsanimation');
+        showPlaceholder('rive-animation-3', 'Juice');
     }
 }
 
 // Visa placeholder om Rive inte kan laddas
 function showRivePlaceholders() {
-    showPlaceholder('rive-canvas-1', 'Animerade ikoner');
-    showPlaceholder('rive-canvas-2', 'Hjärtanimation');
-    showPlaceholder('rive-canvas-3', 'Laddningsanimation');
+    showPlaceholder('rive-animation-1', 'Fordon');
+    showPlaceholder('rive-animation-2', 'Terrängbil');
+    showPlaceholder('rive-animation-3', 'Juice');
 }
 
 // Skapa en placeholder-animation med CSS
@@ -118,7 +117,7 @@ function showPlaceholder(canvasId, label) {
 
 // Initiera Lottie-animation
 function initLottieAnimation() {
-    const lottieContainer = document.getElementById('lottie-container');
+    const lottieContainer = document.getElementById('lottie-animation');
     if (!lottieContainer) return;
 
     // Ladda en gratis Lottie-animation från LottieFiles
@@ -128,8 +127,7 @@ function initLottieAnimation() {
             renderer: 'svg',
             loop: true,
             autoplay: true,
-            // Gratis animation från LottieFiles
-            path: 'https://assets5.lottiefiles.com/packages/lf20_V9t630.json'
+            path: 'https://assets2.lottiefiles.com/packages/lf20_UJNc2t.json'
         });
 
         animation.addEventListener('data_failed', function() {

@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:pomegranate.health)",
-      "Bash(dir \"C:\\\\HEMSIDOR\\\\GranatApple\" /b)"
+      "Bash(dir \"C:\\\\HEMSIDOR\\\\GranatApple\" /b)",
+      "Bash(dir \"C:\\\\HEMSIDOR\\\\GranatApple\" /s /b)",
+      "Bash(findstr:*)",
+      "WebFetch(domain:public.rive.app)",
+      "WebFetch(domain:assets5.lottiefiles.com)",
+      "WebSearch",
+      "WebFetch(domain:cdn.rive.app)"
     ]
   }
 }
