@@ -1,4 +1,9 @@
-# Bilder och inspiration (ska inte laddas upp)
+# API-nycklar får aldrig committas — Google spärrar nycklar som upptäcks
+# i publika GitHub-repon (hände portföljen 2026-07-08). Kopiera in en egen
+# nyckel i js/apikey.js lokalt; saknas filen kör chatten i offline-läge.
+js/apikey.js
+
+# Referensbilder/inspiration (ska inte laddas upp)
 Bilder för Claude Ai att titta på och ta inspiration från/
 
 # OS-filer
@@ -12,13 +17,13 @@ Desktop.ini
 *.swo
 *~
 
-# Node modules (om du använder npm senare)
+# Node
 node_modules/
-
-# Logs
 *.log
 npm-debug.log*
 
 # Temp-filer
 *.tmp
 *.temp
+_diag.html
+.preview/
