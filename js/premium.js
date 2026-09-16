@@ -3,7 +3,7 @@
     'use strict';
     const root = document.documentElement;
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-    const sections = [...document.querySelectorAll('#phones, #end, #circuit, #layers, #stack, #predictive, #rive-demo, #cta')];
+    const sections = [...document.querySelectorAll('#phones, #end, #caring, #circuit, #layers, #stack, #predictive, #lab, #rive-demo, #explore, #capabilities, #cta')];
     const loops = new Map();
     const visible = new Set();
     const allowed = () => root.dataset.perf !== 'essential' && !reduced.matches && !document.hidden;
@@ -54,7 +54,6 @@
         finale.querySelector('.final-hint').textContent = state.hint;
         finale.querySelectorAll('[data-final-mode]').forEach(control => control.setAttribute('aria-pressed', String(control === button)));
     }));
-    float('.architecture-layer', [{ translate: '0 0' }, { translate: '0 -7px' }], { duration: 5000 });
     // Measure real card edges into the SVG coordinate system. Resize and font changes
     // reuse the same geometry; no DOM measurements or path morphing per animation frame.
     const network = document.querySelector('.floating-profiles');

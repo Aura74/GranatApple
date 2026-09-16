@@ -295,9 +295,9 @@
     }
 
     function initPlanButtons() {
-        $$('.showcase-btn').forEach((btn) => {
+        $$('[data-plan]').forEach((btn) => {
             btn.addEventListener('click', () => {
-                showToast(`Demo – här skulle ${btn.dataset.plan}-planen öppna kassan (t.ex. Stripe Checkout).`);
+                showToast(`Du har valt ${btn.dataset.plan}. Det här är en demo – inget köp genomförs.`);
             });
         });
     }
@@ -337,59 +337,6 @@
         ]);
     }
 
-    function initUserCardAnimations() {
-        const cards = $$('.user-card');
-        if (!cards.length) return;
-
-        if (CINEMATIC) {
-            gsap.from('.caring-cards', {
-                x: -100, opacity: 0,
-                scrollTrigger: { trigger: '.caring-section', start: 'top 70%', end: 'top 40%', scrub: 1 },
-            });
-        } else {
-            gsap.from(cards, { y: 40, opacity: 0, duration: 0.9, stagger: 0.15, scrollTrigger: revealOnce('.caring-section', 'top 75%') });
-        }
-
-        pauseOffscreen('.caring-section', cards.map((card, i) =>
-            gsap.to(card, { y: -15, duration: 2.5 + i * 0.3, delay: i * 0.5, ease: 'sine.inOut', repeat: -1, yoyo: true, paused: true })));
-    }
-
-    function initDataCardAnimations() {
-        const grid = $('.data-cards-grid');
-        if (!grid) return;
-
-        gsap.from('.data-card', { y: 50, opacity: 0, duration: 0.8, stagger: 0.08, scrollTrigger: revealOnce('.data-cards-grid') });
-
-        const line = $('.animated-line');
-        if (line) {
-            const length = line.getTotalLength();
-            gsap.set(line, { strokeDasharray: length, strokeDashoffset: length });
-            gsap.to(line, { strokeDashoffset: 0, duration: 2, ease: 'power2.out', scrollTrigger: revealOnce('.card-graph') });
-        }
-
-        const area = $('.animated-area');
-        if (area) {
-            const length = area.getTotalLength();
-            gsap.set(area, { strokeDasharray: length, strokeDashoffset: length });
-            gsap.to(area, { strokeDashoffset: 0, duration: 2, ease: 'power2.out', scrollTrigger: revealOnce('.card-resting') });
-        }
-
-        gsap.from('.intensity-progress', { strokeDashoffset: 220, duration: 2, ease: 'power2.out', scrollTrigger: revealOnce('.card-intensity') });
-        gsap.from('.storage-progress', { strokeDashoffset: 251, duration: 1.6, ease: 'power2.out', scrollTrigger: revealOnce('.card-storage') });
-        gsap.from('.gauge-fill', { strokeDashoffset: 126, duration: 1.6, ease: 'power2.out', scrollTrigger: revealOnce('.card-body') });
-        gsap.to('.gauge-needle', { rotation: 40, duration: 2, ease: 'elastic.out(1, 0.5)', scrollTrigger: revealOnce('.card-body') });
-        gsap.from('.cpu-fill', { scaleY: 0, transformOrigin: 'bottom', duration: 1, stagger: 0.1, ease: 'power2.out', scrollTrigger: revealOnce('.card-cpu') });
-
-        pauseOffscreen('.layers-section', [
-            gsap.to('.animated-heart', { scale: 1.15, duration: 0.8, ease: 'power2.inOut', repeat: -1, yoyo: true, paused: true }),
-        ]);
-    }
-
-    function initCtaAnimations() {
-        if (!$('.cta')) return;
-        gsap.from('.footer__inner > *', { y: 30, opacity: 0, duration: 0.6, stagger: 0.12, scrollTrigger: revealOnce('.footer', 'top 90%') });
-    }
-
     function initSectionReveals() {
         $$('.section-badge').forEach((badge) => {
             gsap.from(badge, { y: 20, opacity: 0, duration: 0.6, scrollTrigger: revealOnce(badge, 'top 85%') });
@@ -403,69 +350,6 @@
         ].join(','));
         paragraphs.forEach((p) => {
             gsap.from(p, { y: 30, opacity: 0, duration: 0.6, delay: 0.2, scrollTrigger: revealOnce(p, 'top 85%') });
-        });
-    }
-
-    function initCafeCards() {
-        const containers = $$('.cafe-container');
-        if (!containers.length) return;
-
-        gsap.set(containers, { opacity: 0, y: 80, rotationY: 90 });
-        containers.forEach((container, i) => {
-            gsap.to(container, {
-                opacity: 1, y: 0, rotationY: 0, duration: 1, delay: i * 0.25,
-                scrollTrigger: { trigger: '.cafe-wrapper', start: 'top 80%', toggleActions: 'play none none reverse' },
-            });
-
-            const info = $('.cafe-information', container);
-            const pic = $('.cafe-pics svg', container);
-            gsap.set(info, { y: 0, yPercent: -100 });
-
-            const tl = gsap.timeline({ paused: true });
-            tl.to(info, { yPercent: 0, duration: 0.5, ease: 'back.out(1.4)' })
-              .to(pic, { y: -90, rotationY: 360, opacity: 1, duration: 0.6, ease: 'power2.inOut' }, 0.2);
-
-            const show = () => tl.play();
-            const hide = () => tl.reverse();
-            if (finePointer) {
-                container.addEventListener('mouseenter', show);
-                container.addEventListener('mouseleave', hide);
-            } else {
-                container.addEventListener('click', () => (tl.progress() > 0 && !tl.reversed() ? hide() : show()));
-            }
-            container.addEventListener('focusin', show);
-            container.addEventListener('focusout', hide);
-        });
-    }
-
-    function initTrioCards() {
-        const cards = $$('.trio-card');
-        if (!cards.length) return;
-
-        gsap.set(cards, { opacity: 0, y: 60 });
-        cards.forEach((card, i) => {
-            gsap.to(card, { opacity: 1, y: 0, duration: 0.8, delay: i * 0.15, scrollTrigger: revealOnce('.trio-holder') });
-
-            if (!finePointer) return;
-            const tl = gsap.timeline({ paused: true });
-            tl.to(card, { y: -8, scale: 1.02, duration: 0.35, ease: 'power2.out' }, 0)
-              .to($('.trio-circle', card), { scale: 1.12, duration: 0.4, ease: 'back.out(2)' }, 0)
-              .to($('.trio-icon', card), { rotation: 360, scale: 1.15, duration: 0.6, ease: 'power2.inOut' }, 0)
-              .to($('.trio-title', card), { y: -3, letterSpacing: '0.16em', duration: 0.3, ease: 'power2.out' }, 0.05);
-            card.addEventListener('mouseenter', () => tl.play());
-            card.addEventListener('mouseleave', () => tl.reverse());
-        });
-    }
-
-    function initShowcaseCards() {
-        const cards = $$('.showcase-card');
-        if (!cards.length) return;
-        gsap.set(cards, { opacity: 0, y: 60, scale: 0.94 });
-        cards.forEach((card, i) => {
-            gsap.to(card, {
-                opacity: 1, y: 0, scale: 1, duration: 0.7, delay: i * 0.15, ease: 'back.out(1.4)',
-                scrollTrigger: { trigger: '.showcase-grid', start: 'top 80%', toggleActions: 'play none none reverse' },
-            });
         });
     }
 
@@ -488,16 +372,10 @@
         gsap.defaults({ ease: 'power3.out' });
 
         initHeroAnimations();
-        initUserCardAnimations();
-        initDataCardAnimations();
-        initCtaAnimations();
         initSectionReveals();
-        initCafeCards();
-        initTrioCards();
-        initShowcaseCards();
         initCurvedCards();
 
-        /* Typsnitt och lazy-laddade diagram ändrar layouten – räkna om triggers */
+        /* Typsnitt och expanderbara kort ändrar layouten – räkna om triggers */
         document.fonts?.ready.then(() => ScrollTrigger.refresh());
         document.addEventListener('tf:layoutchange', () => ScrollTrigger.refresh());
     }
@@ -514,6 +392,6 @@
     initPlanButtons();
     initAnimations();
 
-    /* Litet publikt API för övriga script (chat.js, charts.js, rive.js) */
+    /* Litet publikt API för övriga script (chat.js, rive.js) */
     window.TechFlow = Object.freeze({ showToast, perf: PERF, essential: ESSENTIAL, cinematic: CINEMATIC });
 })();

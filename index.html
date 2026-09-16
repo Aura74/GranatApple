@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TechFlow – Intelligent Technology | Lars Asplund</title>
-    <meta name="description" content="TechFlow – en premium landningssida med GSAP-scrollanimationer, Rive- och Lottie-animationer, fyra diagrambibliotek och en AI-assistent. Byggd i ren HTML, CSS och JavaScript av Lars Asplund.">
+    <meta name="description" content="TechFlow – en premium landningssida med GSAP-scrollanimationer, egna interaktiva ljusskulpturer, ett levande datalandskap och en AI-assistent. Byggd i ren HTML, CSS och JavaScript av Lars Asplund.">
     <meta name="author" content="Lars Asplund">
     <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0d0b1a" media="(prefers-color-scheme: dark)">
@@ -55,6 +55,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/chat.css">
     <link rel="stylesheet" href="css/premium.css">
+    <link rel="stylesheet" href="css/atelier.css">
+    <link rel="stylesheet" href="css/studio.css">
 </head>
 <body>
     <a class="skip-link" href="#hero">Hoppa till innehållet</a>
@@ -476,71 +478,29 @@
         <!-- ============================================
              5. CARING ABOUT YOU (användarkort)
              ============================================ -->
-        <section class="caring-section wave-divider" id="caring" aria-labelledby="caring-title">
-            <div class="caring-cards">
-                <article class="user-card">
-                    <div class="user-avatar">
-                        <div class="avatar-circle avatar--violet"><span>OL</span></div>
-                    </div>
-                    <h3 class="user-name">Oscar Lindqvist</h3>
-                    <div class="user-stats">
-                        <div class="user-stat">
-                            <span class="stat-val">28</span>
-                            <span class="stat-lbl">Projects</span>
-                        </div>
-                        <div class="user-stat">
-                            <span class="stat-val">156</span>
-                            <span class="stat-lbl">Commits</span>
-                        </div>
-                        <div class="user-stat">
-                            <span class="stat-val">4.2K</span>
-                            <span class="stat-lbl">Lines</span>
-                        </div>
-                    </div>
-                    <div class="user-tags">
-                        <span class="tag tag--blue">Full Stack</span>
-                        <span class="tag tag--green">Team Player</span>
-                        <span class="tag tag--orange">Agile Expert</span>
-                    </div>
-                </article>
-                <article class="user-card">
-                    <div class="user-avatar">
-                        <div class="avatar-circle avatar--rose"><span>EN</span></div>
-                    </div>
-                    <h3 class="user-name">Emma Nyström</h3>
-                    <div class="user-stats">
-                        <div class="user-stat">
-                            <span class="stat-val">32</span>
-                            <span class="stat-lbl">Projects</span>
-                        </div>
-                        <div class="user-stat">
-                            <span class="stat-val">170</span>
-                            <span class="stat-lbl">Commits</span>
-                        </div>
-                        <div class="user-stat">
-                            <span class="stat-val">5.1K</span>
-                            <span class="stat-lbl">Lines</span>
-                        </div>
-                    </div>
-                    <div class="user-tags">
-                        <span class="tag tag--purple">UX Designer</span>
-                        <span class="tag tag--teal">Creative</span>
-                        <span class="tag tag--pink">Mentor</span>
-                    </div>
-                </article>
-            </div>
-            <div class="caring-content">
-                <span class="section-badge">Technology that cares</span>
-                <h2 id="caring-title">Caring about you<br>thousands of times<br>a day</h2>
-                <p>
-                    TechFlow cares about your success all the time. It collects billions of
-                    data points and uses advanced machine intelligence to learn
-                    about your workflow and your needs, predicting issues before
-                    they become problems, and giving you the right tools at the right
-                    time to stop a small issue from becoming a big one.
-                </p>
-            </div>
-        </section>
+        <section class="studio-section care-section" id="caring" aria-labelledby="caring-title" data-day="morning">
+  <div class="care-layout">
+    <div class="care-art">
+      <div class="care-art-top"><span class="studio-micro">A DAY THAT FEELS LIKE YOU</span><span class="care-weather" aria-hidden="true">☀</span></div>
+      <div class="care-clock"><span data-care-time>09:41</span><span data-care-greeting>A little room to begin.</span></div>
+      <svg class="care-bloom" viewBox="0 0 500 470" role="img" aria-label="En skulptural blomma i pärlemor och persika, omsluten av tunna banor">
+        <defs><radialGradient id="care-petal" cx=".3" cy=".2" r=".85"><stop stop-color="#fff9ea"/><stop offset=".4" stop-color="#ecdac9"/><stop offset=".72" stop-color="#c5b1a7"/><stop offset="1" stop-color="#9a8c99"/></radialGradient><radialGradient id="care-pearl" cx=".3" cy=".25" r=".8"><stop stop-color="#fffdf2"/><stop offset=".35" stop-color="#f6e8d5"/><stop offset=".7" stop-color="#d4b7a2"/><stop offset="1" stop-color="#947988"/></radialGradient><radialGradient id="care-shadow"><stop stop-color="#796576" stop-opacity=".2"/><stop offset="1" stop-color="#796576" stop-opacity="0"/></radialGradient></defs>
+        <ellipse cx="250" cy="399" rx="150" ry="25" fill="url(#care-shadow)"/>
+        <g fill="none" stroke="#ac9f9d" stroke-opacity=".35"><ellipse cx="250" cy="240" rx="197" ry="121" transform="rotate(-30 250 240)"/><ellipse cx="250" cy="240" rx="197" ry="121" transform="rotate(30 250 240)"/></g>
+        <g class="care-flower"><ellipse cx="250" cy="181" rx="52" ry="87" fill="url(#care-petal)" transform="rotate(0 250 240)"/><ellipse cx="250" cy="181" rx="52" ry="87" fill="url(#care-petal)" transform="rotate(60 250 240)"/><ellipse cx="250" cy="181" rx="52" ry="87" fill="url(#care-petal)" transform="rotate(120 250 240)"/><ellipse cx="250" cy="181" rx="52" ry="87" fill="url(#care-petal)" transform="rotate(180 250 240)"/><ellipse cx="250" cy="181" rx="52" ry="87" fill="url(#care-petal)" transform="rotate(240 250 240)"/><ellipse cx="250" cy="181" rx="52" ry="87" fill="url(#care-petal)" transform="rotate(300 250 240)"/><circle cx="250" cy="240" r="64" fill="url(#care-pearl)"/><path d="M214 220q15-29 49-24" stroke="#fffef4" stroke-opacity=".5" stroke-width="2" fill="none"/></g>
+        <circle cx="81" cy="186" r="7" fill="#b29386"/><circle cx="417" cy="307" r="5" fill="#8b9e8a"/>
+      </svg>
+      <div class="care-note care-note--first"><span class="care-note-icon" aria-hidden="true">✦</span><div><strong data-care-note>Time for your best idea.</strong><span data-care-sub>Your focus time is protected.</span></div><span class="care-check" aria-hidden="true">✓</span></div>
+      <div class="care-note care-note--second"><span class="care-note-icon" aria-hidden="true">↗</span><div><strong>The little things? Handled.</strong><span>Everything, quietly in place.</span></div></div>
+      <div class="care-art-bottom"><span class="art-live-dot"></span><span>IN TUNE WITH YOUR DAY</span><span>TF / 01</span></div>
+    </div>
+    <div class="studio-copy care-copy"><span class="atelier-label">TECHNOLOGY THAT CARES</span><h2 id="caring-title">Caring about you.<br><em>In a thousand<br>little ways.</em></h2><p>A clearer morning. An uninterrupted afternoon. A little less on your mind. Thoughtful technology, looking after the details so you can be here for the good stuff.</p>
+      <div class="care-day-controls" role="group" aria-label="Utforska en dag med TechFlow"><button type="button" data-care-day="morning" aria-pressed="true">Morning</button><button type="button" data-care-day="afternoon" aria-pressed="false">Afternoon</button><button type="button" data-care-day="evening" aria-pressed="false">Evening</button></div>
+      <p class="care-message" role="status">Start with a clear head. We'll take care of the background.</p>
+      <a class="studio-text-link" href="#cta">Make a little room for you <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
 
         <!-- ============================================
              6. DESIGNED BY… (kretskort)
@@ -681,264 +641,84 @@
         <!-- ============================================
              7. MULTIPLE LAYERS (datakort)
              ============================================ -->
-        <section class="layers-section wave-divider" id="layers" aria-labelledby="layers-title">
-            <div class="layers-header">
-                <span class="section-badge">Intelligent Platform</span>
-                <h2 id="layers-title">Multiple layers of<br>intelligent technology</h2>
-                <p>
-                    TechFlow has multiple layers of seamlessly connected intelligent technology,
-                    all built on the foundation of an intelligent platform that uses billions of data
-                    points and AI to learn about you and identify your current and future needs.
-                </p>
-            </div>
-            <div class="data-cards-grid">
-                <article class="data-card card-graph">
-                    <div class="card-header">
-                        <h3 class="card-title">Weekly growth</h3><span class="trend-label">+18.6%</span>
-                    </div>
-                    <div class="mini-chart" aria-hidden="true">
-                        <svg viewBox="0 0 100 50" class="line-chart">
-                            <polyline class="chart-line animated-line" points="0,40 20,35 40,38 60,20 80,25 100,15"/>
-                        </svg>
-                    </div>
-                    <div class="card-labels"><span>14</span><span>15</span><span>16</span><span>17</span></div>
-                </article>
-                <article class="data-card card-heart">
-                    <h3 class="card-title">System Health</h3>
-                    <div class="heart-icon animated-heart" aria-hidden="true">
-                        <svg viewBox="0 0 50 50">
-                            <path d="M25 45 10 28Q0 15 12 8q13-8 13 7 0-15 13-7 12 7 2 20Z" fill="var(--accent-red)"/>
-                        </svg>
-                    </div>
-                    <div class="heart-stats">
-                        <span class="heart-value">99.9<small>%</small></span>
-                        <span class="heart-label">Uptime this month</span>
-                    </div>
-                </article>
-                <article class="data-card card-resting">
-                    <h3 class="card-title">API Latency</h3>
-                    <div class="resting-display">
-                        <div class="resting-circle">
-                            <span class="resting-value">64</span>
-                            <span class="resting-unit">ms</span>
-                        </div>
-                        <span class="resting-label">Average Today</span>
-                    </div>
-                    <div class="resting-chart" aria-hidden="true">
-                        <svg viewBox="0 0 120 40" class="area-chart">
-                            <path class="area-fill" d="M0 35Q30 30 60 25T120 20v20H0Z"/>
-                            <path class="area-line animated-area" d="M0 35Q30 30 60 25T120 20"/>
-                        </svg>
-                    </div>
-                </article>
-                <article class="data-card card-intensity">
-                    <h3 class="card-title">Throughput</h3>
-                    <div class="intensity-ring">
-                        <svg viewBox="0 0 80 80" aria-hidden="true">
-                            <circle class="ring-track ring-track--sky" cx="40" cy="40" r="35" fill="none" stroke-width="6"/>
-                            <circle class="intensity-progress" cx="40" cy="40" r="35" fill="none" stroke-width="6"
-                                    stroke-dasharray="220" stroke-dashoffset="55"/>
-                        </svg>
-                        <div class="intensity-value">
-                            <span class="big">429</span>
-                            <span class="small">req / sec</span>
-                        </div>
-                    </div>
-                    <div class="intensity-bars" aria-hidden="true">
-                        <div class="bar-item"><span>T</span></div>
-                        <div class="bar-item"><span>W</span></div>
-                        <div class="bar-item"><span>T</span></div>
-                        <div class="bar-item bar-item--active"><span>F</span></div>
-                        <div class="bar-item"><span>S</span></div>
-                        <div class="bar-item"><span>S</span></div>
-                        <div class="bar-item"><span>M</span></div>
-                    </div>
-                </article>
-                <article class="data-card card-time">
-                    <h3 class="card-title">Time Active</h3>
-                    <div class="time-grid">
-                        <div class="time-stat"><span class="zone zone-1"></span><span class="time-val">520<small>min</small></span></div>
-                        <div class="time-stat"><span class="zone zone-2"></span><span class="time-val">360<small>min</small></span></div>
-                        <div class="time-stat"><span class="zone zone-3"></span><span class="time-val">68<small>min</small></span></div>
-                        <div class="time-stat"><span class="zone zone-4"></span><span class="time-val">22<small>min</small></span></div>
-                    </div>
-                </article>
-                <article class="data-card card-body">
-                    <h3 class="card-title">Memory Usage</h3>
-                    <div class="body-gauge" aria-hidden="true">
-                        <svg viewBox="0 0 100 60">
-                            <defs>
-                                <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" stop-color="#22c55e"/>
-                                    <stop offset="50%" stop-color="#eab308"/>
-                                    <stop offset="100%" stop-color="#ef4444"/>
-                                </linearGradient>
-                            </defs>
-                            <path class="ring-track" d="M10 55A40 40 0 0 1 90 55" fill="none" stroke-width="8" stroke-linecap="round"/>
-                            <path class="gauge-fill" d="M10 55A40 40 0 0 1 90 55" fill="none" stroke="url(#gaugeGradient)" stroke-width="8"
-                                  stroke-linecap="round" stroke-dasharray="126" stroke-dashoffset="50"/>
-                        </svg>
-                        <div class="gauge-needle"></div>
-                    </div>
-                </article>
-                <article class="data-card card-cpu">
-                    <h3 class="card-title">CPU Load</h3>
-                    <div class="cpu-bars">
-                        <div class="cpu-bar"><div class="cpu-fill" style="--h: 65%"></div><span>Core 1</span></div>
-                        <div class="cpu-bar"><div class="cpu-fill" style="--h: 82%"></div><span>Core 2</span></div>
-                        <div class="cpu-bar"><div class="cpu-fill" style="--h: 45%"></div><span>Core 3</span></div>
-                        <div class="cpu-bar"><div class="cpu-fill" style="--h: 78%"></div><span>Core 4</span></div>
-                    </div>
-                </article>
-                <article class="data-card card-network">
-                    <h3 class="card-title">Network Traffic</h3>
-                    <div class="network-stats">
-                        <div class="network-stat">
-                            <span class="net-arrow net-arrow--up" aria-hidden="true"></span>
-                            <span class="net-value">1.2<small>GB/s</small></span>
-                            <span class="net-label">Upload</span>
-                        </div>
-                        <div class="network-stat">
-                            <span class="net-arrow net-arrow--down" aria-hidden="true"></span>
-                            <span class="net-value">3.8<small>GB/s</small></span>
-                            <span class="net-label">Download</span>
-                        </div>
-                    </div>
-                    <div class="network-wave" aria-hidden="true">
-                        <svg viewBox="0 0 100 30">
-                            <path class="wave-path wave-1" d="M0 15Q25 5 50 15t50 0"/>
-                            <path class="wave-path wave-2" d="M0 15q25 10 50 0t50 0"/>
-                        </svg>
-                    </div>
-                </article>
-                <article class="data-card card-storage">
-                    <h3 class="card-title">Storage</h3>
-                    <div class="storage-ring">
-                        <svg viewBox="0 0 100 100" aria-hidden="true">
-                            <circle class="ring-track" cx="50" cy="50" r="40" fill="none" stroke-width="12"/>
-                            <circle class="storage-progress" cx="50" cy="50" r="40" fill="none" stroke-width="12"
-                                    stroke-dasharray="251" stroke-dashoffset="75" stroke-linecap="round"
-                                    transform="rotate(-90 50 50)"/>
-                        </svg>
-                        <div class="storage-text">
-                            <span class="storage-percent">70%</span>
-                            <span class="storage-used">Used</span>
-                        </div>
-                    </div>
-                    <div class="storage-details"><span>140 GB / 200 GB</span></div>
-                </article>
-                <article class="data-card card-requests">
-                    <h3 class="card-title">Requests/min</h3>
-                    <div class="requests-number">
-                        <span class="req-value">8,429</span>
-                        <span class="req-trend req-trend--up">+12.5%</span>
-                    </div>
-                    <div class="requests-sparkline" aria-hidden="true">
-                        <svg viewBox="0 0 100 30">
-                            <polyline class="sparkline" points="0,25 10,22 20,18 30,20 40,15 50,12 60,14 70,8 80,10 90,5 100,3"/>
-                        </svg>
-                    </div>
-                </article>
-                <article class="data-card card-users">
-                    <h3 class="card-title">Active Users</h3>
-                    <div class="users-display">
-                        <div class="users-avatars" aria-hidden="true">
-                            <span class="mini-avatar"></span>
-                            <span class="mini-avatar"></span>
-                            <span class="mini-avatar"></span>
-                            <span class="mini-avatar"></span>
-                            <span class="mini-avatar mini-avatar--more">+86</span>
-                        </div>
-                        <div class="users-count">
-                            <span class="count-number">1,247</span>
-                            <span class="count-label">online now</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
+        <section class="studio-section flow-story" id="layers" aria-labelledby="layers-title">
+  <div class="studio-heading"><div><span class="atelier-label">INTELLIGENCE, WORKING TOGETHER</span><h2 id="layers-title">From a little chaos.<br><em>To a beautiful flow.</em></h2></div><p>All the moving parts of your day, finding their place.<br> One thoughtful system. A little more clarity.</p></div>
+  <div class="flow-story-art" role="img" aria-label="Spridda signaler samlas i ett skimrande prisma och blir tre lugna, organiserade strömmar">
+    <div class="flow-art-label"><span>THE ART OF MAKING THINGS SIMPLE</span><span>01 → 02 → 03</span></div>
+    <svg class="flow-thread-art" viewBox="0 0 1100 360" aria-hidden="true">
+      <defs><linearGradient id="story-thread"><stop stop-color="#bba18d" stop-opacity=".25"/><stop offset=".45" stop-color="#e9c8a9"/><stop offset="1" stop-color="#a3c9b7" stop-opacity=".6"/></linearGradient><radialGradient id="story-glow"><stop stop-color="#cbdac3" stop-opacity=".14"/><stop offset="1" stop-color="#cbdac3" stop-opacity="0"/></radialGradient><radialGradient id="story-bead" cx=".3" cy=".25"><stop stop-color="#ffefd7"/><stop offset="1" stop-color="#b0947e"/></radialGradient></defs>
+      <ellipse cx="555" cy="180" rx="260" ry="160" fill="url(#story-glow)"/>
+      <path class="flow-thread" style="--thread-delay:0s" d="M30 32C185 -50,280 320,510 163S780 70,1060 72" fill="none" stroke="url(#story-thread)" stroke-width="1.5" opacity="0.3" pathLength="100"/><path class="flow-thread" style="--thread-delay:-0.7s" d="M45 56C190 -16,284 296,510 166S780 87,1060 89" fill="none" stroke="url(#story-thread)" stroke-width="0.7" opacity="0.33999999999999997" pathLength="100"/><path class="flow-thread" style="--thread-delay:-1.4s" d="M60 80C195 18,288 272,510 169S780 104,1060 106" fill="none" stroke="url(#story-thread)" stroke-width="0.7" opacity="0.38" pathLength="100"/><path class="flow-thread" style="--thread-delay:-2.0999999999999996s" d="M30 104C200 52,292 248,510 172S780 121,1060 123" fill="none" stroke="url(#story-thread)" stroke-width="1.5" opacity="0.42" pathLength="100"/><path class="flow-thread" style="--thread-delay:-2.8s" d="M45 128C205 86,296 224,510 175S780 138,1060 140" fill="none" stroke="url(#story-thread)" stroke-width="0.7" opacity="0.45999999999999996" pathLength="100"/><path class="flow-thread" style="--thread-delay:-3.5s" d="M60 152C210 120,300 200,510 178S780 155,1060 157" fill="none" stroke="url(#story-thread)" stroke-width="0.7" opacity="0.5" pathLength="100"/><path class="flow-thread" style="--thread-delay:-4.199999999999999s" d="M30 176C215 154,304 176,510 181S780 172,1060 174" fill="none" stroke="url(#story-thread)" stroke-width="1.5" opacity="0.54" pathLength="100"/><path class="flow-thread" style="--thread-delay:-4.8999999999999995s" d="M45 200C220 188,308 152,510 184S780 189,1060 191" fill="none" stroke="url(#story-thread)" stroke-width="0.7" opacity="0.5800000000000001" pathLength="100"/><path class="flow-thread" style="--thread-delay:-5.6s" d="M60 224C225 222,312 128,510 187S780 206,1060 208" fill="none" stroke="url(#story-thread)" stroke-width="0.7" opacity="0.62" pathLength="100"/><path class="flow-thread" style="--thread-delay:-6.3s" d="M30 248C230 256,316 104,510 190S780 223,1060 225" fill="none" stroke="url(#story-thread)" stroke-width="1.5" opacity="0.6599999999999999" pathLength="100"/><path class="flow-thread" style="--thread-delay:-7s" d="M45 272C235 290,320 80,510 193S780 240,1060 242" fill="none" stroke="url(#story-thread)" stroke-width="0.7" opacity="0.7" pathLength="100"/><path class="flow-thread" style="--thread-delay:-7.699999999999999s" d="M60 296C240 324,324 56,510 196S780 257,1060 259" fill="none" stroke="url(#story-thread)" stroke-width="0.7" opacity="0.74" pathLength="100"/><path class="flow-thread" style="--thread-delay:-8.399999999999999s" d="M30 320C245 358,328 32,510 199S780 274,1060 276" fill="none" stroke="url(#story-thread)" stroke-width="1.5" opacity="0.78" pathLength="100"/>
+      <circle cx="77" cy="88" r="11" fill="url(#story-bead)"/><circle cx="143" cy="213" r="15" fill="url(#story-bead)"/><circle cx="223" cy="118" r="7" fill="url(#story-bead)"/><circle cx="109" cy="297" r="8" fill="url(#story-bead)"/><circle cx="286" cy="249" r="10" fill="url(#story-bead)"/><circle cx="332" cy="66" r="5" fill="url(#story-bead)"/>
+      <g fill="none" stroke="#accab6" stroke-opacity=".3"><circle cx="550" cy="180" r="103"/><circle cx="550" cy="180" r="115" stroke-dasharray="1 7"/></g>
+      <g fill="#d0dfc4"><circle cx="965" cy="93" r="4"/><circle cx="1020" cy="180" r="4"/><circle cx="940" cy="263" r="4"/></g>
+    </svg>
+    <div class="flow-prism" aria-hidden="true"><i></i><i></i><i></i><span>tf<span>IN SYNC</span></span></div>
+    <div class="flow-art-foot"><span>MANY LITTLE SIGNALS</span><span>ONE CLEAR DIRECTION</span></div>
+  </div>
+  <div class="flow-story-steps"><article><span>01 / GATHER</span><h3>A place for everything.</h3><p>Your tools, ideas and everyday signals, brought into the same conversation.</p></article><article><span>02 / UNDERSTAND</span><h3>See the bigger picture.</h3><p>Connected thinking turns scattered information into something that makes sense.</p></article><article><span>03 / MAKE ROOM</span><h3>Move with a little ease.</h3><p>Helpful next steps. Fewer loose ends. More time for the work that feels like you.</p></article></div>
+</section>
 
         <!-- ============================================
-             8. FIVE LAYERS (isometrisk stapel)
+             8. THE TECHFLOW ECOSYSTEM
              ============================================ -->
-        <section class="stack-section wave-divider wave-divider--s" id="stack" aria-labelledby="stack-title">
-            <div class="stack-content">
-                <span class="section-badge">Full stack platform</span>
-                <h2 id="stack-title">
-                    Five vertically
-                    <br>
-                    integrated layers
-                </h2>
-                <p>
-                    With TechFlow, you'll get five layers of full-stack, vertically
-                    integrated technology. Four are dynamic subscription-based,
-                    covering pretty much everything you'll ever need, including
-                    most enterprise solutions. Only the top layer is traditional – that's for
-                    those rare "once or twice in a lifetime" problems. TechFlow
-                    covers all your technology needs from the little stuff to the really
-                    big stuff, all in one place.
-                </p>
-            </div>
-            <div class="stack-animation">
-                <div class="architecture-stack">
-                    <div class="stack-axis" aria-hidden="true">
-                    </div>
-                    <div class="layer-slot" style="--i:0">
-                        <div class="architecture-layer">
-                            <span class="layer-icon" aria-hidden="true">◇</span>
-                            <div>
-                                <strong>Experience</strong>
-                                <small>Made for the way you work</small>
-                            </div>
-                            <span class="layer-number">01</span>
-                        </div>
-                    </div>
-                    <div class="layer-slot" style="--i:1">
-                        <div class="architecture-layer">
-                            <span class="layer-icon" aria-hidden="true">✦</span>
-                            <div>
-                                <strong>Intelligence</strong>
-                                <small>Always one step ahead</small>
-                            </div>
-                            <span class="layer-number">02</span>
-                        </div>
-                    </div>
-                    <div class="layer-slot" style="--i:2">
-                        <div class="architecture-layer">
-                            <span class="layer-icon" aria-hidden="true">↗</span>
-                            <div>
-                                <strong>Automation</strong>
-                                <small>Less friction. More flow.</small>
-                            </div>
-                            <span class="layer-number">03</span>
-                        </div>
-                    </div>
-                    <div class="layer-slot" style="--i:3">
-                        <div class="architecture-layer">
-                            <span class="layer-icon" aria-hidden="true">⌘</span>
-                            <div>
-                                <strong>Connection</strong>
-                                <small>Every tool, working together</small>
-                            </div>
-                            <span class="layer-number">04</span>
-                        </div>
-                    </div>
-                    <div class="layer-slot" style="--i:4">
-                        <div class="architecture-layer">
-                            <span class="layer-icon" aria-hidden="true">▣</span>
-                            <div>
-                                <strong>Foundation</strong>
-                                <small>Secure by design</small>
-                            </div>
-                            <span class="layer-number">05</span>
-                        </div>
-                    </div>
-                    <div class="stack-caption">
-                        <span class="screen-live">Five layers. One ecosystem.</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <section class="ecosystem-section" id="stack" aria-labelledby="stack-title">
+  <div class="ecosystem-heading"><span class="atelier-label">THE TECHFLOW ECOSYSTEM</span><span class="atelier-index">01 — CONNECTED BY DESIGN</span></div>
+  <div class="ecosystem-layout">
+    <div class="ecosystem-copy">
+      <h2 id="stack-title">Beautifully connected.<br><em>Simply yours.</em></h2>
+      <p>Great technology should feel like one thoughtful idea. Five connected layers, working quietly together to make room for what matters.</p>
+      <div class="ecosystem-selector" role="group" aria-label="Utforska plattformens fem delar">
+        <button type="button" data-ecosystem="0" aria-pressed="false" aria-controls="ecosystem-detail"><span>01</span>Experience<span aria-hidden="true">↗</span></button><button type="button" data-ecosystem="1" aria-pressed="true" aria-controls="ecosystem-detail"><span>02</span>Intelligence<span aria-hidden="true">↗</span></button><button type="button" data-ecosystem="2" aria-pressed="false" aria-controls="ecosystem-detail"><span>03</span>Automation<span aria-hidden="true">↗</span></button><button type="button" data-ecosystem="3" aria-pressed="false" aria-controls="ecosystem-detail"><span>04</span>Connection<span aria-hidden="true">↗</span></button><button type="button" data-ecosystem="4" aria-pressed="false" aria-controls="ecosystem-detail"><span>05</span>Foundation<span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="ecosystem-detail" id="ecosystem-detail" aria-live="polite" aria-atomic="true"><span class="ecosystem-detail-number">02 / INTELLIGENCE</span><h3>A little ahead. Always.</h3><p>Patterns become possibilities. Thoughtful insights help you see your next step, before you need to take it.</p></div>
+    </div>
+    <div class="ecosystem-art">
+      <div class="art-corner"><span class="art-live-dot"></span> ONE CONNECTED SYSTEM <span>TF—05</span></div>
+      <svg class="ecosystem-sculpture" viewBox="0 0 600 560" role="img" aria-label="Fem svävande ljusringar i persika, lavendel och grönt. Intelligence är markerad.">
+        <defs>
+          <radialGradient id="ecosystem-halo"><stop stop-color="#8fb8a5" stop-opacity=".17"/><stop offset="1" stop-color="#8fb8a5" stop-opacity="0"/></radialGradient>
+          <linearGradient id="ring-surface-0" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edc8b2" stop-opacity=".5"/><stop offset=".45" stop-color="#edc8b2" stop-opacity=".04"/><stop offset="1" stop-color="#edc8b2" stop-opacity=".28"/></linearGradient><linearGradient id="ring-surface-1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d7d0f1" stop-opacity=".5"/><stop offset=".45" stop-color="#d7d0f1" stop-opacity=".04"/><stop offset="1" stop-color="#d7d0f1" stop-opacity=".28"/></linearGradient><linearGradient id="ring-surface-2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#bddece" stop-opacity=".5"/><stop offset=".45" stop-color="#bddece" stop-opacity=".04"/><stop offset="1" stop-color="#bddece" stop-opacity=".28"/></linearGradient><linearGradient id="ring-surface-3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a9cdd4" stop-opacity=".5"/><stop offset=".45" stop-color="#a9cdd4" stop-opacity=".04"/><stop offset="1" stop-color="#a9cdd4" stop-opacity=".28"/></linearGradient><linearGradient id="ring-surface-4" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a6b5cc" stop-opacity=".5"/><stop offset=".45" stop-color="#a6b5cc" stop-opacity=".04"/><stop offset="1" stop-color="#a6b5cc" stop-opacity=".28"/></linearGradient>
+          <pattern id="ecosystem-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#bad3c6" stroke-opacity=".055"/></pattern>
+        </defs>
+        <rect width="600" height="560" fill="url(#ecosystem-grid)"/>
+        <ellipse cx="300" cy="290" rx="270" ry="255" fill="url(#ecosystem-halo)"/>
+        <ellipse cx="300" cy="471" rx="186" ry="27" fill="#061717" opacity=".4"/>
+        <path d="M300 83V440" stroke="#bfcebf" stroke-opacity=".3" stroke-dasharray="2 7"/>
+        <g class="ecosystem-ring" data-ring="4" style="--ring-color:#a6b5cc;--ring-delay:-3.2s">
+    <ellipse cx="300" cy="389.5" rx="182" ry="57" fill="none" stroke="#a6b5cc" stroke-opacity="0.67" stroke-width="1.1"/><ellipse cx="300" cy="388" rx="182" ry="57" fill="none" stroke="#a6b5cc" stroke-opacity="0.61" stroke-width="1.1"/><ellipse cx="300" cy="386.5" rx="182" ry="57" fill="none" stroke="#a6b5cc" stroke-opacity="0.55" stroke-width="1.1"/><ellipse cx="300" cy="385" rx="182" ry="57" fill="none" stroke="#a6b5cc" stroke-opacity="0.49" stroke-width="1.1"/><ellipse cx="300" cy="383.5" rx="182" ry="57" fill="none" stroke="#a6b5cc" stroke-opacity="0.43" stroke-width="1.1"/><ellipse cx="300" cy="382" rx="182" ry="57" fill="none" stroke="#a6b5cc" stroke-opacity="0.37" stroke-width="1.1"/><ellipse cx="300" cy="380.5" rx="182" ry="57" fill="none" stroke="#a6b5cc" stroke-opacity="0.31" stroke-width="1.1"/><ellipse cx="300" cy="379" rx="182" ry="57" fill="none" stroke="#a6b5cc" stroke-opacity="0.25" stroke-width="1.1"/><ellipse cx="300" cy="377.5" rx="182" ry="57" fill="none" stroke="#a6b5cc" stroke-opacity="0.19" stroke-width="1.1"/><ellipse cx="300" cy="376" rx="182" ry="57" fill="none" stroke="#a6b5cc" stroke-opacity="0.13" stroke-width="1.1"/>
+    <ellipse class="ring-rim" cx="300" cy="376" rx="182" ry="57" fill="url(#ring-surface-4)" stroke="#a6b5cc" stroke-width="1.5"/>
+    <ellipse cx="300" cy="376" rx="165" ry="49" fill="#14282d" fill-opacity=".88" stroke="#a6b5cc" stroke-opacity=".35"/>
+    <ellipse class="ring-tracer" cx="300" cy="376" rx="182" ry="57" fill="none" stroke="#fff8ed" stroke-width="2.5" pathLength="100" stroke-dasharray="4 96"/>
+  </g><g class="ecosystem-ring" data-ring="3" style="--ring-color:#a9cdd4;--ring-delay:-2.4000000000000004s">
+    <ellipse cx="300" cy="335.5" rx="169" ry="54" fill="none" stroke="#a9cdd4" stroke-opacity="0.67" stroke-width="1.1"/><ellipse cx="300" cy="334" rx="169" ry="54" fill="none" stroke="#a9cdd4" stroke-opacity="0.61" stroke-width="1.1"/><ellipse cx="300" cy="332.5" rx="169" ry="54" fill="none" stroke="#a9cdd4" stroke-opacity="0.55" stroke-width="1.1"/><ellipse cx="300" cy="331" rx="169" ry="54" fill="none" stroke="#a9cdd4" stroke-opacity="0.49" stroke-width="1.1"/><ellipse cx="300" cy="329.5" rx="169" ry="54" fill="none" stroke="#a9cdd4" stroke-opacity="0.43" stroke-width="1.1"/><ellipse cx="300" cy="328" rx="169" ry="54" fill="none" stroke="#a9cdd4" stroke-opacity="0.37" stroke-width="1.1"/><ellipse cx="300" cy="326.5" rx="169" ry="54" fill="none" stroke="#a9cdd4" stroke-opacity="0.31" stroke-width="1.1"/><ellipse cx="300" cy="325" rx="169" ry="54" fill="none" stroke="#a9cdd4" stroke-opacity="0.25" stroke-width="1.1"/><ellipse cx="300" cy="323.5" rx="169" ry="54" fill="none" stroke="#a9cdd4" stroke-opacity="0.19" stroke-width="1.1"/><ellipse cx="300" cy="322" rx="169" ry="54" fill="none" stroke="#a9cdd4" stroke-opacity="0.13" stroke-width="1.1"/>
+    <ellipse class="ring-rim" cx="300" cy="322" rx="169" ry="54" fill="url(#ring-surface-3)" stroke="#a9cdd4" stroke-width="1.5"/>
+    <ellipse cx="300" cy="322" rx="152" ry="46" fill="#14282d" fill-opacity=".88" stroke="#a9cdd4" stroke-opacity=".35"/>
+    <ellipse class="ring-tracer" cx="300" cy="322" rx="169" ry="54" fill="none" stroke="#fff8ed" stroke-width="2.5" pathLength="100" stroke-dasharray="4 96"/>
+  </g><g class="ecosystem-ring" data-ring="2" style="--ring-color:#bddece;--ring-delay:-1.6s">
+    <ellipse cx="300" cy="281.5" rx="156" ry="51" fill="none" stroke="#bddece" stroke-opacity="0.67" stroke-width="1.1"/><ellipse cx="300" cy="280" rx="156" ry="51" fill="none" stroke="#bddece" stroke-opacity="0.61" stroke-width="1.1"/><ellipse cx="300" cy="278.5" rx="156" ry="51" fill="none" stroke="#bddece" stroke-opacity="0.55" stroke-width="1.1"/><ellipse cx="300" cy="277" rx="156" ry="51" fill="none" stroke="#bddece" stroke-opacity="0.49" stroke-width="1.1"/><ellipse cx="300" cy="275.5" rx="156" ry="51" fill="none" stroke="#bddece" stroke-opacity="0.43" stroke-width="1.1"/><ellipse cx="300" cy="274" rx="156" ry="51" fill="none" stroke="#bddece" stroke-opacity="0.37" stroke-width="1.1"/><ellipse cx="300" cy="272.5" rx="156" ry="51" fill="none" stroke="#bddece" stroke-opacity="0.31" stroke-width="1.1"/><ellipse cx="300" cy="271" rx="156" ry="51" fill="none" stroke="#bddece" stroke-opacity="0.25" stroke-width="1.1"/><ellipse cx="300" cy="269.5" rx="156" ry="51" fill="none" stroke="#bddece" stroke-opacity="0.19" stroke-width="1.1"/><ellipse cx="300" cy="268" rx="156" ry="51" fill="none" stroke="#bddece" stroke-opacity="0.13" stroke-width="1.1"/>
+    <ellipse class="ring-rim" cx="300" cy="268" rx="156" ry="51" fill="url(#ring-surface-2)" stroke="#bddece" stroke-width="1.5"/>
+    <ellipse cx="300" cy="268" rx="139" ry="43" fill="#14282d" fill-opacity=".88" stroke="#bddece" stroke-opacity=".35"/>
+    <ellipse class="ring-tracer" cx="300" cy="268" rx="156" ry="51" fill="none" stroke="#fff8ed" stroke-width="2.5" pathLength="100" stroke-dasharray="4 96"/>
+  </g><g class="ecosystem-ring is-active" data-ring="1" style="--ring-color:#d7d0f1;--ring-delay:-0.8s">
+    <ellipse cx="300" cy="227.5" rx="143" ry="48" fill="none" stroke="#d7d0f1" stroke-opacity="0.67" stroke-width="1.1"/><ellipse cx="300" cy="226" rx="143" ry="48" fill="none" stroke="#d7d0f1" stroke-opacity="0.61" stroke-width="1.1"/><ellipse cx="300" cy="224.5" rx="143" ry="48" fill="none" stroke="#d7d0f1" stroke-opacity="0.55" stroke-width="1.1"/><ellipse cx="300" cy="223" rx="143" ry="48" fill="none" stroke="#d7d0f1" stroke-opacity="0.49" stroke-width="1.1"/><ellipse cx="300" cy="221.5" rx="143" ry="48" fill="none" stroke="#d7d0f1" stroke-opacity="0.43" stroke-width="1.1"/><ellipse cx="300" cy="220" rx="143" ry="48" fill="none" stroke="#d7d0f1" stroke-opacity="0.37" stroke-width="1.1"/><ellipse cx="300" cy="218.5" rx="143" ry="48" fill="none" stroke="#d7d0f1" stroke-opacity="0.31" stroke-width="1.1"/><ellipse cx="300" cy="217" rx="143" ry="48" fill="none" stroke="#d7d0f1" stroke-opacity="0.25" stroke-width="1.1"/><ellipse cx="300" cy="215.5" rx="143" ry="48" fill="none" stroke="#d7d0f1" stroke-opacity="0.19" stroke-width="1.1"/><ellipse cx="300" cy="214" rx="143" ry="48" fill="none" stroke="#d7d0f1" stroke-opacity="0.13" stroke-width="1.1"/>
+    <ellipse class="ring-rim" cx="300" cy="214" rx="143" ry="48" fill="url(#ring-surface-1)" stroke="#d7d0f1" stroke-width="1.5"/>
+    <ellipse cx="300" cy="214" rx="126" ry="40" fill="#14282d" fill-opacity=".88" stroke="#d7d0f1" stroke-opacity=".35"/>
+    <ellipse class="ring-tracer" cx="300" cy="214" rx="143" ry="48" fill="none" stroke="#fff8ed" stroke-width="2.5" pathLength="100" stroke-dasharray="4 96"/>
+  </g><g class="ecosystem-ring" data-ring="0" style="--ring-color:#edc8b2;--ring-delay:0s">
+    <ellipse cx="300" cy="173.5" rx="130" ry="45" fill="none" stroke="#edc8b2" stroke-opacity="0.67" stroke-width="1.1"/><ellipse cx="300" cy="172" rx="130" ry="45" fill="none" stroke="#edc8b2" stroke-opacity="0.61" stroke-width="1.1"/><ellipse cx="300" cy="170.5" rx="130" ry="45" fill="none" stroke="#edc8b2" stroke-opacity="0.55" stroke-width="1.1"/><ellipse cx="300" cy="169" rx="130" ry="45" fill="none" stroke="#edc8b2" stroke-opacity="0.49" stroke-width="1.1"/><ellipse cx="300" cy="167.5" rx="130" ry="45" fill="none" stroke="#edc8b2" stroke-opacity="0.43" stroke-width="1.1"/><ellipse cx="300" cy="166" rx="130" ry="45" fill="none" stroke="#edc8b2" stroke-opacity="0.37" stroke-width="1.1"/><ellipse cx="300" cy="164.5" rx="130" ry="45" fill="none" stroke="#edc8b2" stroke-opacity="0.31" stroke-width="1.1"/><ellipse cx="300" cy="163" rx="130" ry="45" fill="none" stroke="#edc8b2" stroke-opacity="0.25" stroke-width="1.1"/><ellipse cx="300" cy="161.5" rx="130" ry="45" fill="none" stroke="#edc8b2" stroke-opacity="0.19" stroke-width="1.1"/><ellipse cx="300" cy="160" rx="130" ry="45" fill="none" stroke="#edc8b2" stroke-opacity="0.13" stroke-width="1.1"/>
+    <ellipse class="ring-rim" cx="300" cy="160" rx="130" ry="45" fill="url(#ring-surface-0)" stroke="#edc8b2" stroke-width="1.5"/>
+    <ellipse cx="300" cy="160" rx="113" ry="37" fill="#14282d" fill-opacity=".88" stroke="#edc8b2" stroke-opacity=".35"/>
+    <ellipse class="ring-tracer" cx="300" cy="160" rx="130" ry="45" fill="none" stroke="#fff8ed" stroke-width="2.5" pathLength="100" stroke-dasharray="4 96"/>
+  </g>
+        <g fill="#dbe7d8"><circle cx="300" cy="104" r="4"/><path d="M293 104h14M300 97v14" stroke="#dbe7d8" stroke-width=".6"/></g>
+        <path d="M300 105V75H426" fill="none" stroke="#a4bfb1" stroke-opacity=".4"/>
+        <text x="433" y="78" fill="#b5cbbd" font-size="9" letter-spacing="1.5" font-family="monospace">IN HARMONY</text>
+      </svg>
+      <div class="ecosystem-art-foot"><span class="sculpture-caption">Intelligence, illuminated.</span><span>FIVE PARTS. ONE FLOW.</span></div>
+    </div>
+  </div>
+</section>
 
         <!-- ============================================
              9. PREDICTIVE (tre små telefoner)
@@ -1167,17 +947,10 @@
         <!-- ============================================
              10. TECH LAB – intro till komponentlabbet
              ============================================ -->
-        <section class="lab-intro wave-divider" id="lab" aria-labelledby="lab-title">
-            <div class="lab-intro__inner">
-                <span class="section-badge">Tech Lab</span>
-                <h2 id="lab-title">Under huven</h2>
-                <p>
-                    Här nedanför ligger komponentlabbet: samma teknik som driver sidan –
-                    Rive- och Lottie-animationer, fyra diagrambibliotek och en uppsättning
-                    interaktiva kort – körda live så att du kan jämföra dem sida vid sida.
-                </p>
-            </div>
-        </section>
+        <section class="studio-section curiosity-section" id="lab" aria-labelledby="lab-title" data-light="warm">
+  <div class="curiosity-layout"><div class="studio-copy curiosity-copy"><span class="atelier-label">THE CREATIVE PLAYGROUND</span><h2 id="lab-title">A little curiosity.<br><em>A lot of character.</em></h2><p>Ljus som rör sig. Former som hittar balans. Data som blir ett landskap. En samling små upplevelser, skapade för att väcka nyfikenhet.</p><div class="curiosity-caption"><span class="studio-micro">OBJECT NO. 01</span><h3>Endless possibilities.</h3><p>En obruten form. Nya perspektiv från varje vinkel.</p></div><div class="material-controls" role="group" aria-label="Välj ljus för 3D-skulpturen"><button type="button" data-material="warm" aria-pressed="true"><i></i>Warm porcelain</button><button type="button" data-material="cool" aria-pressed="false"><i></i>Moonlight silver</button></div></div>
+  <div class="curiosity-stage"><div class="curiosity-stage-top"><span class="studio-micro">STUDIES IN FORM &amp; FEELING</span><button class="studio-pause" type="button" data-studio-pause aria-pressed="false" aria-label="Pausa skulpturens rörelse">Ⅱ</button></div><div class="sculpture-halo" aria-hidden="true"></div><div class="sculpture-plinth" aria-hidden="true"></div><img class="curiosity-object" src="images/curiosity-sculpture.svg" width="600" height="500" loading="lazy" alt="En tredimensionell, sammanflätad knut i varm porslinston med mjuka metalliska reflexer"><div class="curiosity-stage-bottom"><span class="material-label" role="status">01 / WARM PORCELAIN</span><span>A DIFFERENT POINT OF VIEW</span></div></div></div>
+</section>
 
         <!-- ============================================
              11. RIVE
@@ -1187,13 +960,41 @@
                 <span class="section-badge">Animation Technology</span>
                 <h2 id="rive-title">Small details. Real character.</h2>
                 <p>
-                    En liten samling rörelsestudier. Från interaktiva fordon till ljus, material och vätska – detaljer som ger en digital upplevelse liv.
+                    En liten samling rörelsestudier. Från svävande skulpturer till ljus, material och vätska – detaljer som ger en digital upplevelse liv.
                 </p>
-                <a href="https://rive.app/" target="_blank" rel="noopener" class="chart-link chart-link--rive">Skapa egna på rive.app</a>
             </div>
 
             <div class="rive-demo-grid">
-                <article class="rive-card scene-card"><div class="scene-stage"><svg class="product-scene van-scene" viewBox="0 0 500 340" role="img" aria-label="Verklighetstrogen silvergrön skåpbil i trekvartsperspektiv med rörliga hjul och ljusreflexer"><defs><linearGradient id="van-bg" x2="0" y2="1"><stop stop-color="#dee8e6"/><stop offset="1" stop-color="#b9ceca"/></linearGradient><linearGradient id="van-side" x2=".1" y2="1"><stop stop-color="#e6efec"/><stop offset=".42" stop-color="#b8ccc5"/><stop offset=".7" stop-color="#91ada4"/><stop offset=".86" stop-color="#bbcdc6"/><stop offset="1" stop-color="#708e84"/></linearGradient><linearGradient id="van-front" x2="1" y2=".8"><stop stop-color="#dce8e1"/><stop offset=".5" stop-color="#bfd1c7"/><stop offset="1" stop-color="#91ada2"/></linearGradient><linearGradient id="van-glass" x2="1" y2="1"><stop stop-color="#658792"/><stop offset=".4" stop-color="#314d5a"/><stop offset="1" stop-color="#182d37"/></linearGradient><radialGradient id="van-shadow"><stop stop-color="#283e39" stop-opacity=".4"/><stop offset="1" stop-color="#283e39" stop-opacity="0"/></radialGradient><clipPath id="van-window-mask"><path d="m270 126 70 8 17 56-72-9Z"/></clipPath></defs><rect width="500" height="340" fill="url(#van-bg)"/><circle cx="385" cy="83" r="48" fill="#f8faf0" opacity=".45"/><path d="M0 221 93 199 157 211 226 191 327 216 423 197 500 211V340H0Z" fill="#a1b8b1" opacity=".4"/><path d="M0 267 500 242V340H0Z" fill="#93aaa3" opacity=".35"/><g class="van-road" stroke="#e6eeea" stroke-width="2" opacity=".5"><path d="M-100 310 10 299M105 290 215 279M310 270 420 259M515 250 625 239"/></g><ellipse cx="253" cy="270" rx="167" ry="24" fill="url(#van-shadow)"/><g class="van-body"><path d="M97 125Q98 112 115 109L259 89Q280 87 303 98L345 116 376 190 378 239 298 274 106 239Z" fill="url(#van-side)" stroke="#7d998f" stroke-width="1.2"/><path d="m110 112 150-21q19-1 39 9l43 17-77 5Z" fill="#eff4ef"/><path d="m265 122 79-5 31 74 3 48-80 35-28-78Z" fill="url(#van-front)"/><path d="M104 131 252 110l8 119-151 12Z" fill="none" stroke="#7e9e90" stroke-opacity=".5"/><path d="m179 122 6 114M110 205l149-16" stroke="#698c7e" stroke-width="1" opacity=".6"/><path d="m263 123 7 74 27 64" fill="none" stroke="#638578"/><path d="m270 126 70 8 17 56-72-9Z" fill="url(#van-glass)" stroke="#6b8983" stroke-width="3"/><g clip-path="url(#van-window-mask)"><path class="van-reflection" d="m251 119 22-4 80 94-24 3Z" fill="#d5f0ef" opacity=".22"/><path d="m268 136 80 18" stroke="#d5e9e4" stroke-opacity=".2" stroke-width="2"/></g><path d="m228 123 27-4 6 61-29 3Z" fill="url(#van-glass)" stroke="#749187" stroke-width="2"/><path d="m285 180 21-10m9 14 25-9" stroke="#111e26" stroke-width="2"/><path d="m283 195 78 6 4 30-65 22Z" fill="#afc6b9"/><path d="m303 222 47-9 1 21-42 15Z" fill="#293e3b"/><path d="m307 226 38-9m-36 15 37-9m-35 15 35-10" stroke="#778d81" stroke-width="1.2"/><path d="m285 203 15 2 4 11-14 1Z" fill="#f4ffe6" stroke="#829a8c"/><path d="m351 198 15-1 4 11-16 4Z" fill="#f4ffe6" stroke="#829a8c"/><path d="m304 254 53-18 7 8-51 20Z" fill="#213934"/><path d="m320 241 21-6 1 6-21 7Z" fill="#dfe9df"/><path d="m99 220 170 23 29 23 3 8-199-32Z" fill="#415e53"/><path d="m103 223 161 18" stroke="#d6e6da" stroke-opacity=".6" stroke-width="2"/><path d="M128 246c-8-44 35-52 43 5M242 263c-8-48 35-52 45 6" fill="#243d32"/><g transform="translate(147 239)"><ellipse rx="17" ry="26" fill="#14212a"/><ellipse rx="12.24" ry="19.76" fill="#71838a" stroke="#c1ccd0" stroke-width="1.5"/><g class="van-wheel"><ellipse rx="9.01" ry="15.079999999999998" fill="#253741"/><path d="M-2-16.900000000000002 2-16.900000000000002 3-3-2-1Z" fill="#b6c3c8" transform="rotate(0)"/><path d="M-2-16.900000000000002 2-16.900000000000002 3-3-2-1Z" fill="#b6c3c8" transform="rotate(60)"/><path d="M-2-16.900000000000002 2-16.900000000000002 3-3-2-1Z" fill="#b6c3c8" transform="rotate(120)"/><path d="M-2-16.900000000000002 2-16.900000000000002 3-3-2-1Z" fill="#b6c3c8" transform="rotate(180)"/><path d="M-2-16.900000000000002 2-16.900000000000002 3-3-2-1Z" fill="#b6c3c8" transform="rotate(240)"/><path d="M-2-16.900000000000002 2-16.900000000000002 3-3-2-1Z" fill="#b6c3c8" transform="rotate(300)"/><circle r="3" fill="#d7e0e3"/></g></g><g transform="translate(264 254)"><ellipse rx="19" ry="28" fill="#14212a"/><ellipse rx="13.68" ry="21.28" fill="#71838a" stroke="#c1ccd0" stroke-width="1.5"/><g class="van-wheel"><ellipse rx="10.07" ry="16.24" fill="#253741"/><path d="M-2-18.2 2-18.2 3-3-2-1Z" fill="#b6c3c8" transform="rotate(0)"/><path d="M-2-18.2 2-18.2 3-3-2-1Z" fill="#b6c3c8" transform="rotate(60)"/><path d="M-2-18.2 2-18.2 3-3-2-1Z" fill="#b6c3c8" transform="rotate(120)"/><path d="M-2-18.2 2-18.2 3-3-2-1Z" fill="#b6c3c8" transform="rotate(180)"/><path d="M-2-18.2 2-18.2 3-3-2-1Z" fill="#b6c3c8" transform="rotate(240)"/><path d="M-2-18.2 2-18.2 3-3-2-1Z" fill="#b6c3c8" transform="rotate(300)"/><circle r="3" fill="#d7e0e3"/></g></g><path d="m250 174 15-3 10 13-9 9-12-2Z" fill="#3e5c52"/><path d="m259 177 10 8-6 5-8-4Z" fill="#8aa89d"/><path d="m192 171 12-1" stroke="#4e7061" stroke-width="3" stroke-linecap="round"/><path d="m113 131 3 83" stroke="#eef9ee" stroke-opacity=".4" stroke-width="2"/><path d="m102 167 4 23" stroke="#b16554" stroke-width="4"/><text x="137" y="176" fill="#426959" font-size="15" font-family="Georgia" transform="rotate(-5 137 176)">techflow</text><text x="139" y="190" fill="#678578" font-size="4.5" letter-spacing="1.7" transform="rotate(-5 139 190)">MADE TO MOVE</text></g><text x="25" y="32" fill="#617975" font-size="9" letter-spacing="2" font-family="monospace">MOTION / 01</text></svg><button class="scene-toggle" type="button" aria-pressed="false" aria-label="Pausa Made to move"><span aria-hidden="true">Ⅱ</span></button></div><div class="rive-card-info"><span class="scene-eyebrow">01 / MOTION STUDY</span><h3>Made to move</h3><p>Mjuka reflexer, skulpterade karossytor och små rörelser som ger resan liv.</p></div></article>
+                <article class="rive-card scene-card"><div class="scene-stage kinetic-stage">
+  <svg class="product-scene kinetic-scene" viewBox="0 0 500 340" role="img" aria-label="En svävande konstnärlig mobil med en terrakottasol, mässingsbågar och en grön halvmåne mot en varm gräddvit bakgrund">
+    <defs>
+      <linearGradient id="mobile-bg" x2=".8" y2="1"><stop stop-color="#f6f0e5"/><stop offset="1" stop-color="#e5d8c4"/></linearGradient>
+      <linearGradient id="mobile-copper" x2="1" y2=".7"><stop stop-color="#f6c09a"/><stop offset=".45" stop-color="#cf815e"/><stop offset="1" stop-color="#a9553f"/></linearGradient>
+      <linearGradient id="mobile-brass" x2="1" y2=".3"><stop stop-color="#a88650"/><stop offset=".45" stop-color="#f9deb0"/><stop offset="1" stop-color="#b18b52"/></linearGradient>
+      <linearGradient id="mobile-jade" x2="1" y2="1"><stop stop-color="#99b9a3"/><stop offset="1" stop-color="#3f6b5e"/></linearGradient>
+      <radialGradient id="mobile-shadow"><stop stop-color="#71634e" stop-opacity=".2"/><stop offset="1" stop-color="#71634e" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="500" height="340" fill="url(#mobile-bg)"/>
+    <path d="M352 340V128a89 89 0 0 0-178 0v212" fill="#fcf7eb" opacity=".45"/>
+    <path d="M365 340V128a102 102 0 0 0-204 0v212" fill="none" stroke="#fff9ed" stroke-opacity=".45"/>
+    <ellipse class="mobile-shadow" cx="251" cy="308" rx="133" ry="19" fill="url(#mobile-shadow)"/>
+    <path d="M253 0v58" stroke="#9e8c70" stroke-width="1"/>
+    <g class="kinetic-mobile">
+      <circle cx="253" cy="61" r="5" fill="none" stroke="url(#mobile-brass)" stroke-width="2"/>
+      <path d="M143 106Q208 42 336 96" fill="none" stroke="url(#mobile-brass)" stroke-width="4" stroke-linecap="round"/>
+      <path d="M145 106v38M335 96v77M245 77v123" fill="none" stroke="#a59072" stroke-width="1"/>
+      <g class="mobile-sun"><circle cx="145" cy="179" r="38" fill="url(#mobile-copper)"/><path d="M116 177a29 29 0 0 1 40-26" fill="none" stroke="#ffdcc0" stroke-opacity=".55" stroke-width="1.5"/></g>
+      <g class="mobile-moon"><path d="M296 173h79a39.5 39.5 0 0 1-79 0" fill="url(#mobile-jade)"/><path d="M301 177h69" stroke="#d7e6c9" stroke-opacity=".6"/></g>
+      <path d="M199 218q44-36 98 1" fill="none" stroke="url(#mobile-brass)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M200 218v27M295 219v30" fill="none" stroke="#a59072" stroke-width="1"/>
+      <ellipse cx="200" cy="259" rx="13" ry="20" fill="url(#mobile-brass)" transform="rotate(25 200 259)"/>
+      <circle cx="295" cy="256" r="8" fill="#b7725a"/>
+    </g>
+    <text x="25" y="32" fill="#85745e" font-size="9" letter-spacing="2" font-family="monospace">BALANCE / 01</text>
+    <text x="25" y="317" fill="#85745e" font-size="8" letter-spacing="1.3" font-family="monospace">A LITTLE SPACE TO BREATHE</text>
+  </svg>
+  <button class="scene-toggle" type="button" aria-pressed="false" aria-label="Pausa The art of balance"><span aria-hidden="true">Ⅱ</span></button>
+  </div><div class="rive-card-info"><span class="scene-eyebrow">01 / KINETIC SCULPTURE</span><h3>The art of balance</h3><p>Terrakotta, mässing och salviagrönt. En liten skulptur som hittar sin egen rytm.</p></div></article>
                 <article class="rive-card scene-card">
             <div class="scene-stage">
                 <svg class="product-scene car-scene" viewBox="0 0 500 340" role="img" aria-label="Silverfärgad elbil med roterande hjul och rörligt landskap">
@@ -1383,53 +1184,6 @@
             </div>
         </article>
             </div>
-
-            <div class="rive-info-box">
-                <h3>Hur skapar man Rive-animationer?</h3>
-                <ol class="rive-steps">
-                    <li class="rive-step">
-                        <span class="step-number" aria-hidden="true">1</span>
-                        <div class="step-content">
-                            <strong>Skapa konto</strong>
-                            <p>Gå till <a href="https://rive.app/" target="_blank" rel="noopener">rive.app</a> – gratis att använda</p>
-                        </div>
-                    </li>
-                    <li class="rive-step">
-                        <span class="step-number" aria-hidden="true">2</span>
-                        <div class="step-content">
-                            <strong>Designa i editorn</strong>
-                            <p>Rita former, lägg till bones, skapa animationer</p>
-                        </div>
-                    </li>
-                    <li class="rive-step">
-                        <span class="step-number" aria-hidden="true">3</span>
-                        <div class="step-content">
-                            <strong>Exportera .riv</strong>
-                            <p>Ladda ner din animation som .riv-fil</p>
-                        </div>
-                    </li>
-                    <li class="rive-step">
-                        <span class="step-number" aria-hidden="true">4</span>
-                        <div class="step-content">
-                            <strong>Lägg till på webben</strong>
-                            <p>Använd @rive-app/canvas för att visa den</p>
-                        </div>
-                    </li>
-                </ol>
-
-                <div class="code-example">
-                    <h4>Kodexempel</h4>
-                    <pre><code>&lt;script src="https://cdn.jsdelivr.net/npm/@rive-app/canvas@2.42.1/rive.min.js"&gt;&lt;/script&gt;
-&lt;canvas id="rive-canvas"&gt;&lt;/canvas&gt;
-&lt;script&gt;
-  new rive.Rive({
-    src: "animation.riv",
-    canvas: document.getElementById("rive-canvas"),
-    autoplay: true
-  });
-&lt;/script&gt;</code></pre>
-                </div>
-            </div>
         </section>
 
         <!-- ============================================
@@ -1438,337 +1192,43 @@
         <section class="lottie-section wave-divider" id="lottie-demo" aria-labelledby="lottie-title"><div class="orbital-layout"><div class="orbital-copy"><span class="section-badge">Motion, with purpose</span><h2 id="lottie-title">A thousand details.<br>One beautiful rhythm.</h2><p>A little curiosity. A change of pace. Watch every thread find its place in a living constellation of light.</p><div class="orbital-description"><span>01 / EXPLORE THE MOTION</span><p>Välj ett tempo och se hur formen förändrar sitt uttryck. Samma rörelse, en helt annan känsla.</p></div><div class="orbit-speeds" role="group" aria-label="Lottie-animationens hastighet"><button type="button" data-orbit-speed="0.5" aria-pressed="false" disabled>Drift <span>0.5×</span></button><button type="button" data-orbit-speed="1" aria-pressed="true" disabled>Flow <span>1×</span></button><button type="button" data-orbit-speed="1.8" aria-pressed="false" disabled>Pulse <span>1.8×</span></button></div><span class="orbit-credit">An original motion study · Made with Lottie</span></div><div class="orbital-stage"><div class="orbital-stage-head"><span>TF / ORBITAL INTELLIGENCE</span><span class="screen-live">Motion study</span></div><div class="orbital-glow" aria-hidden="true"></div><div id="lottie-animation" role="img" aria-label="Lottie-skulptur av roterande lysande banor och satelliter"><svg class="orbit-fallback" viewBox="0 0 600 600" aria-hidden="true"><g fill="none" stroke="#94d8d5" stroke-width="1.5"><ellipse cx="300" cy="300" rx="90" ry="170" transform="rotate(0 300 300)"/><ellipse cx="300" cy="300" rx="90" ry="170" transform="rotate(13 300 300)"/><ellipse cx="300" cy="300" rx="90" ry="170" transform="rotate(26 300 300)"/><ellipse cx="300" cy="300" rx="90" ry="170" transform="rotate(39 300 300)"/><ellipse cx="300" cy="300" rx="90" ry="170" transform="rotate(52 300 300)"/><ellipse cx="300" cy="300" rx="90" ry="170" transform="rotate(65 300 300)"/><ellipse cx="300" cy="300" rx="90" ry="170" transform="rotate(78 300 300)"/><ellipse cx="300" cy="300" rx="90" ry="170" transform="rotate(91 300 300)"/><ellipse cx="300" cy="300" rx="90" ry="170" transform="rotate(104 300 300)"/><ellipse cx="300" cy="300" rx="90" ry="170" transform="rotate(117 300 300)"/><ellipse cx="300" cy="300" rx="90" ry="170" transform="rotate(130 300 300)"/><ellipse cx="300" cy="300" rx="90" ry="170" transform="rotate(143 300 300)"/><ellipse cx="300" cy="300" rx="90" ry="170" transform="rotate(156 300 300)"/><ellipse cx="300" cy="300" rx="90" ry="170" transform="rotate(169 300 300)"/></g></svg></div><div class="orbital-stage-foot"><span class="orbit-state" role="status">Loading the constellation…</span><button class="orbit-toggle" type="button" aria-label="Pausa Lottie-animationen" aria-pressed="false" disabled><span aria-hidden="true">Ⅱ</span></button></div></div></div></section>
 
         <!-- ============================================
-             13–16. DIAGRAMBIBLIOTEK (laddas först när de närmar sig)
+             13. THE FLOW OBSERVATORY
              ============================================ -->
-        <section class="chart-demo-section chartjs-section wave-divider wave-divider--s" id="chartjs" aria-labelledby="chartjs-title" data-chart="chartjs">
-            <div class="chart-demo-header">
-                <span class="section-badge">Chart Library #1</span>
-                <h2 id="chartjs-title">Chart.js</h2>
-                <p>
-                    Det enklaste biblioteket att börja med. Perfekt för stapel-, linje- och cirkeldiagram.
-                    Endast ~60 KB och MIT-licensierat.
-                </p>
-                <a href="https://www.chartjs.org/" target="_blank" rel="noopener" class="chart-link">chartjs.org</a>
-            </div>
-            <div class="chart-demo-content">
-                <div class="chart-container">
-                    <canvas id="chartjs-demo" role="img" aria-label="Linjediagram: användare och konverteringar januari–juni"></canvas>
-                </div>
-                <div class="chart-info">
-                    <h3>Fördelar</h3>
-                    <ul>
-                        <li>Enkel att komma igång</li>
-                        <li>Responsiv och animerad</li>
-                        <li>8 inbyggda diagramtyper</li>
-                        <li>Bra dokumentation</li>
-                    </ul>
-                    <h3>Användning</h3>
-                    <code>&lt;script src="chart.umd.js"&gt;&lt;/script&gt;</code>
-                </div>
-            </div>
-        </section>
+        <section class="observatory-section" id="observatory" aria-labelledby="observatory-title">
+  <div class="observatory-heading"><div><span class="atelier-label">THE FLOW OBSERVATORY</span><h2 id="observatory-title">A clearer picture.<br><em>A better rhythm.</em></h2></div><p>Behind every number, a little more possibility.<br> Explore the shape of a week well spent.</p></div>
+  <div class="observatory-panel">
+    <div class="observatory-toolbar"><span class="observatory-brand"><span class="art-live-dot"></span> Your momentum</span><div class="observatory-periods" role="group" aria-label="Välj tidsperiod"><button type="button" data-period="week" aria-pressed="true">Week</button><button type="button" data-period="month" aria-pressed="false">Month</button><button type="button" data-period="quarter" aria-pressed="false">Quarter</button></div><span class="observatory-demo">ILLUSTRATIVE DATA</span></div>
+    <div class="observatory-main">
+      <div class="landscape-panel">
+        <div class="landscape-title"><div><span class="observatory-kicker">ROOM FOR YOUR BEST WORK</span><div class="momentum-value"><strong data-momentum>32.5</strong><span>hours<br>in flow</span></div></div><span class="momentum-change" data-change>↗ 18.2% this week</span></div>
+        <svg class="flow-landscape" viewBox="0 0 760 310" role="img" aria-labelledby="landscape-chart-title landscape-chart-desc"><title id="landscape-chart-title">Din veckorytm</title><desc id="landscape-chart-desc">Illustrativt landskap över fokustid under veckan. Totalt 32,5 timmar, en ökning med 18,2 procent.</desc><defs><linearGradient id="landscape-ink" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#6faaa1"/><stop offset=".5" stop-color="#b8d9b7"/><stop offset="1" stop-color="#eec7a0"/></linearGradient><linearGradient id="landscape-fill" x2="0" y2="1"><stop stop-color="#a8c8ab" stop-opacity=".18"/><stop offset="1" stop-color="#a8c8ab" stop-opacity="0"/></linearGradient></defs><g class="landscape-grid" stroke="#c2d7c5" stroke-opacity=".07"><path d="M20 70H740M20 130H740M20 190H740M20 250H740M20 30V275M140 30V275M260 30V275M380 30V275M500 30V275M620 30V275M740 30V275"/></g><g id="landscape-lines"></g></svg>
+        <div class="landscape-axis" aria-hidden="true"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span></div>
+        <div class="landscape-legend"><span><i></i> Focus, finding its natural rhythm</span><span data-period-caption>16 — 22 SEPTEMBER</span></div>
+      </div>
+      <aside class="rhythm-panel" aria-label="Fördelning av tid">
+        <span class="observatory-kicker">A LITTLE MORE BALANCE</span>
+        <div class="rhythm-ring"><svg viewBox="0 0 180 180" aria-hidden="true"><circle cx="90" cy="90" r="72" fill="none" stroke="#ffffff0d" stroke-width="9"/><circle class="rhythm-arc rhythm-arc--focus" cx="90" cy="90" r="72" pathLength="100" fill="none" stroke="#c3dac1" stroke-width="9" stroke-dasharray="64 36"/><circle class="rhythm-arc rhythm-arc--collaboration" cx="90" cy="90" r="72" pathLength="100" fill="none" stroke="#e9bc9d" stroke-width="9" stroke-dasharray="21 79" stroke-dashoffset="-67"/><circle class="rhythm-arc rhythm-arc--space" cx="90" cy="90" r="72" pathLength="100" fill="none" stroke="#9ca8c0" stroke-width="9" stroke-dasharray="6 94" stroke-dashoffset="-91"/></svg><div><strong data-focus>68<span>%</span></strong><span>deep focus</span></div></div>
+        <div class="rhythm-key"><span>Deep work <b data-share="focus">68%</b></span><span>Collaboration <b data-share="collaboration">24%</b></span><span>Breathing room <b data-share="space">8%</b></span></div>
+        <p class="rhythm-note">Less switching.<br><em>More making.</em></p>
+      </aside>
+    </div>
+    <div class="observatory-stats" aria-live="polite" aria-atomic="true"><div><span>TIME GIVEN BACK</span><strong data-saved>8.4 <small>hrs</small></strong><p>A little more room for you.</p></div><div><span>QUIETLY TAKEN CARE OF</span><strong data-tasks>142 <small>tasks</small></strong><p>The small things, handled.</p></div><div><span>YOUR WEEK, IN A WORD</span><strong class="observatory-word" data-word>Effortless.</strong><p data-insight>Your strongest flow was on Friday.</p></div></div>
+    <span class="sr-only" id="observatory-announcement" role="status"></span>
+  </div>
+  <div class="observatory-footer"><span>Less noise. More perspective.</span><span>DESIGNED TO MAKE SENSE.</span></div>
+</section>
 
-        <section class="chart-demo-section d3-section wave-divider" id="d3js" aria-labelledby="d3-title" data-chart="d3">
-            <div class="chart-demo-header">
-                <span class="section-badge">Chart Library #2</span>
-                <h2 id="d3-title">D3.js</h2>
-                <p>
-                    Det mest kraftfulla visualiseringsbiblioteket. Fullständig kontroll över varje pixel.
-                    Används av New York Times, BBC och NASA.
-                </p>
-                <a href="https://d3js.org/" target="_blank" rel="noopener" class="chart-link">d3js.org</a>
-            </div>
-            <div class="chart-demo-content">
-                <div class="chart-container">
-                    <svg id="d3-demo" viewBox="0 0 400 250" role="img" aria-label="Stapeldiagram: popularitet för fem ramverk"></svg>
-                </div>
-                <div class="chart-info">
-                    <h3>Fördelar</h3>
-                    <ul>
-                        <li>Oändlig flexibilitet</li>
-                        <li>SVG-baserat</li>
-                        <li>Kraftfulla övergångar</li>
-                        <li>Databindning</li>
-                    </ul>
-                    <h3>Nackdelar</h3>
-                    <ul class="chart-info__cons">
-                        <li>Brant inlärningskurva</li>
-                        <li>Mer kod krävs</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="chart-demo-section apex-section wave-divider wave-divider--s" id="apex" aria-labelledby="apex-title" data-chart="apex">
-            <div class="chart-demo-header">
-                <span class="section-badge">Chart Library #3</span>
-                <h2 id="apex-title">ApexCharts</h2>
-                <p>
-                    Moderna, interaktiva grafer med minimal konfiguration.
-                    Snyggast "out of the box" med zoom, pan och export inbyggt.
-                </p>
-                <a href="https://apexcharts.com/" target="_blank" rel="noopener" class="chart-link">apexcharts.com</a>
-            </div>
-            <div class="chart-demo-content">
-                <div class="chart-container">
-                    <div id="apex-demo" role="img" aria-label="Grupperat stapeldiagram: försäljning och intäkter januari–september"></div>
-                </div>
-                <div class="chart-info">
-                    <h3>Fördelar</h3>
-                    <ul>
-                        <li>Professionellt utseende</li>
-                        <li>Interaktiv (zoom, pan)</li>
-                        <li>Exportera till PNG/SVG</li>
-                        <li>Dark mode inbyggt</li>
-                    </ul>
-                    <h3>Användning</h3>
-                    <code>&lt;script src="apexcharts.min.js"&gt;&lt;/script&gt;</code>
-                </div>
-            </div>
-        </section>
-
-        <section class="chart-demo-section frappe-section wave-divider" id="frappe-charts" aria-labelledby="frappe-title" data-chart="frappe">
-            <div class="chart-demo-header">
-                <span class="section-badge">Chart Library #4</span>
-                <h2 id="frappe-title">Frappe Charts</h2>
-                <p>
-                    Lättviktigt (~25 KB) med GitHub-inspirerad design.
-                    Perfekt för dashboards och enkla visualiseringar.
-                </p>
-                <a href="https://frappe.io/charts" target="_blank" rel="noopener" class="chart-link">frappe.io/charts</a>
-            </div>
-            <div class="chart-demo-content">
-                <div class="chart-container">
-                    <div id="frappe-demo" role="img" aria-label="Stapeldiagram: besökare och klick per veckodag"></div>
-                </div>
-                <div class="chart-info">
-                    <h3>Fördelar</h3>
-                    <ul>
-                        <li>Minsta filstorleken</li>
-                        <li>Heatmaps (GitHub-stil)</li>
-                        <li>Inga beroenden</li>
-                        <li>MIT-licens</li>
-                    </ul>
-                    <h3>Perfekt för</h3>
-                    <ul>
-                        <li>Enkla dashboards</li>
-                        <li>Prestandakritiska appar</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================
-             17. JÄMFÖRELSE
-             ============================================ -->
-        <section class="chart-comparison-section wave-divider wave-divider--s" id="comparison" aria-labelledby="comparison-title">
-            <div class="comparison-header">
-                <span class="section-badge">Överblick</span>
-                <h2 id="comparison-title">Jämförelse</h2>
-            </div>
-            <div class="comparison-table">
-                <table>
-                    <caption class="visually-hidden">Jämförelse av fyra diagrambibliotek</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Bibliotek</th>
-                            <th scope="col">Storlek</th>
-                            <th scope="col">Svårighetsgrad</th>
-                            <th scope="col">Flexibilitet</th>
-                            <th scope="col">Bäst för</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><th scope="row">Chart.js</th><td>~60 KB</td><td>Lätt</td><td>Medium</td><td>Nybörjare</td></tr>
-                        <tr><th scope="row">D3.js</th><td>~250 KB</td><td>Svår</td><td>Maximal</td><td>Avancerade</td></tr>
-                        <tr><th scope="row">ApexCharts</th><td>~450 KB</td><td>Medium</td><td>Hög</td><td>Professionella</td></tr>
-                        <tr><th scope="row">Frappe</th><td>~25 KB</td><td>Lätt</td><td>Låg</td><td>Enkla dashboards</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- ============================================
-             18. INTERAKTIVA KORT (hover-reveal)
-             ============================================ -->
-        <section class="cafe-section wave-divider" id="explore" aria-labelledby="explore-title">
-            <div class="cafe-header">
-                <span class="section-badge">Interactive Showcase</span>
-                <h2 id="explore-title">Hover to Explore</h2>
-                <p>Three ways to make room for better work. Hover, tap or focus to explore.</p>
-            </div>
-            <div class="cafe-wrapper">
-                <article class="cafe-container" tabindex="0">
-                    <div class="cafe-pics" aria-hidden="true">
-                        <svg class="cafe-float-icon" viewBox="0 0 120 120" width="150" height="150">
-                            <rect x="10" y="55" width="18" height="55" rx="4" fill="#818cf8"/>
-                            <rect x="35" y="35" width="18" height="75" rx="4" fill="#6366f1"/>
-                            <rect x="60" y="15" width="18" height="95" rx="4" fill="#4f46e5"/>
-                            <rect x="85" y="40" width="18" height="70" rx="4" fill="#818cf8"/>
-                            <path d="M18 50 44 30l25-20 25 25" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="18" cy="50" r="4" fill="#fbbf24"/>
-                            <circle cx="44" cy="30" r="4" fill="#fbbf24"/>
-                            <circle cx="69" cy="10" r="4" fill="#fbbf24"/>
-                            <circle cx="94" cy="35" r="4" fill="#fbbf24"/>
-                        </svg>
-                    </div>
-                    <div class="cafe-card">
-                        <h3 class="cafe-card-title">Analyze</h3>
-                        <img src="images/analytics-dashboard.jpg" alt="Analysdashboard med grafer på en skärm" width="600" height="750" loading="lazy">
-                        <div class="cafe-information">
-                            <h4 class="cafe-info-title">Deep Analytics</h4>
-                            <p class="cafe-info-text">TechFlow processes billions of data points in real time, giving you extraordinary depth and clarity – from high-level trends to granular insights.</p>
-                            <p class="cafe-more"><a href="#layers">Read more …</a></p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="cafe-container" tabindex="0">
-                    <div class="cafe-pics" aria-hidden="true">
-                        <svg class="cafe-float-icon" viewBox="0 0 120 120" width="150" height="150">
-                            <circle cx="60" cy="60" r="35" fill="none" stroke="#6366f1" stroke-width="6"/>
-                            <circle cx="60" cy="60" r="15" fill="#4f46e5"/>
-                            <rect x="56" y="8" width="8" height="16" rx="3" fill="#818cf8"/>
-                            <rect x="56" y="96" width="8" height="16" rx="3" fill="#818cf8"/>
-                            <rect x="8" y="56" width="16" height="8" rx="3" fill="#818cf8"/>
-                            <rect x="96" y="56" width="16" height="8" rx="3" fill="#818cf8"/>
-                            <rect x="26" y="18" width="8" height="14" rx="3" fill="#a5b4fc" transform="rotate(45 30 25)"/>
-                            <rect x="86" y="88" width="8" height="14" rx="3" fill="#a5b4fc" transform="rotate(45 90 95)"/>
-                            <rect x="86" y="18" width="8" height="14" rx="3" fill="#a5b4fc" transform="rotate(-45 90 25)"/>
-                            <rect x="26" y="88" width="8" height="14" rx="3" fill="#a5b4fc" transform="rotate(-45 30 95)"/>
-                        </svg>
-                    </div>
-                    <div class="cafe-card">
-                        <h3 class="cafe-card-title">Automate</h3>
-                        <img src="images/automation-robot.jpg" alt="Robotarm i en automatiserad miljö" width="600" height="750" loading="lazy">
-                        <div class="cafe-information">
-                            <h4 class="cafe-info-title">Smart Automation</h4>
-                            <p class="cafe-info-text">Start every sprint with intelligent workflows that adapt to your team. Powered by AI that learns your patterns and eliminates repetitive tasks.</p>
-                            <p class="cafe-more"><a href="#circuit">Read more …</a></p>
-                        </div>
-                    </div>
-                </article>
-            <article class="cafe-container" tabindex="0"><div class="cafe-pics" aria-hidden="true"><svg class="cafe-float-icon" viewBox="0 0 120 120" width="150" height="150"><path d="M60 60 22 26M60 60l38-34M60 60l38 36M60 60 22 96" stroke="#a5b4fc" stroke-width="5"/><circle cx="60" cy="60" r="23" fill="#6366f1"/><circle cx="60" cy="60" r="10" fill="#e0e7ff"/><circle cx="22" cy="26" r="13" fill="#8da99a"/><circle cx="22" cy="26" r="5" fill="#e5f5ea"/><circle cx="98" cy="26" r="13" fill="#8da99a"/><circle cx="98" cy="26" r="5" fill="#e5f5ea"/><circle cx="98" cy="96" r="13" fill="#8da99a"/><circle cx="98" cy="96" r="5" fill="#e5f5ea"/><circle cx="22" cy="96" r="13" fill="#8da99a"/><circle cx="22" cy="96" r="5" fill="#e5f5ea"/></svg></div><div class="cafe-card"><h3 class="cafe-card-title">Connect</h3><img src="images/plan-enterprise.jpg" alt="Team som samarbetar i en gemensam arbetsmiljö" width="600" height="750" loading="lazy"><div class="cafe-information"><h4 class="cafe-info-title">Better Together</h4><p class="cafe-info-text">Bring your people, tools and ideas into one connected workspace. Less switching. More shared momentum. Everything you need, working beautifully together.</p><p class="cafe-more"><a href="#end">Explore connections →</a></p></div></div></article>
-            </div>
-        </section>
+        <section class="studio-section explore-section" id="explore" aria-labelledby="explore-title"><div class="studio-heading"><div><span class="atelier-label">MADE TO BE EXPLORED</span><h2 id="explore-title">Three ways.<br><em>More possibility.</em></h2></div><p>A closer look at what better work can feel like.<br> Hover for a little movement. Open to discover more.</p></div><div class="explore-gallery"><details class="explore-piece explore-piece--0"><summary><span class="explore-piece-index">01 / ANALYZE</span><div class="explore-art"><svg viewBox="0 0 360 270" aria-hidden="true"><defs><linearGradient id="explore-lens" x2="1" y2="1"><stop stop-color="#f2dfcd"/><stop offset=".4" stop-color="#b6a5b4"/><stop offset=".7" stop-color="#eee7ec"/><stop offset="1" stop-color="#8e879e"/></linearGradient><radialGradient id="explore-glass"><stop stop-color="#efede8" stop-opacity=".2"/><stop offset=".75" stop-color="#b4afc8" stop-opacity=".2"/><stop offset="1" stop-color="#f4f0f6" stop-opacity=".8"/></radialGradient></defs><ellipse cx="182" cy="234" rx="98" ry="13" fill="#4b435116"/><g class="explore-object"><ellipse cx="180" cy="134" rx="86" ry="86" fill="none" stroke="#7b748c" stroke-width="21" transform="translate(6 8)"/><circle cx="180" cy="134" r="86" fill="url(#explore-glass)" stroke="url(#explore-lens)" stroke-width="21"/><circle cx="180" cy="134" r="73" fill="none" stroke="#fff8f0" stroke-opacity=".7"/><path d="M132 140h21l17-35 22 58 18-30h24" fill="none" stroke="#8f889e" stroke-width="2"/><path d="M123 112a65 65 0 0 1 68-43" fill="none" stroke="#fffaf5" stroke-width="3" stroke-linecap="round"/></g></svg></div><div class="explore-piece-heading"><h3>Analyze</h3><span class="explore-plus" aria-hidden="true">+</span></div><strong>A little more clarity.</strong><p>Find the patterns that bring your next step into focus.</p><span class="explore-affordance">TAKE A CLOSER LOOK <span aria-hidden="true">↗</span></span></summary><div class="explore-expanded"><p>See a bigger picture in the Flow Observatory. Explore your momentum, your time and your natural rhythm.</p><a class="studio-text-link" href="#observatory">Explore the observatory <span aria-hidden="true">↗</span></a></div></details><details class="explore-piece explore-piece--1"><summary><span class="explore-piece-index">02 / AUTOMATE</span><div class="explore-art"><svg viewBox="0 0 360 270" aria-hidden="true"><defs><linearGradient id="explore-copper" x2=".8" y2="1"><stop stop-color="#fae3bd"/><stop offset=".4" stop-color="#d8aa80"/><stop offset=".75" stop-color="#a87559"/><stop offset="1" stop-color="#e5bc99"/></linearGradient></defs><ellipse cx="180" cy="237" rx="98" ry="13" fill="#74513316"/><g class="explore-object" fill="none" stroke="url(#explore-copper)" stroke-width="24"><path d="M111 168a53 53 0 1 1 49-86l43 75a53 53 0 1 0 47-78" stroke-linecap="round"/><path d="M112 168a53 53 0 0 0 48-11l43-75a53 53 0 0 1 47-3" stroke-linecap="round"/></g><path d="M91 94q25-28 53-8m69 77q24 17 45-5" fill="none" stroke="#fff2d8" stroke-opacity=".55" stroke-width="2"/></svg></div><div class="explore-piece-heading"><h3>Automate</h3><span class="explore-plus" aria-hidden="true">+</span></div><strong>Make room for the good stuff.</strong><p>Let the everyday find a rhythm of its own.</p><span class="explore-affordance">TAKE A CLOSER LOOK <span aria-hidden="true">↗</span></span></summary><div class="explore-expanded"><p>Less repetitive work means more space for your ideas. See how everything connects into one thoughtful flow.</p><a class="studio-text-link" href="#layers">Follow the flow <span aria-hidden="true">↗</span></a></div></details><details class="explore-piece explore-piece--2"><summary><span class="explore-piece-index">03 / CONNECT</span><div class="explore-art"><svg viewBox="0 0 360 270" aria-hidden="true"><defs><radialGradient id="explore-sage" cx=".3" cy=".25"><stop stop-color="#eef1d4"/><stop offset=".5" stop-color="#b5c5a8"/><stop offset="1" stop-color="#6d8b80"/></radialGradient></defs><ellipse cx="180" cy="235" rx="98" ry="13" fill="#33534318"/><g class="explore-object"><g fill="none" stroke="#819b89" stroke-opacity=".65"><ellipse cx="180" cy="132" rx="109" ry="46" transform="rotate(-32 180 132)"/><ellipse cx="180" cy="132" rx="109" ry="46" transform="rotate(32 180 132)"/><ellipse cx="180" cy="132" rx="50" ry="96"/></g><g fill="url(#explore-sage)"><circle cx="180" cy="132" r="48"/><circle cx="90" cy="180" r="18"/><circle cx="266" cy="84" r="22"/><circle cx="172" cy="36" r="10"/></g><path d="M149 119a34 34 0 0 1 34-21" stroke="#f8f8df" stroke-opacity=".55" stroke-width="2" fill="none"/></g></svg></div><div class="explore-piece-heading"><h3>Connect</h3><span class="explore-plus" aria-hidden="true">+</span></div><strong>Better, together.</strong><p>Bring your people, your tools and your ideas closer.</p><span class="explore-affordance">TAKE A CLOSER LOOK <span aria-hidden="true">↗</span></span></summary><div class="explore-expanded"><p>One shared workspace, with every part in conversation. Discover the five layers working quietly together.</p><a class="studio-text-link" href="#stack">Meet the ecosystem <span aria-hidden="true">↗</span></a></div></details></div></section>
 
         <!-- ============================================
              19. TRE FUNKTIONSKORT
              ============================================ -->
-        <section class="trio-section wave-divider wave-divider--s" id="capabilities" aria-labelledby="capabilities-title">
-            <div class="trio-header">
-                <span class="section-badge">Core Capabilities</span>
-                <h2 id="capabilities-title">Built for the Future</h2>
-            </div>
-            <div class="trio-holder">
-                <article class="trio-card">
-                    <div class="trio-circle">
-                        <div class="trio-icon" aria-hidden="true">
-                            <svg viewBox="0 0 64 64" fill="currentColor">
-                                <path d="M32 4C16.536 4 4 16.536 4 32s12.536 28 28 28 28-12.536 28-28S47.464 4 32 4zm0 4c13.255 0 24 10.745 24 24S45.255 56 32 56 8 45.255 8 32 18.745 8 32 8z"/>
-                                <circle cx="22" cy="28" r="3"/>
-                                <circle cx="42" cy="28" r="3"/>
-                                <path d="M32 18c-4 0-7.5 1.5-10 4l3 3c1.8-1.8 4.2-3 7-3s5.2 1.2 7 3l3-3c-2.5-2.5-6-4-10-4z"/>
-                                <path d="M20 36c0 6.627 5.373 12 12 12s12-5.373 12-12H20z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <h3 class="trio-title">AI Intelligence</h3>
-                    <p class="trio-desc">Advanced machine learning that adapts to your workflow, predicts issues before they arise, and delivers actionable insights in real time.</p>
-                </article>
-                <article class="trio-card">
-                    <div class="trio-circle">
-                        <div class="trio-icon" aria-hidden="true">
-                            <svg viewBox="0 0 64 64" fill="currentColor">
-                                <path d="M52 28c0-1.1-.4-2.1-1-3 .6-.9 1-1.9 1-3 0-3.3-2.7-6-6-6h-2c1.2-1.6 2-3.7 2-6 0-5.5-4.5-10-10-10S26 4.5 26 10c0 2.3.8 4.4 2 6h-2c-3.3 0-6 2.7-6 6 0 1.1.4 2.1 1 3-.6.9-1 1.9-1 3 0 1.1.4 2.1 1 3-.6.9-1 1.9-1 3 0 3.3 2.7 6 6 6h20c3.3 0 6-2.7 6-6 0-1.1-.4-2.1-1-3 .6-.9 1-1.9 1-3z"/>
-                                <path d="M16 42v16h32V42" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                                <path d="M24 50h16M24 54h12" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <h3 class="trio-title">Cloud Platform</h3>
-                    <p class="trio-desc">Enterprise-grade infrastructure with 99.9% uptime. Scales seamlessly from startup to global enterprise with zero configuration needed.</p>
-                </article>
-                <article class="trio-card">
-                    <div class="trio-circle">
-                        <div class="trio-icon" aria-hidden="true">
-                            <svg viewBox="0 0 64 64" fill="currentColor">
-                                <path d="M32 2 6 16v20c0 13.4 11.1 25.5 26 30 14.9-4.5 26-16.6 26-30V16L32 2zm0 6 20 10.8V36c0 10.4-8.6 20-20 24-11.4-4-20-13.6-20-24V18.8L32 8z"/>
-                                <path d="M28 32l-6-6-3 3 9 9 15-15-3-3z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <h3 class="trio-title">Security First</h3>
-                    <p class="trio-desc">Bank-grade encryption with zero-trust architecture. Your data stays protected with continuous monitoring and automated threat response.</p>
-                </article>
-            </div>
-        </section>
+        <section class="studio-section future-section" id="capabilities" aria-labelledby="capabilities-title"><div class="studio-heading"><div><span class="atelier-label">QUIET POWER. REAL POSSIBILITY.</span><h2 id="capabilities-title">Built for the future.<br><em>Grounded in your day.</em></h2></div><p>The thoughtful things behind a seamless experience.<br> Intelligence. Possibility. Peace of mind.</p></div><div class="future-grid"><article class="future-card future-card--intelligence"><div class="future-card-top"><span>01 / AI INTELLIGENCE</span><span class="future-chip">A LITTLE AHEAD</span></div><div class="future-art"><svg viewBox="0 0 520 330" aria-hidden="true"><defs><radialGradient id="future-orb" cx=".34" cy=".24"><stop stop-color="#e4eddd"/><stop offset=".35" stop-color="#a8bda4"/><stop offset=".7" stop-color="#4b746b"/><stop offset="1" stop-color="#233d39"/></radialGradient><radialGradient id="future-glow"><stop stop-color="#b5d7b4" stop-opacity=".18"/><stop offset="1" stop-color="#b5d7b4" stop-opacity="0"/></radialGradient></defs><ellipse cx="260" cy="165" rx="220" ry="160" fill="url(#future-glow)"/><g class="future-orbit" fill="none" stroke="#b5d0b1" stroke-opacity=".22"><ellipse cx="260" cy="165" rx="130" ry="45" transform="rotate(0 260 165)"/><ellipse cx="260" cy="165" rx="139" ry="50" transform="rotate(24 260 165)"/><ellipse cx="260" cy="165" rx="148" ry="55" transform="rotate(48 260 165)"/><ellipse cx="260" cy="165" rx="157" ry="60" transform="rotate(72 260 165)"/><ellipse cx="260" cy="165" rx="166" ry="65" transform="rotate(96 260 165)"/><ellipse cx="260" cy="165" rx="175" ry="70" transform="rotate(120 260 165)"/><ellipse cx="260" cy="165" rx="184" ry="75" transform="rotate(144 260 165)"/></g><circle class="future-core" cx="260" cy="165" r="84" fill="url(#future-orb)"/><g fill="none" stroke="#eff6d9" stroke-opacity=".26"><ellipse cx="260" cy="165" rx="12" ry="84"/><ellipse cx="260" cy="165" rx="22" ry="84"/><ellipse cx="260" cy="165" rx="32" ry="84"/><ellipse cx="260" cy="165" rx="42" ry="84"/><ellipse cx="260" cy="165" rx="52" ry="84"/><ellipse cx="260" cy="165" rx="62" ry="84"/><ellipse cx="260" cy="165" rx="72" ry="84"/><ellipse cx="260" cy="165" rx="82" ry="84"/></g><path d="M198 128q32-49 84-33" fill="none" stroke="#f2f8df" stroke-opacity=".55" stroke-width="2"/><circle cx="93" cy="193" r="5" fill="#d5c8a7"/><circle cx="403" cy="95" r="8" fill="#bad5b6"/></svg></div><div class="future-copy"><h3>A spark of possibility.</h3><p>Find meaning in the everyday. Connected intelligence helps turn the way you work into a clearer way forward.</p><a href="#stack" class="studio-text-link">Explore intelligence <span aria-hidden="true">↗</span></a></div></article><article class="future-card future-card--cloud"><div class="future-copy"><span class="studio-micro">02 / CLOUD PLATFORM</span><h3>Room to grow.</h3><p>A connected home for your work. From your first idea to your next big chapter.</p><a href="#pricing" class="studio-text-link">Find your fit <span aria-hidden="true">↗</span></a></div><div class="future-art"><svg viewBox="0 0 270 220" aria-hidden="true"><defs><linearGradient id="cloud-slab" x2=".6" y2="1"><stop stop-color="#f0e0ce"/><stop offset=".4" stop-color="#b8b8a7"/><stop offset="1" stop-color="#6e9389"/></linearGradient></defs><g class="cloud-slabs"><g transform="translate(0 60)"><path d="m42 83 92-47 93 47v17l-93 47-92-47Z" fill="#425e55"/><path d="m42 83 92-47 93 47-93 47Z" fill="url(#cloud-slab)"/><path d="m42 83 92 47 93-47" fill="none" stroke="#e0dfc4" stroke-opacity=".6"/><path d="m150 123 30-15" stroke="#bddeba" stroke-width="2"/></g><g transform="translate(0 30)"><path d="m42 83 92-47 93 47v17l-93 47-92-47Z" fill="#425e55"/><path d="m42 83 92-47 93 47-93 47Z" fill="url(#cloud-slab)"/><path d="m42 83 92 47 93-47" fill="none" stroke="#e0dfc4" stroke-opacity=".6"/><path d="m150 123 30-15" stroke="#bddeba" stroke-width="2"/></g><g transform="translate(0 0)"><path d="m42 83 92-47 93 47v17l-93 47-92-47Z" fill="#425e55"/><path d="m42 83 92-47 93 47-93 47Z" fill="url(#cloud-slab)"/><path d="m42 83 92 47 93-47" fill="none" stroke="#e0dfc4" stroke-opacity=".6"/><path d="m150 123 30-15" stroke="#bddeba" stroke-width="2"/></g></g></svg></div></article><article class="future-card future-card--security"><div class="future-copy"><span class="studio-micro">03 / SECURITY FIRST</span><h3>Peace of mind.<br>Built in.</h3><p>A considered foundation, with care at the heart of every connection.</p><a href="#stack" class="studio-text-link">Meet the foundation <span aria-hidden="true">↗</span></a></div><div class="future-art"><svg viewBox="0 0 270 220" aria-hidden="true"><defs><linearGradient id="shield-metal" x2="1" y2=".8"><stop stop-color="#f5dfbb"/><stop offset=".4" stop-color="#b9bda2"/><stop offset=".6" stop-color="#779588"/><stop offset="1" stop-color="#c5cdb1"/></linearGradient></defs><g class="shield-sculpture"><path d="m135 25 65 25v64q-2 50-65 81-63-31-65-81V50Z" fill="#354c42" stroke="#64806b" stroke-width="1" transform="translate(7 6)"/><path d="m135 25 65 25v64q-2 50-65 81-63-31-65-81V50Z" fill="url(#shield-metal)"/><path d="m135 40 52 21v51q-2 41-52 68-50-27-52-68V61Z" fill="none" stroke="#fff0ce" stroke-opacity=".55"/><path d="m110 104 19 19 33-36" stroke="#eef3d6" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div></article></div><div class="future-footer"><span class="art-live-dot"></span> A STRONG FOUNDATION FOR WHATEVER COMES NEXT.</div></section>
 
         <!-- ============================================
              20. PRISPLANER
              ============================================ -->
-        <section class="showcase-section wave-divider" id="pricing" aria-labelledby="pricing-title">
-            <div class="showcase-header">
-                <span class="section-badge">Solutions</span>
-                <h2 id="pricing-title">Choose Your Plan</h2>
-                <p>Flexible packages designed to scale with your ambitions.</p>
-            </div>
-            <div class="showcase-grid">
-                <article class="showcase-card">
-                    <div class="showcase-img">
-                        <img src="images/plan-starter.jpg" alt="Ett team som samarbetar vid ett bord" width="800" height="500" loading="lazy">
-                        <span class="showcase-badge-tag">Popular</span>
-                    </div>
-                    <div class="showcase-body">
-                        <h3 class="showcase-name">TechFlow Starter</h3>
-                        <p class="showcase-date">Available now — Free trial 30 days</p>
-                        <div class="showcase-bottom">
-                            <p class="showcase-price">
-                                <span class="price-amount">$29</span>
-                                <span class="price-period">/month</span>
-                            </p>
-                            <button class="showcase-btn" type="button" data-plan="Starter">Get Started</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="showcase-card showcase-card--featured">
-                    <div class="showcase-img">
-                        <img src="images/plan-pro.jpg" alt="Laptop med en analysdashboard" width="800" height="500" loading="lazy">
-                        <span class="showcase-badge-tag">Best Value</span>
-                    </div>
-                    <div class="showcase-body">
-                        <h3 class="showcase-name">TechFlow Pro</h3>
-                        <p class="showcase-date">Full platform access — Priority support</p>
-                        <div class="showcase-bottom">
-                            <p class="showcase-price">
-                                <span class="price-amount">$79</span>
-                                <span class="price-period">/month</span>
-                            </p>
-                            <button class="showcase-btn" type="button" data-plan="Pro">Get Started</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="showcase-card">
-                    <div class="showcase-img">
-                        <img src="images/plan-enterprise.jpg" alt="Öppet kontorslandskap med många arbetsplatser" width="800" height="500" loading="lazy">
-                        <span class="showcase-badge-tag">Enterprise</span>
-                    </div>
-                    <div class="showcase-body">
-                        <h3 class="showcase-name">TechFlow Enterprise</h3>
-                        <p class="showcase-date">Custom deployment — Dedicated support</p>
-                        <div class="showcase-bottom">
-                            <p class="showcase-price">
-                                <span class="price-amount">$249</span>
-                                <span class="price-period">/month</span>
-                            </p>
-                            <button class="showcase-btn" type="button" data-plan="Enterprise">Contact Sales</button>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
+        <section class="studio-section plans-section" id="pricing" aria-labelledby="pricing-title"><div class="studio-heading"><div><span class="atelier-label">SPACE FOR YOUR NEXT CHAPTER</span><h2 id="pricing-title">Find your fit.<br><em>Make it your own.</em></h2></div><p>Flexible packages designed to scale with your ambitions.<br> A thoughtful place to start. Plenty of room to grow.</p></div><div class="plans-grid"><article class="plan-card" aria-labelledby="plan-starter"><div class="plan-top"><span class="studio-micro">01 / YOUR FIRST CHAPTER</span></div><div class="plan-symbol plan-symbol--0" aria-hidden="true"><i></i></div><h3 id="plan-starter">Starter</h3><p class="plan-intro">A little structure. A lot of possibility.</p><div class="plan-price"><span>$29</span><span>/ month</span></div><p class="plan-audience">For individuals finding their flow.</p><button class="plan-button" type="button" data-plan="Starter">Start with Starter <span aria-hidden="true">↗</span></button><div class="plan-includes"><span>THOUGHTFULLY INCLUDED</span><ul><li><span aria-hidden="true">✓</span>Your personal workspace</li><li><span aria-hidden="true">✓</span>Essential tools, together</li><li><span aria-hidden="true">✓</span>30-day free trial</li></ul></div></article><article class="plan-card plan-card--featured" aria-labelledby="plan-pro"><div class="plan-top"><span class="studio-micro">02 / A LITTLE MORE POSSIBILITY</span><span class="plan-recommended">THE SWEET SPOT</span></div><div class="plan-symbol plan-symbol--1" aria-hidden="true"><i></i><i></i></div><h3 id="plan-pro">Pro</h3><p class="plan-intro">For the work you’re ready to grow into.</p><div class="plan-price"><span>$79</span><span>/ month</span></div><p class="plan-audience">For teams building something good.</p><button class="plan-button" type="button" data-plan="Pro">Find your flow <span aria-hidden="true">↗</span></button><div class="plan-includes"><span>THOUGHTFULLY INCLUDED</span><ul><li><span aria-hidden="true">✓</span>Full platform access</li><li><span aria-hidden="true">✓</span>Connected team workflows</li><li><span aria-hidden="true">✓</span>Priority support</li></ul></div></article><article class="plan-card" aria-labelledby="plan-enterprise"><div class="plan-top"><span class="studio-micro">03 / YOUR NEXT BIG CHAPTER</span></div><div class="plan-symbol plan-symbol--2" aria-hidden="true"><i></i><i></i><i></i></div><h3 id="plan-enterprise">Enterprise</h3><p class="plan-intro">More room for your biggest ambitions.</p><div class="plan-price"><span>$249</span><span>/ month</span></div><p class="plan-audience">For organisations thinking bigger.</p><button class="plan-button" type="button" data-plan="Enterprise">Explore Enterprise <span aria-hidden="true">↗</span></button><div class="plan-includes"><span>THOUGHTFULLY INCLUDED</span><ul><li><span aria-hidden="true">✓</span>Custom deployment</li><li><span aria-hidden="true">✓</span>A workspace shaped around you</li><li><span aria-hidden="true">✓</span>Dedicated support</li></ul></div></article></div><div class="plans-footnote"><span>Simple monthly pricing. Space to choose.</span><span>Demo plans · No payment is taken</span></div></section>
 
         <!-- ============================================
              21. WHY TECHFLOW (böjda gradientkort)
@@ -1830,27 +1290,7 @@
     <!-- ============================================
          FOOTER
          ============================================ -->
-    <footer class="footer">
-        <div class="footer__inner">
-            <div class="footer__brand">
-                <svg class="logo footer__logo" aria-hidden="true"><use href="#i-logo"/></svg>
-                <span class="footer__name">TechFlow</span>
-            </div>
-            <p class="footer__tagline">Intelligent technology for forward-thinking teams.</p>
-            <ul class="footer__icons">
-                <li><a href="#" aria-label="GitHub (platshållare)"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
-                <li><a href="#" aria-label="LinkedIn (platshållare)"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
-                <li><a href="#" aria-label="E-post (platshållare)"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
-                <li><a href="#" aria-label="Webbplats (platshållare)"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></a></li>
-            </ul>
-            <nav class="footer__links" aria-label="Sidfotslänkar">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms &amp; Conditions</a>
-                <a href="#cta">Contact</a>
-            </nav>
-            <p class="footer__copy">&copy; 2026 TechFlow by Lars Asplund. All rights reserved.</p>
-        </div>
-    </footer>
+    <footer class="studio-footer" id="footer"><div class="footer-invitation"><div><span class="atelier-label">A LITTLE LESS FRICTION. A LITTLE MORE LIFE.</span><h2>Good things<br><em>start with a little flow.</em></h2></div><a href="#cta" class="footer-join">Find your flow <span aria-hidden="true">↗</span></a></div><div class="footer-navigation"><div class="footer-statement"><a href="#hero" class="footer-wordmark" aria-label="TechFlow, tillbaka till startsidan"><span class="footer-mark" aria-hidden="true">✳</span> techflow<span class="footer-wordmark-dot">.</span></a><p>Thoughtful technology.<br> A little more room to be you.</p><span class="footer-signature">A concept by Lars Asplund<br>Made with care in Sweden.</span></div><nav aria-label="Utforska TechFlow"><h3>The experience</h3><a href="#caring">Made for you</a><a href="#stack">Our ecosystem</a><a href="#capabilities">The possibilities</a><a href="#pricing">Find your plan</a></nav><nav aria-label="Utforska det kreativa labbet"><h3>A little curiosity</h3><a href="#lab">The playground</a><a href="#rive-demo">Studies in motion</a><a href="#observatory">Flow Observatory</a><a href="#explore">Explore more</a></nav><div class="footer-small-note"><span class="footer-note-star" aria-hidden="true">✳</span><p>Designed to feel<br> <em>a little different.</em></p><a href="#hero" class="footer-back">Back to the beginning <span aria-hidden="true">↑</span></a></div></div><div class="footer-colophon"><span>© 2026 TechFlow · Lars Asplund</span><span>Independent design concept · Demo experience</span><span>BUILT WITH CURIOSITY &amp; CARE</span></div><div class="footer-large-type" aria-hidden="true">a little more flow.</div></footer>
 
     <!-- ============================================
          EFFEKTNIVÅ (Essential / Balanced / Cinematic)
@@ -1944,8 +1384,8 @@
         <p class="chat__footer">Drivs av Google Gemini · Demo</p>
     </div>
 
-    <!-- Bibliotek: bara GSAP laddas direkt. Rive, Lottie och diagrambiblioteken
-         laddas av js/rive.js och js/charts.js först när sektionerna närmar sig. -->
+    <!-- Bibliotek: bara GSAP laddas direkt. Den lokala Lottie-spelaren
+         laddas av js/rive.js först när sektionen närmar sig. -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js" defer></script>
 
@@ -1953,8 +1393,9 @@
     <script src="js/apikey.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/premium.js" defer></script>
+    <script src="js/atelier.js" defer></script>
+    <script src="js/studio.js" defer></script>
     <script src="js/rive.js" defer></script>
-    <script src="js/charts.js" defer></script>
     <script src="js/chat.js" defer></script>
 </body>
 </html>

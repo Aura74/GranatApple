@@ -26,7 +26,7 @@ Om sidan:
 
 Tekniken bakom sidan (fråga gärna om den):
 - Ren HTML, CSS och JavaScript – inga ramverk, inga byggverktyg.
-- GSAP + ScrollTrigger för scrollanimationer, Rive och Lottie för vektoranimationer, samt en jämförelse av fyra diagrambibliotek: Chart.js, D3.js, ApexCharts och Frappe Charts (laddas först när man scrollar dit).
+- GSAP + ScrollTrigger för scrollanimationer, egna SVG-skulpturer och Lottie för vektoranimationer. TechFlow Ecosystem har fem valbara ljusringar. Flow Observatory visar ett eget SVG-datalandskap med vecka, månad och kvartal samt tydligt märkta exempeldata. Inga externa diagrambibliotek behövs.
 - Modern CSS: light-dark(), :is(), clamp(), logiska egenskaper, CSS-variabler för hela designsystemet.
 - Mörkt läge (knappen uppe till höger) och tre effektnivåer – **Essential**, **Balanced** och **Cinematic** – via reglaget nere till vänster, så att äldre datorer kan skruva ner animationerna.
 - Du själv körs via Google Gemini; utan API-nyckel kör du i offline-läge.
@@ -146,8 +146,8 @@ Regler:
         {
             triggers: ['byggd', 'teknik', 'kod', 'gsap', 'rive', 'lottie', 'ramverk', 'built', 'tech', 'stack', 'framework', 'chart', 'diagram'],
             responses: [
-                'Ren **HTML, CSS och JavaScript** – inga ramverk. Scrollanimationerna görs med **GSAP + ScrollTrigger**, vektoranimationerna med **Rive** och **Lottie**, och i labbet jämförs **Chart.js, D3, ApexCharts och Frappe Charts**. Biblioteken laddas först när du scrollar dit.',
-                'Plain **HTML, CSS and JavaScript** – no frameworks. **GSAP + ScrollTrigger** drive the scroll animations, **Rive** and **Lottie** the vector animations, and the lab compares **Chart.js, D3, ApexCharts and Frappe Charts**, lazy-loaded on scroll.',
+                'Ren **HTML, CSS och JavaScript** – inga ramverk. **GSAP + ScrollTrigger** sköter scrollanimationerna, och egna **SVG-skulpturer** och **Lottie** ger rörelse. Utforska fem ljusringar i **TechFlow Ecosystem** eller byt tidsperiod i **Flow Observatory**, ett eget datalandskap med exempeldata.',
+                'Plain **HTML, CSS and JavaScript** – no frameworks. **GSAP + ScrollTrigger** drive the scroll animations, with custom **SVG sculptures** and **Lottie** for motion. Explore five light rings in **TechFlow Ecosystem** or change the period in **Flow Observatory**, a custom data landscape with illustrative data.',
             ],
         },
         {

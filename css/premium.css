@@ -127,18 +127,6 @@
 .card-graph .chart-line { stroke: #8094c2; }
 .heart-icon { opacity: .8; }
 .chart-demo-box { border: 1px solid var(--premium-line); box-shadow: 0 12px 32px #252b4508; }
-.stack-animation { height: 465px; min-width: 0; }
-.architecture-stack { position: relative; width: min(100%,440px); padding: 14px 8px; perspective: 1000px; }
-.stack-axis { position: absolute; left: 40px; top: 30px; bottom: 50px; width: 1px; background: var(--premium-line); }
-.layer-slot { position: relative; margin-top: -3px; padding: 6px 0; transform: translateX(calc((2 - var(--i))*8px)); }
-.architecture-layer { position: relative; display: flex; align-items: center; gap: 18px; height: 72px; padding: 16px 22px; border: 1px solid light-dark(#d9deec,#44475b); border-radius: 16px; background: linear-gradient(110deg, var(--surface),var(--surface-2)); box-shadow: 0 5px 0 light-dark(#e1e5ee,#25273b),0 10px 20px -10px #1c285040; transform: rotateY(-9deg) rotateX(8deg); }
-.layer-slot:nth-of-type(2) .architecture-layer { background: light-dark(#e9e9f8,#2d2d50); }
-.layer-slot:nth-of-type(6) .architecture-layer { background: #222c43; color: #eef2ff; border-color: #526079; box-shadow: 0 5px 0 #141d30,0 15px 30px -10px #17243a50; }
-.layer-icon { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid #8995b333; border-radius: 10px; color: #8b93c7; font-size: 22px; }
-.architecture-layer strong { display: block; font-size: 13px; font-weight: 500; }
-.architecture-layer small { display: block; font-size: 10px; margin-top: 4px; opacity: .6; }
-.layer-number { margin-left: auto; font: 11px var(--font-mono); opacity: .45; }
-.stack-caption { text-align: center; margin-top: 24px; font-size: 10px; letter-spacing: .04em; color: var(--text-muted); }
 .rive-card { border: 1px solid var(--premium-line); box-shadow: 0 14px 32px -20px #222c4550; border-radius: 24px; }
 .rive-container { min-height: 0; height: auto; aspect-ratio: 500 / 340; padding: 0; overflow: hidden; background: #dce6e3; }
 .rive-container canvas { height: 100%; width: 100%; max-width: none; aspect-ratio: auto; }
@@ -327,12 +315,6 @@
 .orbit-toggle { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid #93b4c455; background: #90adba12; color: #bdd8de; cursor: pointer; }
 .orbit-toggle:disabled { opacity: .4; cursor: wait; }
 .orbit-toggle:hover { background: #90adba30; }
-.van-body { animation: suspension 2s ease-in-out infinite alternate; }
-.van-wheel { transform-box: fill-box; transform-origin: center; animation: wheel-turn 2.5s linear infinite; }
-.van-road { animation: van-road 2s linear infinite; }
-.van-reflection { animation: van-reflection 7s ease-in-out infinite alternate; }
-@keyframes van-road { to { transform: translate(-205px,20px); } }
-@keyframes van-reflection { to { transform: translateX(36px); opacity: .1; } }
 .cafe-wrapper { gap: clamp(24px,4vw,56px); }
 .cafe-container { flex: 0 0 250px; }
 @media (width <= 1024px) {

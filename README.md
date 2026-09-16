@@ -1,6 +1,6 @@
 # TechFlow – Intelligent Technology (GranatApple)
 
-Premium landningssida inspirerad av [pomegranate.health](https://pomegranate.health/), byggd i ren HTML, CSS och JavaScript med GSAP-scrollanimationer. Sidan består av två delar: själva **landningssidan** (intro → hero → berättande sektioner → interaktiv telefonfinal och väntelista) och ett **Tech Lab** med egna SVG-illustrationer, Lottie, fyra diagrambibliotek och interaktiva kort. Allt är demo – inget skickas eller köps på riktigt.
+Premium landningssida inspirerad av [pomegranate.health](https://pomegranate.health/), byggd i ren HTML, CSS och JavaScript med GSAP-scrollanimationer. Sidan består av två delar: själva **landningssidan** (intro → hero → berättande sektioner → interaktiv telefonfinal och väntelista) och ett **Tech Lab** med egna SVG-illustrationer, Lottie, ett interaktivt datalandskap och interaktiva kort. Allt är demo – inget skickas eller köps på riktigt.
 
 ## Tech Stack
 
@@ -9,7 +9,7 @@ Premium landningssida inspirerad av [pomegranate.health](https://pomegranate.hea
 | Markup/stil/logik | Vanilla HTML5, CSS, ES2022 | Inga ramverk, inga byggverktyg |
 | Animation | [GSAP 3.15](https://gsap.com) + ScrollTrigger | Enda biblioteket som laddas direkt |
 | Vektoranimation | Egna SVG-scener + [lottie-web 5.13](https://airbnb.io/lottie/) | Lottie-runtime finns lokalt och lazy-laddas tillsammans med den egna animationen |
-| Diagram | Chart.js 4.5, D3 7.9, ApexCharts 7.3, Frappe Charts 1.6 | Lazy-laddas per sektion, följer dark mode |
+| Datalandskap | Egen SVG + vanilla JavaScript | Vecka/månad/kvartal med exempeldata, utan diagrambibliotek |
 | AI-chatt | Google Gemini (`gemini-flash-lite-latest` → `gemini-flash-latest`) | Offline-läge utan nyckel |
 | Typsnitt | DM Serif Display (400 + italic) + Inter (400/500/600) | Google Fonts, `display=swap` |
 | Ikoner | Inline SVG-sprite (Lucide-stil) | Inga ikonfonter |
@@ -24,18 +24,21 @@ GranatApple/
 ├── css/
 │   ├── style.css       # Design-tokens, alla sektioner, effektnivåer, responsivt (TOC i toppen)
 │   ├── chat.css        # Chattwidgeten
-│   └── premium.css     # Telefoner, nätverk, kretskort, lager och rörelsestudier
+│   ├── premium.css     # Telefoner, nätverk, kretskort och rörelsestudier
+│   ├── atelier.css     # Ljusringar, kinetisk mobil och Flow Observatory
+│   └── studio.css      # Caring, flödesberättelse, 3D-scen, kort, prisplaner och sidfot
 ├── js/
 │   ├── main.js         # Tema, meny, intro, effektväljare, FPS-probe, formulär, GSAP
 │   ├── premium.js      # Produktanimationer, SVG-kopplingar och synlighetspaus
 │   ├── rive.js         # Lottie-spelare (historiskt filnamn): lazy-load, hastighet, paus
 │   ├── vendor/         # Lokal Lottie 5.13.0 + MIT-licens
-│   ├── charts.js       # Fyra diagram: lazy-load, temafärger från CSS-variabler
+│   ├── atelier.js      # Valbara ljusringar och datalandskap med periodval
+│   ├── studio.js       # Dygnsväxling, materialval, paus och expanderbara kort
 │   ├── chat.js         # "Flow" – Gemini-chatt med lokal reservhjärna
 │   └── apikey.js       # GITIGNORAD – window.GEMINI_API_KEY
-├── images/             # Fem lokala foton (Unsplash, se Bildkällor)
+├── images/             # Lokala foton + egen tredimensionell SVG-skulptur
 ├── animations/         # flow-orbit.json/.js + äldre demoanimationer som arkiv
-├── scripts/            # build-orbit.cjs: genererar den egna Lottie-kompositionen
+├── scripts/            # build-orbit.cjs + build-sculpture.cjs: egen grafik
 └── README.md
 ```
 
@@ -47,22 +50,21 @@ GranatApple/
 | 2 | Hero `#hero` | Lagrade kort, badge, H1, beskrivning |
 | 3 | Telefoner `#phones` | Tre metallramade telefoner med kameraö, levande diagram och mjuk svävning |
 | 4 | The end of… `#end` | Arbetsplatsdiagram med precisa SVG-kopplingar och animerade signaler |
-| 5 | Caring `#caring` | Två svävande användarkort med statistik och taggar |
+| 5 | Caring `#caring` | Pärlemorsblomma med svävande notiser. Morning / Afternoon / Evening ändrar tid, text och stämning |
 | 6 | Circuit `#circuit` | Mörkt kretskort med chip, kontaktstift, genomföringar och ljuspulser längs banorna |
-| 7 | Layers `#layers` | Elva datakort (grafer, ringar, mätare) med SVG-animationer |
-| 8 | Stack `#stack` | Fem namngivna tekniklager med djup och mjuk individuell rörelse |
+| 7 | Flow story `#layers` | En sammanhållen illustration: signaler blir ordning genom ett glasprisma. Ersätter de elva diagramkorten |
+| 8 | Ecosystem `#stack` | Fem svävande ljusringar, valbara lager och beskrivningar i en gräddvit/mörkgrön miljö |
 | 9 | Predictive `#predictive` | Tre mindre telefoner med samma levande skärmgränssnitt |
-| 10 | Tech Lab `#lab` | Introduktion till komponentlabbet |
-| 11 | Rörelsestudier `#rive-demo` | Egna SVG-scener: skåpbil i trekvartsperspektiv, elbil och citrusglas; varsin pausknapp |
+| 10 | Tech Lab `#lab` | Egen 3D-knut i SVG, belyst i Warm porcelain eller Moonlight silver. Pausbar rörelse |
+| 11 | Rörelsestudier `#rive-demo` | Egna SVG-scener: kinetisk mobil i terrakotta/mässing, elbil och citrusglas; varsin pausknapp |
 | 12 | Lottie `#lottie-demo` | Orbital Intelligence: egen ljusskulptur med 29 lager, hastighetsval och paus |
-| 13–16 | Chart.js / D3 / ApexCharts / Frappe | Ett diagram per bibliotek + för- och nackdelar |
-| 17 | Jämförelse `#comparison` | Tabell över biblioteken |
-| 18 | Hover to Explore `#explore` | Tre kort: Analyze, Automate och Connect (tangentbord + touch stöds) |
-| 19 | Built for the Future `#capabilities` | Tre mörka funktionskort |
-| 20 | Choose Your Plan `#pricing` | Tre prisplaner (demoknappar → toast) |
+| 13 | Flow Observatory `#observatory` | Grönt SVG-datalandskap, tidsfördelning och nyckeltal; periodval uppdaterar all exempeldata |
+| 18 | Explore `#explore` | Tre skulpturkort: Analyze, Automate och Connect. Native details/summary för touch och tangentbord |
+| 19 | Capabilities `#capabilities` | Asymmetrisk komposition med en ljussfär, molnplattform och metallsköld |
+| 20 | Pricing `#pricing` | Tydliga prisplaner med innehållslistor och Pro markerad. Oförändrade priser, demoknappar → toast |
 | 21 | What Sets Us Apart `#why` | Böjda gradientkort |
 | 22 | Väntelista `#cta` | E-postformulär (demo → toast) + levande telefoner med Focus / Flow / Unwind |
-| – | Sidfot | Logotyp, ikonlänkar (platshållare), länkar, copyright |
+| – | Sidfot `#footer` | Redaktionell avslutning, sektionsnavigering, väntelistelänk och avsändare. Inga platshållarlänkar |
 
 ## Designsystem
 
@@ -87,9 +89,9 @@ Reglaget nere till vänster sätter `data-perf` på `<html>` (sparas i `localSto
 
 | Nivå | Vad händer |
 |------|------------|
-| **Essential** | Inga GSAP-tweens. Lottie börjar pausad och kan startas manuellt. SVG-scener och telefoner är stilla. Diagram utan animation. Café-kort via CSS-hover. |
+| **Essential** | Inga GSAP-tweens. Lottie börjar pausad och kan startas manuellt. SVG-scener och telefoner är stilla. Datalandskap och periodval fungerar utan kontinuerlig animation. Explore-kort fungerar med native details/summary. |
 | **Balanced** (standard på svag hårdvara) | Avslöjanden + billiga transform-loopar (svävande kort, pulser). Ingen scroll-scrubbad parallax. |
-| **Cinematic** | Samma produktanimationer som Balanced, dessutom scrollstyrd introduktion av användarkorten. Fri scroll utan scroll-snap. |
+| **Cinematic** | Samma produktanimationer som Balanced, dessutom sidans scrollavslöjanden. Fri scroll utan scroll-snap. |
 
 GSAP-loopar pausas via ScrollTrigger när deras sektion är utanför skärmen. Produktillustrationerna i `premium.js` använder Web Animations API och CSS; de pausas med IntersectionObserver, när fliken döljs och vid reducerad rörelse. SVG-linjerna i nätverket mäts från de verkliga kortkanterna med ResizeObserver, utan layoutmätningar i animationsloopen. Byte av nivå laddar om sidan (intron hoppas då över via `sessionStorage`).
 
@@ -108,7 +110,7 @@ npx serve .
 npx live-server
 ```
 
-Sidan fungerar även om `index.html` öppnas direkt (`file://`). Den egna Lottie-kompositionen laddas som ett lokalt script (`animations/flow-orbit.js`) och använder den lokala spelaren i `js/vendor/`; inga fetch-anrop krävs för den. Internet krävs fortfarande för sidans externa typsnitt, GSAP och diagrambibliotek.
+Sidan fungerar även om `index.html` öppnas direkt (`file://`). Den egna Lottie-kompositionen laddas som ett lokalt script (`animations/flow-orbit.js`) och använder den lokala spelaren i `js/vendor/`; inga fetch-anrop krävs för den. Internet krävs fortfarande för sidans externa typsnitt och GSAP.
 
 ## Anpassning
 
@@ -121,15 +123,16 @@ Sidan fungerar även om `index.html` öppnas direkt (`file://`). Den egna Lottie
 | Byta chattpersona | `SYSTEM_PROMPT` och `localBrain` i `js/chat.js` |
 | Koppla väntelistan på riktigt | `initWaitlist()` i `js/main.js` → Klaviyo / Mailchimp / Beehiiv |
 | Koppla prisknapparna | `initPlanButtons()` → Stripe Checkout / Snipcart |
-| Riktiga sidfotslänkar | `.footer__icons` och `.footer__links` i `index.html` är platshållare (`href="#"`) |
+| Sidfotslänkar | `.footer-navigation` i `index.html` länkar till sidans verkliga sektioner |
+| Bygga om 3D-skulpturen | Kör `node scripts/build-sculpture.cjs`; matematiskt renderad geometri sparas som `images/curiosity-sculpture.svg` |
 
 ## Mobil / responsivt
 
-Desktop-first med brytpunkter **1200 / 1024 / 768 / 480**; produktillustrationerna anpassas även vid **600 / 360**. Under 1024 px blir tvåkolumnssektionerna en kolumn med texten först; under 768 px blir menyn ett toppark med egen stängknapp och pillerknapparna göms medan den är öppen. Alla tre telefoner visas även vid 320 px. Skärminnehållet skalar med container-enheter (`cqw`); sekundära notiser döljs på små skärmar. Chatten blir fullskärm under 480 px. Hover-effekter körs bara på `(hover: hover) and (pointer: fine)`; café-korten öppnas med tryck på touch.
+Desktop-first med brytpunkter **1200 / 1024 / 768 / 480**; produktillustrationerna anpassas även vid **600 / 360**. Under 1024 px blir tvåkolumnssektionerna en kolumn med texten först; under 768 px blir menyn ett toppark med egen stängknapp och pillerknapparna göms medan den är öppen. Alla tre telefoner visas även vid 320 px. Skärminnehållet skalar med container-enheter (`cqw`); sekundära notiser döljs på små skärmar. Chatten blir fullskärm under 480 px. Explore-korten använder native `details`/`summary`: klick, touch, Enter och mellanslag fungerar utan extra bibliotek.
 
 ## Tillgänglighet
 
-Hopplänk, `<main>`, en `<h1>`, rubriker i ordning, `aria-labelledby` på sektioner, riktiga `<a>`/`<button>`, `aria-expanded`/`aria-pressed`/`role="radiogroup"`, `:focus-visible`-ringar, `prefers-reduced-motion` respekteras (både CSS och GSAP), `role="img"` + `aria-label` på canvas/SVG-diagram, tabell med `<caption>` och `scope`.
+Hopplänk, `<main>`, en `<h1>`, rubriker i ordning, `aria-labelledby` på sektioner, riktiga `<a>`/`<button>`, `aria-expanded`/`aria-pressed`/`role="radiogroup"`, `:focus-visible`-ringar, `prefers-reduced-motion` respekteras (både CSS och GSAP), `role="img"` med beskrivningar på SVG-grafik. Ecosystem och Observatory har namngivna knappgrupper, `aria-pressed` och uppläsning av ändrat innehåll.
 
 ## Bildkällor
 
@@ -150,6 +153,25 @@ De äldre Rive-filerna (`vehicles`, `off_road_car_v7`, `juice_v7`) och Lottie-fi
 Chrome/Edge 123+, Firefox 120+, Safari 17.5+ (kräver `light-dark()`). Äldre webbläsare får ljust tema utan mörka varianter men i övrigt fungerande sida.
 
 ## Ändringslogg
+
+### 2.4 (2026-09-16) – en sammanhängande skulptural kollektion
+
+- Caring har fått en egen pärlemorsblomma, svävande vardagsnotiser och valbara stämningar för morgon, eftermiddag och kväll.
+- Diagramväggen ersatt av en lugn flödesberättelse: Gather → Understand → Make room, med ljustrådar genom ett glasprisma.
+- Tech Lab har fått en egen geometriskt renderad 3D-knut på sockel. Warm porcelain och Moonlight silver ändrar ljus och material; rörelsen går att pausa.
+- Explore använder tre egna skulpturer och native details/summary. Funktionskorten har ersatts av en asymmetrisk komposition med sfär, skivor och sköld.
+- Prisplanerna har tydlig hierarki, funktionslistor och en markerad Pro-plan. Priserna är oförändrade. Sidfoten har riktiga sektionslänkar och en tydlig avsändare.
+- Gamla animationsfunktioner för borttagna kort rensade. Rörelse pausas utanför skärmen och respekterar Essential och reducerad rörelse.
+
+
+### 2.3 (2026-09-16) – ljusskulpturer och datalandskap
+
+- "Five vertically integrated layers" ersatt av TechFlow Ecosystem: fem ljusringar med valbara lager, markerad ring och tillhörande beskrivning.
+- Skåpbilen ersatt av The art of balance, en egen kinetisk SVG-mobil i terrakotta, mässing och salviagrönt. Paus, synlighet och reducerad rörelse följer sidans gemensamma logik.
+- Fyra diagrambibliotek och jämförelsetabellen ersatta av Flow Observatory. Vecka, månad och kvartal uppdaterar landskapet, tidsfördelningen, nyckeltalen och beskrivningarna tillsammans. All data är tydligt märkt som exempeldata.
+- Diagrammens externa beroenden och gamla laddningsscript borttagna. Ingen ny runtime eller backend tillagd. Den tidigare Rive-guiden borttagen från rörelsestudierna.
+- Kontrollerat i Chrome vid 1440, 768, 390 och 320 px samt i mörkt läge, med reducerad rörelse och via lokal filöppning.
+
 
 ### 2.2 (2026-09-15) – interaktiv final och rörelsestudier
 
