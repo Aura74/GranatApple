@@ -62,7 +62,7 @@ GranatApple/
 | 18 | Explore `#explore` | Tre skulpturkort: Analyze, Automate och Connect. Native details/summary för touch och tangentbord |
 | 19 | Capabilities `#capabilities` | Asymmetrisk komposition med en ljussfär, molnplattform och metallsköld |
 | 20 | Pricing `#pricing` | Tydliga prisplaner med innehållslistor och Pro markerad. Oförändrade priser, demoknappar → toast |
-| 21 | What Sets Us Apart `#why` | Böjda gradientkort |
+| 21 | What Sets Us Apart `#why` | Tre skulpturkort i salvia, champagne och silver med glob, kristall och metallvingar. Subtil musstyrd lutning och fungerande länkar |
 | 22 | Väntelista `#cta` | E-postformulär (demo → toast) + levande telefoner med Focus / Flow / Unwind |
 | – | Sidfot `#footer` | Redaktionell avslutning, sektionsnavigering, väntelistelänk och avsändare. Inga platshållarlänkar |
 
@@ -153,6 +153,13 @@ De äldre Rive-filerna (`vehicles`, `off_road_car_v7`, `juice_v7`) och Lottie-fi
 Chrome/Edge 123+, Firefox 120+, Safari 17.5+ (kräver `light-dark()`). Äldre webbläsare får ljust tema utan mörka varianter men i övrigt fungerande sida.
 
 ## Ändringslogg
+
+### 2.5 (2026-09-16) – The TechFlow Signature
+
+- What Sets Us Apart har fått tre egna SVG-objekt, mjuka metalltoner, rundade underkanter och ljus som följer musen. Tangentbord och touch använder vanliga länkar.
+- Lutningen avaktiveras vid Essential och reducerad rörelse. Objektens långsamma svävning pausas när sektionen lämnar skärmen.
+- Footertextens negativa nederkant borttagen. Rymligare radbox, lite högre kontrast och plats under hela texten gör att ”a little more flow.” visas utan avklippta bokstäver.
+- Verifierat vid 320, 390, 768, 1440 och 1920 px: ingen horisontell scroll, hela footertexten synlig, fungerande tangentbordslänk, återställd lutning och inga JavaScript-fel.
 
 ### 2.4 (2026-09-16) – en sammanhängande skulptural kollektion
 

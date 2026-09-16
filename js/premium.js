@@ -3,7 +3,7 @@
     'use strict';
     const root = document.documentElement;
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-    const sections = [...document.querySelectorAll('#phones, #end, #caring, #circuit, #layers, #stack, #predictive, #lab, #rive-demo, #explore, #capabilities, #cta')];
+    const sections = [...document.querySelectorAll('#phones, #end, #caring, #circuit, #layers, #stack, #predictive, #lab, #rive-demo, #explore, #capabilities, #why, #cta')];
     const loops = new Map();
     const visible = new Set();
     const allowed = () => root.dataset.perf !== 'essential' && !reduced.matches && !document.hidden;

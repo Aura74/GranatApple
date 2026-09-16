@@ -40,4 +40,38 @@
     document.querySelectorAll('.explore-piece').forEach(piece => piece.addEventListener('toggle', () => {
         document.dispatchEvent(new Event('tf:layoutchange'));
     }));
+
+    // One update per pointer frame; touch, Essential and reduced motion remain still.
+    const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+    document.querySelectorAll('.signature-card').forEach(card => {
+        let frame = 0;
+        const reset = () => {
+            cancelAnimationFrame(frame);
+            frame = 0;
+            ['--tilt-x', '--tilt-y', '--light-x', '--light-y'].forEach(name => card.style.removeProperty(name));
+        };
+        card.addEventListener('pointermove', event => {
+            if (!finePointer.matches || reduced.matches || document.documentElement.dataset.perf === 'essential' || event.pointerType === 'touch') return;
+            cancelAnimationFrame(frame);
+            const { clientX, clientY } = event;
+            frame = requestAnimationFrame(() => {
+                // Measure the static wrapper so the tilt cannot feed back into itself.
+                const rect = card.parentElement.getBoundingClientRect();
+                const x = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+                const y = Math.max(0, Math.min(1, (clientY - rect.top) / rect.height));
+                card.style.setProperty('--tilt-x', `${(0.5 - y) * 6}deg`);
+                card.style.setProperty('--tilt-y', `${(x - 0.5) * 7}deg`);
+                card.style.setProperty('--light-x', `${x * 100}%`);
+                card.style.setProperty('--light-y', `${y * 100}%`);
+                frame = 0;
+            });
+        }, { passive: true });
+        card.addEventListener('pointerleave', reset);
+        card.addEventListener('pointercancel', reset);
+        card.addEventListener('blur', reset);
+        reduced.addEventListener('change', reset);
+        finePointer.addEventListener('change', reset);
+        document.addEventListener('visibilitychange', () => { if (document.hidden) reset(); });
+    });
 })();

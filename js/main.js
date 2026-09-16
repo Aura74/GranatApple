@@ -353,18 +353,6 @@
         });
     }
 
-    function initCurvedCards() {
-        const cards = $$('.curved-card');
-        if (!cards.length) return;
-        gsap.set(cards, { opacity: 0, y: 100, rotationX: 15 });
-        cards.forEach((card, i) => {
-            gsap.to(card, {
-                opacity: 1, y: 0, rotationX: 0, duration: 0.9, delay: i * 0.2,
-                scrollTrigger: { trigger: '.curved-wrapper', start: 'top 80%', toggleActions: 'play none none reverse' },
-            });
-        });
-    }
-
     function initAnimations() {
         if (!hasGsap || ESSENTIAL) return;
 
@@ -373,7 +361,6 @@
 
         initHeroAnimations();
         initSectionReveals();
-        initCurvedCards();
 
         /* Typsnitt och expanderbara kort ändrar layouten – räkna om triggers */
         document.fonts?.ready.then(() => ScrollTrigger.refresh());
