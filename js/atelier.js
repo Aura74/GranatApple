@@ -20,16 +20,16 @@
             detail.querySelector('h3').textContent = layer.title;
             detail.querySelector('p').textContent = layer.copy;
             ecosystem.querySelector('.sculpture-caption').textContent = `${layer.name}, illuminated.`;
-            ecosystem.querySelector('.ecosystem-sculpture').setAttribute('aria-label', `Fem svävande ljusringar i pärlemor, champagne och salvia. ${layer.name} är markerad.`);
+            ecosystem.querySelector('.ecosystem-sculpture').setAttribute('aria-label', `Five floating rings of light in pearl, champagne and sage. ${layer.name} is highlighted.`);
         }));
     }
 
     const observatory = document.querySelector('#observatory');
     if (!observatory) return;
     const periods = {
-        week: { hours: '32.5', change: '18.2', label: 'this week', caption: '16 — 22 SEPTEMBER', saved: '8.4', tasks: '142', shares: [68, 24, 8], word: 'Effortless.', insight: 'Your strongest flow was on Friday.', title: 'Din veckorytm', phase: 0 },
-        month: { hours: '128.0', change: '12.6', label: 'this month', caption: '01 — 30 SEPTEMBER', saved: '34.2', tasks: '586', shares: [72, 19, 9], word: 'In rhythm.', insight: 'A little more focus, week after week.', title: 'Din månadsrytm', phase: 1.3 },
-        quarter: { hours: '386.5', change: '24.8', label: 'this quarter', caption: 'JULY — SEPTEMBER', saved: '106', tasks: '1,824', shares: [76, 18, 6], word: 'Flourishing.', insight: 'Small moments. A season of progress.', title: 'Din kvartalsrytm', phase: 2.7 }
+        week: { hours: '32.5', change: '18.2', label: 'this week', caption: '16 — 22 SEPTEMBER', saved: '8.4', tasks: '142', shares: [68, 24, 8], word: 'Effortless.', insight: 'Your strongest flow was on Friday.', title: 'Your weekly rhythm', phase: 0 },
+        month: { hours: '128.0', change: '12.6', label: 'this month', caption: '01 — 30 SEPTEMBER', saved: '34.2', tasks: '586', shares: [72, 19, 9], word: 'In rhythm.', insight: 'A little more focus, week after week.', title: 'Your monthly rhythm', phase: 1.3 },
+        quarter: { hours: '386.5', change: '24.8', label: 'this quarter', caption: 'JULY — SEPTEMBER', saved: '106', tasks: '1,824', shares: [76, 18, 6], word: 'Flourishing.', insight: 'Small moments. A season of progress.', title: 'Your quarterly rhythm', phase: 2.7 }
     };
     const namespace = 'http://www.w3.org/2000/svg';
     const lineGroup = document.getElementById('landscape-lines');
@@ -71,7 +71,7 @@
         observatory.querySelector('[data-word]').textContent = state.word;
         observatory.querySelector('[data-insight]').textContent = state.insight;
         observatory.querySelector('#landscape-chart-title').textContent = state.title;
-        observatory.querySelector('#landscape-chart-desc').textContent = `Illustrativa exempeldata: ${state.hours} timmar i fokus, en ökning med ${state.change} procent. ${state.shares[0]} procent fokustid, ${state.shares[1]} procent gemensam tid och ${state.shares[2]} procent återhämtning.`;
+        observatory.querySelector('#landscape-chart-desc').textContent = `Illustrative sample data: ${state.hours} hours in focus, up ${state.change} percent. ${state.shares[0]} percent focus time, ${state.shares[1]} percent shared time and ${state.shares[2]} percent breathing room.`;
         const labels = key === 'week' ? ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'] : key === 'month' ? ['01', '05', '10', '15', '20', '25', '30'] : ['JUL 01', 'JUL 15', 'AUG 01', 'AUG 15', 'SEP 01', 'SEP 15', 'SEP 30'];
         observatory.querySelectorAll('.landscape-axis span').forEach((span, i) => span.textContent = labels[i]);
         let offset = 0;
@@ -83,7 +83,7 @@
             offset += state.shares[i];
         });
         landscape(state.phase);
-        if (announce) observatory.querySelector('#observatory-announcement').textContent = `${state.title}: ${state.hours} timmar i fokus. ${state.saved} timmar frigjorda och ${state.tasks} uppgifter hanterade. Illustrativa exempeldata.`;
+        if (announce) observatory.querySelector('#observatory-announcement').textContent = `${state.title}: ${state.hours} hours in focus. ${state.saved} hours freed up and ${state.tasks} tasks handled. Illustrative sample data.`;
     }
     observatory.querySelectorAll('[data-period]').forEach(button => button.addEventListener('click', () => selectPeriod(button.dataset.period)));
     selectPeriod('week', false);

@@ -22,8 +22,8 @@ function vertex(t,p) {
     return {p:rotate(add(c,scale(normal,.245))),n:rotate(normal)};
 }
 const faces=[],light=unit([-2,-3,5]);
-for(let u=0;u<192;u++) for(let v=0;v<20;v++) {
-    const points=[[u,v],[u+1,v],[u+1,v+1],[u,v+1]].map(([a,b])=>vertex(a/192*TAU,b/20*TAU));
+for(let u=0;u<128;u++) for(let v=0;v<16;v++) {
+    const points=[[u,v],[u+1,v],[u+1,v+1],[u,v+1]].map(([a,b])=>vertex(a/128*TAU,b/16*TAU));
     const normal=unit(points.reduce((sum,p)=>add(sum,p.n),[0,0,0]));
     if(normal[2]<-.3) continue;
     const diffuse=Math.max(0,dot(normal,light));

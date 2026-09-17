@@ -20,7 +20,7 @@
         const play = visible && !document.hidden && !userPaused;
         if (play) animation.play(); else animation.pause();
         toggle.setAttribute('aria-pressed', String(userPaused));
-        toggle.setAttribute('aria-label', `${userPaused ? 'Spela' : 'Pausa'} Lottie-animationen`);
+        toggle.setAttribute('aria-label', `${userPaused ? 'Play' : 'Pause'} the Lottie animation`);
         toggle.firstElementChild.textContent = userPaused ? '▷' : 'Ⅱ';
         status.textContent = userPaused ? 'Paused · a moment of stillness' : `${speed}× / Seamless orbit`;
         section.dataset.lottieState = play ? 'playing' : 'paused';

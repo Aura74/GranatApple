@@ -27,13 +27,13 @@
             lab.dataset.light = cool ? 'cool' : 'warm';
             lab.querySelectorAll('[data-material]').forEach(control => control.setAttribute('aria-pressed', String(control === button)));
             lab.querySelector('.material-label').textContent = cool ? '02 / MOONLIGHT SILVER' : '01 / WARM PORCELAIN';
-            lab.querySelector('.curiosity-object').alt = `En tredimensionell, sammanflätad knut i ${cool ? 'svala silvertoner med mjuka ljusreflexer' : 'varm porslinston med mjuka metalliska reflexer'}`;
+            lab.querySelector('.curiosity-object').alt = `A three-dimensional interwoven knot in ${cool ? 'cool silver tones with soft highlights' : 'warm porcelain with soft metallic reflections'}`;
         }));
         lab.querySelector('[data-studio-pause]')?.addEventListener('click', event => {
             const button = event.currentTarget;
             const paused = lab.querySelector('.curiosity-stage').classList.toggle('studio-is-paused');
             button.setAttribute('aria-pressed', String(paused));
-            button.setAttribute('aria-label', `${paused ? 'Spela' : 'Pausa'} skulpturens rörelse`);
+            button.setAttribute('aria-label', `${paused ? 'Play' : 'Pause'} the sculpture's motion`);
             button.textContent = paused ? '▷' : 'Ⅱ';
         });
     }

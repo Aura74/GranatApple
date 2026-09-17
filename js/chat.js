@@ -32,7 +32,7 @@ Tekniken bakom sidan (fråga gärna om den):
 - Du själv körs via Google Gemini; utan API-nyckel kör du i offline-läge.
 
 Regler:
-- Svara på samma språk som användaren (svenska eller engelska).
+- Svara på samma språk som användaren. Gränssnittet och innehållet är på engelska, så svara på engelska om inte användaren skriver svenska.
 - Var kort: 1–4 meningar om inte användaren ber om mer. Använd **fetstil** för viktiga ord.
 - Var ärlig om att TechFlow är en demo. Hitta inte på funktioner, priser eller kontaktuppgifter som inte nämns här.
 - Håll tonen varm, professionell och aldrig säljig.`;
@@ -66,7 +66,7 @@ Regler:
 
     function setStatus() {
         widget.classList.toggle('is-offline', !apiAvailable);
-        if (statusText) statusText.textContent = apiAvailable ? 'Online' : 'Offline-läge';
+        if (statusText) statusText.textContent = apiAvailable ? 'Online' : 'Offline mode';
     }
 
     /* ---------- Gemini-anrop med modellkedja + timeout ---------- */
@@ -212,7 +212,7 @@ Regler:
             .replace(/\n/g, '<br>');
     }
 
-    const timestamp = () => new Date().toLocaleTimeString('sv-SE', { hour: '2-digit', minute: '2-digit' });
+    const timestamp = () => new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
 
     function iconSvg(id) {
         return `<svg class="icon" aria-hidden="true"><use href="#${id}"/></svg>`;
@@ -226,7 +226,7 @@ Regler:
 
         const meta = document.createElement('div');
         meta.className = 'chat__msg-meta';
-        meta.innerHTML = `${iconSvg(sender === 'bot' ? 'i-bot' : 'i-user')}<span>${sender === 'bot' ? 'Flow' : 'Du'}</span>`;
+        meta.innerHTML = `${iconSvg(sender === 'bot' ? 'i-bot' : 'i-user')}<span>${sender === 'bot' ? 'Flow' : 'You'}</span>`;
 
         const bubble = document.createElement('div');
         bubble.className = 'chat__bubble';
@@ -321,7 +321,7 @@ Regler:
                 console.error('Gemini API error:', err);
                 apiAvailable = false;
                 setStatus();
-                reply = 'Jag når inte min AI-tjänst just nu och har bytt till **offline-läge**. Fråga gärna ändå – jag kan grunderna om sidan, och försöker igen nästa gång du öppnar chatten.';
+                reply = "I can't reach my AI service right now, so I've switched to **offline mode**. Ask away – I know the basics about this page, and I'll try again next time you open the chat.";
             }
         } else {
             await new Promise((r) => setTimeout(r, 500 + Math.random() * 500));
@@ -340,8 +340,8 @@ Regler:
         welcome.id = 'chat-welcome';
         welcome.innerHTML = `
             <div class="chat__welcome-orb" aria-hidden="true"></div>
-            <p class="chat__welcome-title">Hej, jag är Flow</p>
-            <p class="chat__welcome-text">Fråga mig om TechFlow, prisplanerna, effektlägena eller hur den här sidan är byggd.</p>`;
+            <p class="chat__welcome-title">Hi, I'm Flow</p>
+            <p class="chat__welcome-text">Ask me about TechFlow, the plans, the effect levels or how this page was built.</p>`;
         messagesEl.append(welcome);
     }
 

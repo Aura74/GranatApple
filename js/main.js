@@ -1,6 +1,7 @@
 /* ==========================================================================
    TECHFLOW – main.js
-   Tema, navigering, intro, effektnivåer, formulär och GSAP-animationer.
+   Tema, navigering, effektnivåer, formulär och GSAP-avslöjanden.
+   Produktillustrationernas rörelse sköts i premium.js.
 
    Klassiskt script (laddas med defer) i stället för ES-modul så att sidan
    fungerar när index.html öppnas direkt via file:// utan lokal server.
@@ -16,7 +17,6 @@
     const STORAGE = {
         theme: 'theme',              // oprefixad för bakåtkompatibilitet i portföljen
         perf: 'tf:perfMode',
-        skipSplash: 'tf:skipSplash',
     };
 
     /* Effektnivån sattes redan före första rendering i <head> */
@@ -101,47 +101,6 @@
     }
 
     /* ----------------------------------------------------------------------
-       Intro: dela upp namnet i tecken (CSS animerar via --i) och visa
-       navigeringen först när intron scrollats förbi
-       ---------------------------------------------------------------------- */
-    function splitChars(el) {
-        const text = el.textContent.trim();
-        el.setAttribute('aria-label', text);
-        el.textContent = '';
-        let index = 0;
-        const words = text.split(' ');
-        words.forEach((word, wordIndex) => {
-            const wordEl = document.createElement('span');
-            wordEl.className = 'word';
-            for (const ch of word) {
-                const charEl = document.createElement('span');
-                charEl.className = 'char';
-                charEl.textContent = ch;
-                charEl.style.setProperty('--i', index++);
-                wordEl.append(charEl);
-            }
-            el.append(wordEl);
-            if (wordIndex < words.length - 1) el.append(' ');
-        });
-    }
-
-    function initSplash() {
-        const splash = $('.splash');
-        if (!splash) { $('#floating-nav')?.classList.add('is-visible'); return; }
-
-        const name = $('.splash__name', splash);
-        const skip = 'skipSplash' in root.dataset;
-        if (name && !ESSENTIAL && !skip) splitChars(name);
-
-        const nav = $('#floating-nav');
-        if (nav) {
-            new IntersectionObserver(([entry]) => {
-                nav.classList.toggle('is-visible', !entry.isIntersecting);
-            }, { threshold: 0.05 }).observe(splash);
-        }
-    }
-
-    /* ----------------------------------------------------------------------
        Rullgardinsmeny – riktiga länkar, stängknapp, Escape och klick utanför
        ---------------------------------------------------------------------- */
     function initMenu() {
@@ -202,7 +161,6 @@
     function applyPerf(mode) {
         if (mode === PERF) return;
         localStorage.setItem(STORAGE.perf, mode);
-        sessionStorage.setItem(STORAGE.skipSplash, '1');
         location.reload();
     }
 
@@ -249,11 +207,11 @@
                     }
                     const fps = frames / ((now - start) / 1000);
                     if (fps < 45) {
-                        showToast('Den här datorn verkar kämpa med alla effekter. Vill du byta till Balanced för mjukare scroll?', {
+                        showToast('This computer seems to struggle with the full effects. Switch to Balanced for smoother scrolling?', {
                             duration: 12000,
                             actions: [
-                                { label: 'Behåll', onClick: () => {} },
-                                { label: 'Byt', primary: true, onClick: () => applyPerf('balanced') },
+                                { label: 'Keep', onClick: () => {} },
+                                { label: 'Switch', primary: true, onClick: () => applyPerf('balanced') },
                             ],
                         });
                     }
@@ -282,12 +240,12 @@
                 void form.offsetWidth; // starta om skak-animationen
                 form.classList.add('is-invalid');
                 input.focus();
-                showToast('Skriv en giltig e-postadress.');
+                showToast('Please enter a valid email address.');
                 return;
             }
             btn.disabled = true;
-            btn.textContent = 'Tack!';
-            showToast('Tack! Så skulle anmälan fungera. Demo – inget skickas eller sparas.', { duration: 6000 });
+            btn.textContent = 'Thank you!';
+            showToast('Thank you! This is how signing up would feel. Demo – nothing is sent or stored.', { duration: 6000 });
             setTimeout(() => {
                 form.reset();
                 btn.disabled = false;
@@ -299,7 +257,7 @@
     function initPlanButtons() {
         $$('[data-plan]').forEach((btn) => {
             btn.addEventListener('click', () => {
-                showToast(`Du har valt ${btn.dataset.plan}. Det här är en demo – inget köp genomförs.`);
+                showToast(`You chose ${btn.dataset.plan}. This is a demo – no purchase is made.`);
             });
         });
     }
@@ -308,7 +266,6 @@
        GSAP-animationer
        Essential: inga tweens alls (elementen är synliga som standard eftersom
        alla avslöjanden är gsap.from). Balanced: avslöjanden + billiga loopar.
-       Cinematic: dessutom scroll-scrubbad introduktion av användarkorten.
        Produktillustrationernas rörelse sköts separat i premium.js.
        ---------------------------------------------------------------------- */
 
@@ -340,8 +297,7 @@
             gsap.from(heading, { y: 50, opacity: 0, duration: 0.8, scrollTrigger: revealOnce(heading) });
         });
         const paragraphs = $$([
-            '.end-content p', '.caring-content p', '.circuit-content p', '.stack-content p', '.predictive-content p',
-            '.layers-header p', '.lab-intro p', '.rive-demo-header p', '.chart-demo-header p', '.cafe-header p', '.showcase-header p',
+            '.end-content p', '.circuit-content p', '.predictive-content p', '.rive-demo-header p',
         ].join(','));
         paragraphs.filter(el => !el.closest('.tech-lab')).forEach((p) => {
             gsap.from(p, { y: 30, opacity: 0, duration: 0.6, delay: 0.2, scrollTrigger: revealOnce(p, 'top 85%') });
@@ -366,7 +322,6 @@
        Start
        ---------------------------------------------------------------------- */
     initTheme();
-    initSplash();
     initMenu();
     initPerfControl();
     initFpsProbe();

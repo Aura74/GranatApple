@@ -31,7 +31,7 @@
         button.addEventListener('click', () => {
             const paused = card.classList.toggle('is-paused');
             button.setAttribute('aria-pressed', String(paused));
-            button.setAttribute('aria-label', `${paused ? 'Spela' : 'Pausa'} ${title}`);
+            button.setAttribute('aria-label', `${paused ? 'Play' : 'Pause'} ${title}`);
             button.firstElementChild.textContent = paused ? '▷' : 'Ⅱ';
         });
     });

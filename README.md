@@ -15,6 +15,7 @@ Huvudflödet visar appen direkt, följt av dygnsrytmen, tre enkla steg, veckoöv
 | AI-chatt | Google Gemini (`gemini-flash-lite-latest` → `gemini-flash-latest`) | Offline-läge utan nyckel |
 | Typsnitt | DM Serif Display (400 + italic) + Inter (400/500/600) | Google Fonts, `display=swap` |
 | Ikoner | Inline SVG-sprite (Lucide-stil) | Inga ikonfonter |
+| Språk | Engelska i innehåll och gränssnitt (`lang="en"`) | Kodkommentarer på svenska |
 
 Alla CDN-versioner är pinnade (jsDelivr). Ingen Lenis – vanlig scroll känns bäst på svag hårdvara.
 
@@ -24,12 +25,8 @@ Alla CDN-versioner är pinnade (jsDelivr). Ingen Lenis – vanlig scroll känns 
 GranatApple/
 ├── index.html          # Hela sidan, semantisk struktur, SVG-sprite, before-paint-script
 ├── css/
-│   ├── style.css       # Design-tokens, alla sektioner, effektnivåer, responsivt (TOC i toppen)
-│   ├── chat.css        # Chattwidgeten
-│   ├── premium.css     # Telefoner, nätverk, kretskort och rörelsestudier
-│   ├── atelier.css     # Ljusringar, kinetisk mobil och Flow Observatory
-│   ├── harmony.css     # Sammanhållen palett, hero, glasnavigation och Tech Lab
-│   └── studio.css      # Caring, flödesberättelse, 3D-scen, kort, prisplaner och sidfot
+│   ├── style.css       # EN stilmall: tokens, bas, nav, alla illustrationer och sektioner i kaskadordning (TOC i toppen)
+│   └── chat.css        # Chattwidgeten
 ├── js/
 │   ├── main.js         # Tema, meny, intro, effektväljare, FPS-probe, formulär, GSAP
 │   ├── premium.js      # Produktanimationer, SVG-kopplingar och synlighetspaus
@@ -63,7 +60,7 @@ Länkar till en sektion inne i Tech Lab öppnar samlingen automatiskt, även vid
 
 ## Designsystem
 
-Grundtokens finns i `css/style.css`; `css/harmony.css` samordnar sidans komponenter. `light-dark()` följer `color-scheme` på `<html data-theme>`. Illustrationerna har egna nyanser inom samma materialpalett.
+Alla tokens och komponenter finns i `css/style.css`; blocket HARMONY längst ner samordnar palett och layout och vinner i kaskaden. `light-dark()` följer `color-scheme` på `<html data-theme>`. Illustrationerna har egna nyanser inom samma materialpalett.
 
 | Token | Ljust | Mörkt |
 |-------|-------|-------|
@@ -113,12 +110,12 @@ Sidan fungerar även om `index.html` öppnas direkt (`file://`). Den egna Lottie
 |-----------|-----------|
 | Byta färger | Ändra tokens i `:root` i `css/style.css` (båda värdena i `light-dark()`) |
 | Ändra Lottie-skulpturen | Ändra `scripts/build-orbit.cjs` och kör `node scripts/build-orbit.cjs`; JSON och webbläsarscript genereras tillsammans |
-| Ändra telefonfinalens lägen | Texter i `modes` i `js/premium.js`, färger och tempo i `.finale[data-mode]` i `css/premium.css` |
+| Ändra telefonfinalens lägen | Texter i `modes` i `js/premium.js`, färger och tempo i `.finale[data-mode]` i `css/style.css` (blocket PRODUKTILLUSTRATIONER) |
 | Byta chattpersona | `SYSTEM_PROMPT` och `localBrain` i `js/chat.js` |
 | Koppla väntelistan på riktigt | `initWaitlist()` i `js/main.js` → Klaviyo / Mailchimp / Beehiiv |
 | Koppla prisknapparna | `initPlanButtons()` → Stripe Checkout / Snipcart |
 | Sidfotslänkar | `.footer-navigation` i `index.html` länkar till sidans verkliga sektioner |
-| Bygga om 3D-skulpturen | Kör `node scripts/build-sculpture.cjs`; matematiskt renderad geometri sparas som `images/curiosity-sculpture.svg` |
+| Bygga om 3D-skulpturen | Kör `node scripts/build-sculpture.cjs` (128 × 16 segment, ~205 KB); matematiskt renderad geometri sparas som `images/curiosity-sculpture.svg` |
 
 ## Mobil / responsivt
 
@@ -147,6 +144,14 @@ De äldre Rive-filerna (`vehicles`, `off_road_car_v7`, `juice_v7`) och Lottie-fi
 Chrome/Edge 123+, Firefox 120+, Safari 17.5+ (kräver `light-dark()`). Äldre webbläsare får ljust tema utan mörka varianter men i övrigt fungerande sida.
 
 ## Ändringslogg
+
+### 3.1 (2026-09-17) – städning och ett språk
+- Fem stilmallar sammanslagna till `css/style.css` i kaskadordning; 461 döda selektorer (intro, diagrambibliotek, café-, trio-, showcase- och curved-kort m.m.) borttagna, oanvända keyframes rensade.
+- SVG-element skrivs i korrekt camelCase (`linearGradient`, `radialGradient`, `clipPath`, `feGaussianBlur`); genererade tal avrundade till två decimaler; de långa enradiga HTML-blocken radbrutna.
+- Ett språk i gränssnittet: alla aria-labels, knappar, toasts, chattens UI och effektväljaren är nu på engelska liksom innehållet (`lang="en"`). Kodkommentarer är fortsatt svenska.
+- Död intro-kod borttagen ur `main.js` och before-paint-scriptet. 3D-knuten omgenererad med färre segment (390 → 205 KB) utan synlig skillnad. Verktygsmappen `.preview/` (104 MB) borttagen.
+- Verifierat i Chrome: desktop ljust/mörkt, mobil 412 px, Tech Lab öppet, menyer, chatt, effektlägen – identisk rendering, inga konsolfel.
+- Grafikrecepten dokumenterade i `c:\HEMSIDOR\GRAPHICS-RECIPES.md`.
 
 ### 3.0 (2026-09-17) – A little more room to live
 
