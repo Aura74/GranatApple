@@ -20,8 +20,8 @@
 
 Om sidan:
 - TechFlow är en fiktiv produkt på en demo-/portfoliosida byggd av Lars Asplund, en svensk webbutvecklare. Sidan är inspirerad av pomegranate.health och visar upp premium webbdesign – den säljer inget på riktigt.
-- Konceptet TechFlow: "Finally, Really Intelligent Technology" – prenumerationsbaserad intelligent teknik i fem vertikalt integrerade lager, byggd av det (fiktiva) Stockholmsbolaget Really Intelligent.
-- Demo-prisplaner: **Starter $29/mån** (30 dagars gratis provperiod), **Pro $79/mån** (full plattform, prioriterad support), **Enterprise $249/mån** (egen driftsättning, dedikerad support). Knapparna är demoknappar.
+- Konceptet TechFlow: "A little more room to live" – en personlig planeringsapp för dagens prioriteringar, fokustid, gemensamma planer och återhämtning. Funktionerna presenteras som ett koncept, inte en lanserad produkt.
+- Konceptpriser: **Daily gratis** (tre dagliga prioriteringar, dagsplan och kvällsreflektion), **Flow $9/mån** (Daily, fokuspass, rutiner och veckoöversikt), **Together $15/mån för två** (Flow för två, gemensamma planer och egna rutiner). Knapparna är demoknappar.
 - Väntelistan längst ner är också en demo – inget skickas.
 
 Tekniken bakom sidan (fråga gärna om den):
@@ -132,15 +132,15 @@ Regler:
         {
             triggers: ['vad är techflow', 'what is techflow', 'techflow', 'om sidan', 'about'],
             responses: [
-                'TechFlow är ett **demo-koncept** – "Finally, Really Intelligent Technology" – på en portfoliosida av Lars Asplund, inspirerad av pomegranate.health. Sidan visar premium webbdesign; den säljer inget på riktigt.',
-                'TechFlow is a **demo concept** on a portfolio site by Lars Asplund, inspired by pomegranate.health. It showcases premium web design – nothing here is a real product.',
+                'TechFlow är ett **appkoncept för lugnare vardagsplanering** av Lars Asplund. Planera dagen, hitta fokustid och gör plats för återhämtning. Sidan är en demo.',
+                'TechFlow is a **personal planning app concept** by Lars Asplund. Plan your day, find your focus and make room to unwind. This is a demo.',
             ],
         },
         {
             triggers: ['pris', 'kostar', 'plan', 'price', 'cost', 'how much', 'prenumeration', 'subscription'],
             responses: [
-                'Demo-planerna: **Starter $29/mån**, **Pro $79/mån** och **Enterprise $249/mån**. Scrolla till *Choose Your Plan* – men kom ihåg att knapparna bara är demo.',
-                'The demo plans are **Starter $29/mo**, **Pro $79/mo** and **Enterprise $249/mo** – see *Choose Your Plan*. The buttons are demo-only.',
+                'Konceptpriserna är **Daily gratis**, **Flow $9/mån** och **Together $15/mån för två**. Se prisplanerna på sidan. Knapparna är demo och startar ingen prenumeration.',
+                'The concept plans are **Daily free**, **Flow $9/mo** and **Together $15/mo for two**. See the plans on this page. The buttons are demos and do not start a subscription.',
             ],
         },
         {

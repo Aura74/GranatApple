@@ -17,16 +17,16 @@
     background: linear-gradient(135deg, var(--primary-light), var(--primary));
     border-radius: 50%;
     box-shadow:
-        0 2px 4px rgb(30 27 75 / 0.08),
-        0 10px 30px rgb(99 102 241 / 0.35);
+        0 2px 4px rgb(41 60 53 / 0.08),
+        0 10px 30px rgb(41 60 53 / 0.35);
     transition: transform var(--dur) var(--ease-out), box-shadow var(--dur) ease, opacity var(--dur) ease;
 }
 
 .chat-fab:hover {
     transform: translateY(-2px) scale(1.03);
     box-shadow:
-        0 2px 4px rgb(30 27 75 / 0.08),
-        0 14px 36px rgb(99 102 241 / 0.45);
+        0 2px 4px rgb(41 60 53 / 0.08),
+        0 14px 36px rgb(41 60 53 / 0.45);
 }
 
 .chat-fab .icon {
@@ -288,7 +288,7 @@
     color: #fff;
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     border-radius: 1rem 1rem 0.25rem 1rem;
-    box-shadow: 0 2px 12px rgb(99 102 241 / 0.25);
+    box-shadow: 0 2px 12px rgb(41 60 53 / 0.25);
 }
 
 .chat__msg--bot .chat__bubble {
@@ -311,7 +311,7 @@
     padding: 2px 6px;
     font-family: var(--font-mono);
     font-size: 0.8125rem;
-    background: light-dark(rgb(30 27 75 / 0.08), rgb(0 0 0 / 0.35));
+    background: light-dark(rgb(41 60 53 / 0.08), rgb(0 0 0 / 0.35));
     border-radius: 4px;
 }
 
@@ -401,7 +401,7 @@
     height: 3.5rem;
     background: radial-gradient(circle at 30% 30%, var(--primary-light), var(--primary-dark));
     border-radius: 50%;
-    box-shadow: 0 0 30px rgb(99 102 241 / 0.4);
+    box-shadow: 0 0 30px rgb(41 60 53 / 0.4);
     animation: orb-pulse 2.5s ease-in-out infinite;
 }
 

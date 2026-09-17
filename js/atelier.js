@@ -6,7 +6,7 @@
         { name: 'Experience', title: 'Made to feel second nature.', copy: 'A thoughtful workspace that puts your day in focus. Less searching, fewer distractions, more room to do your thing.' },
         { name: 'Intelligence', title: 'A little ahead. Always.', copy: 'Patterns become possibilities. Thoughtful insights help you see your next step, before you need to take it.' },
         { name: 'Automation', title: 'The little things, handled.', copy: 'Let everyday tasks take care of themselves. Your time belongs to the ideas, people and projects that need you most.' },
-        { name: 'Connection', title: 'Everything in conversation.', copy: 'Your tools, your team and your ideas, in the same rhythm. A natural connection from one part of your day to the next.' },
+        { name: 'Connection', title: 'Everything in conversation.', copy: 'Your plans, your routines and your ideas, in the same rhythm. A natural connection from one part of your day to the next.' },
         { name: 'Foundation', title: 'Quietly holding it all together.', copy: 'A considered foundation beneath every interaction. Built to support your work as it grows, changes and becomes something new.' }
     ];
     if (ecosystem) {
@@ -20,7 +20,7 @@
             detail.querySelector('h3').textContent = layer.title;
             detail.querySelector('p').textContent = layer.copy;
             ecosystem.querySelector('.sculpture-caption').textContent = `${layer.name}, illuminated.`;
-            ecosystem.querySelector('.ecosystem-sculpture').setAttribute('aria-label', `Fem svävande ljusringar i persika, lavendel och grönt. ${layer.name} är markerad.`);
+            ecosystem.querySelector('.ecosystem-sculpture').setAttribute('aria-label', `Fem svävande ljusringar i pärlemor, champagne och salvia. ${layer.name} är markerad.`);
         }));
     }
 
@@ -71,7 +71,7 @@
         observatory.querySelector('[data-word]').textContent = state.word;
         observatory.querySelector('[data-insight]').textContent = state.insight;
         observatory.querySelector('#landscape-chart-title').textContent = state.title;
-        observatory.querySelector('#landscape-chart-desc').textContent = `Illustrativa exempeldata: ${state.hours} timmar i fokus, en ökning med ${state.change} procent. ${state.shares[0]} procent fokustid, ${state.shares[1]} procent samarbete och ${state.shares[2]} procent återhämtning.`;
+        observatory.querySelector('#landscape-chart-desc').textContent = `Illustrativa exempeldata: ${state.hours} timmar i fokus, en ökning med ${state.change} procent. ${state.shares[0]} procent fokustid, ${state.shares[1]} procent gemensam tid och ${state.shares[2]} procent återhämtning.`;
         const labels = key === 'week' ? ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'] : key === 'month' ? ['01', '05', '10', '15', '20', '25', '30'] : ['JUL 01', 'JUL 15', 'AUG 01', 'AUG 15', 'SEP 01', 'SEP 15', 'SEP 30'];
         observatory.querySelectorAll('.landscape-axis span').forEach((span, i) => span.textContent = labels[i]);
         let offset = 0;

@@ -26,7 +26,7 @@
 .ecosystem-detail-number { color: var(--atelier-muted); font: 8px var(--font-mono); letter-spacing: .14em; }
 .ecosystem-detail h3 { margin: 8px 0 7px; font: 400 23px var(--font-display); letter-spacing: -.025em; }
 .ecosystem-detail p { max-width: 410px; font-size: 12px; color: var(--atelier-muted); line-height: 1.75; }
-.ecosystem-art { position: relative; overflow: hidden; border-radius: 140px 140px 20px 20px; padding-top: 48px; color: #bccdc0; background: radial-gradient(ellipse at 50% 20%, #253b3c, #112429 75%); box-shadow: 0 28px 55px -38px #0d242b80; }
+.ecosystem-art { position: relative; overflow: hidden; border-radius: 140px 140px 20px 20px; padding-top: 48px; color: #bccdc0; background: radial-gradient(ellipse at 50% 20%, #2a372f, #19211c 75%); box-shadow: 0 28px 55px -38px #18201b80; }
 .art-corner { display: flex; align-items: center; gap: 9px; padding: 25px 35px 0; font: 8px var(--font-mono); letter-spacing: .1em; }
 .art-corner > span:last-child { margin-left: auto; opacity: .65; }
 .art-live-dot { display: inline-block; flex-shrink: 0; width: 5px; height: 5px; background: #c4dbb8; box-shadow: 0 0 10px #bbdbaa66; border-radius: 50%; }
@@ -59,7 +59,7 @@
 .observatory-brand { display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 500; }
 .observatory-periods { display: flex; gap: 4px; margin-left: auto; padding: 4px; background: #0e211d70; border-radius: 8px; }
 .observatory-periods button { min-height: 32px; padding: 7px 15px; border-radius: 5px; font-size: 10px; color: #9bafa1; transition: background .25s, color .25s; }
-.observatory-periods button:hover { color: #fff4e4; }
+.observatory-periods button:hover { color: #f6f2ed; }
 .observatory-periods button[aria-pressed="true"] { color: #1c3429; background: #d5dfc8; }
 .observatory-demo { color: #9aae9f; font: 8px var(--font-mono); letter-spacing: .1em; }
 .observatory-main { display: grid; grid-template-columns: minmax(0, 1fr) 250px; }
@@ -86,8 +86,8 @@
 .rhythm-key { display: grid; gap: 12px; font-size: 10px; }
 .rhythm-key > span { display: flex; align-items: center; gap: 8px; color: #b5c7b7; }
 .rhythm-key > span::before { content: ''; width: 5px; height: 5px; background: #c3dac1; border-radius: 50%; }
-.rhythm-key > span:nth-child(2)::before { background: #e9bc9d; }
-.rhythm-key > span:nth-child(3)::before { background: #9ca8c0; }
+.rhythm-key > span:nth-child(2)::before { background: #d5c6b1; }
+.rhythm-key > span:nth-child(3)::before { background: #a3b9ac; }
 .rhythm-key b { margin-left: auto; font-weight: 400; }
 .rhythm-note { margin-top: 27px; padding-top: 22px; border-top: 1px solid #bdd1b91c; font: 400 23px/1.15 var(--font-display); letter-spacing: -.02em; }
 .rhythm-note em { color: #a9bf9f; }

@@ -1,6 +1,8 @@
-# TechFlow – Intelligent Technology (GranatApple)
+# TechFlow – A little more room to live
 
-Premium landningssida inspirerad av [pomegranate.health](https://pomegranate.health/), byggd i ren HTML, CSS och JavaScript med GSAP-scrollanimationer. Sidan består av två delar: själva **landningssidan** (intro → hero → berättande sektioner → interaktiv telefonfinal och väntelista) och ett **Tech Lab** med egna SVG-illustrationer, Lottie, ett interaktivt datalandskap och interaktiva kort. Allt är demo – inget skickas eller köps på riktigt.
+Ett koncept för en personlig planeringsapp: **planera dagen, hitta fokustid och gör plats för återhämtning**. Sidan är byggd i ren HTML, CSS och JavaScript. Den varma paletten i elfenben, skogsgrönt, salvia och champagne återkommer i navigation, telefoner, illustrationer och mörkt läge.
+
+Huvudflödet visar appen direkt, följt av dygnsrytmen, tre enkla steg, veckoöversikt, prisplaner och designfilosofi. Experimenten finns kvar i en öppningsbar **Tech Lab**-samling. Köp och väntelista är demo; inga betalningar eller anmälningar genomförs. **Daily** är gratis i konceptet, **Flow** kostar $9/mån och **Together** $15/mån för två. Detta är föreslagna konceptpriser, inte en lanserad tjänst.
 
 ## Tech Stack
 
@@ -26,6 +28,7 @@ GranatApple/
 │   ├── chat.css        # Chattwidgeten
 │   ├── premium.css     # Telefoner, nätverk, kretskort och rörelsestudier
 │   ├── atelier.css     # Ljusringar, kinetisk mobil och Flow Observatory
+│   ├── harmony.css     # Sammanhållen palett, hero, glasnavigation och Tech Lab
 │   └── studio.css      # Caring, flödesberättelse, 3D-scen, kort, prisplaner och sidfot
 ├── js/
 │   ├── main.js         # Tema, meny, intro, effektväljare, FPS-probe, formulär, GSAP
@@ -34,6 +37,7 @@ GranatApple/
 │   ├── vendor/         # Lokal Lottie 5.13.0 + MIT-licens
 │   ├── atelier.js      # Valbara ljusringar och datalandskap med periodval
 │   ├── studio.js       # Dygnsväxling, materialval, paus och expanderbara kort
+│   ├── harmony.js      # Tech Lab, sektionslänkar och layoutuppdateringar
 │   ├── chat.js         # "Flow" – Gemini-chatt med lokal reservhjärna
 │   └── apikey.js       # GITIGNORAD – window.GEMINI_API_KEY
 ├── images/             # Lokala foton + egen tredimensionell SVG-skulptur
@@ -44,42 +48,33 @@ GranatApple/
 
 ## Sektioner
 
-| # | Sektion (id) | Innehåll |
-|---|--------------|----------|
-| 1 | Intro `#intro` | Helskärm "Lars Asplund" – teckenavslöjande i DM Serif Display, spelas en gång |
-| 2 | Hero `#hero` | Lagrade kort, badge, H1, beskrivning |
-| 3 | Telefoner `#phones` | Tre metallramade telefoner med kameraö, levande diagram och mjuk svävning |
-| 4 | The end of… `#end` | Arbetsplatsdiagram med precisa SVG-kopplingar och animerade signaler |
-| 5 | Caring `#caring` | Pärlemorsblomma med svävande notiser. Morning / Afternoon / Evening ändrar tid, text och stämning |
-| 6 | Circuit `#circuit` | Mörkt kretskort med chip, kontaktstift, genomföringar och ljuspulser längs banorna |
-| 7 | Flow story `#layers` | En sammanhållen illustration: signaler blir ordning genom ett glasprisma. Ersätter de elva diagramkorten |
-| 8 | Ecosystem `#stack` | Fem svävande ljusringar, valbara lager och beskrivningar i en gräddvit/mörkgrön miljö |
-| 9 | Predictive `#predictive` | Tre mindre telefoner med samma levande skärmgränssnitt |
-| 10 | Tech Lab `#lab` | Egen 3D-knut i SVG, belyst i Warm porcelain eller Moonlight silver. Pausbar rörelse |
-| 11 | Rörelsestudier `#rive-demo` | Egna SVG-scener: kinetisk mobil i terrakotta/mässing, elbil och citrusglas; varsin pausknapp |
-| 12 | Lottie `#lottie-demo` | Orbital Intelligence: egen ljusskulptur med 29 lager, hastighetsval och paus |
-| 13 | Flow Observatory `#observatory` | Grönt SVG-datalandskap, tidsfördelning och nyckeltal; periodval uppdaterar all exempeldata |
-| 18 | Explore `#explore` | Tre skulpturkort: Analyze, Automate och Connect. Native details/summary för touch och tangentbord |
-| 19 | Capabilities `#capabilities` | Asymmetrisk komposition med en ljussfär, molnplattform och metallsköld |
-| 20 | Pricing `#pricing` | Tydliga prisplaner med innehållslistor och Pro markerad. Oförändrade priser, demoknappar → toast |
-| 21 | What Sets Us Apart `#why` | Tre skulpturkort i salvia, champagne och silver med glob, kristall och metallvingar. Subtil musstyrd lutning och fungerande länkar |
-| 22 | Väntelista `#cta` | E-postformulär (demo → toast) + levande telefoner med Focus / Flow / Unwind |
-| – | Sidfot `#footer` | Redaktionell avslutning, sektionsnavigering, väntelistelänk och avsändare. Inga platshållarlänkar |
+| Ordning | Sektion | Innehåll |
+|---|---|---|
+| 1 | Hero `#hero` med `#phones` | Appens budskap, huvudknapp och tre telefoner i samma första vy. Ingen helskärmsintro. |
+| 2 | `#caring` | Morgon, eftermiddag och kväll; pärlemorsblomma och växlande exempeltexter. |
+| 3 | `#layers` | Plan → Focus → Unwind, illustrerat som tre strömmar genom ett prisma. |
+| 4 | `#observatory` | Vecko-, månads- och kvartalsvy med tydligt märkta exempeldata. |
+| 5 | `#pricing` | Daily, Flow och Together; demoknappar utan betalning. |
+| 6 | `#why` | Designfilosofi, illustrerad i salvia, champagne och silver. |
+| 7 | `#tech-lab` | Native details/summary, stängd från början. Innehåller `#lab`, `#stack`, `#explore`, `#capabilities`, `#end`, `#circuit`, `#predictive`, `#rive-demo` och `#lottie-demo`. |
+| 8 | `#cta` och `#footer` | Väntelistedemo, interaktiva Focus/Flow/Unwind-telefoner och navigation. |
+
+Länkar till en sektion inne i Tech Lab öppnar samlingen automatiskt, även vid direktlänk eller hashbyte. Öppning/stängning räknar om scrollanimationernas positioner. Dolda rubriker i samlingen får inga scrollavslöjanden; de förblir läsbara när samlingen öppnas.
 
 ## Designsystem
 
-Alla tokens ligger i `:root` i `css/style.css` och definieras en gång med `light-dark()`; temat växlas med `color-scheme` på `<html data-theme>`.
+Grundtokens finns i `css/style.css`; `css/harmony.css` samordnar sidans komponenter. `light-dark()` följer `color-scheme` på `<html data-theme>`. Illustrationerna har egna nyanser inom samma materialpalett.
 
 | Token | Ljust | Mörkt |
 |-------|-------|-------|
-| `--primary` / `--primary-dark` / `--primary-light` | `#6366f1` / `#4f46e5` / `#818cf8` | samma |
-| `--bg` | `#faf8f5` (cream) | `#0d0b1a` |
-| `--surface` / `--surface-2` | `#ffffff` / `#f1f5f9` | `#161333` / `#1a1740` |
-| `--text` / `--text-muted` | `#1e1b4b` / `#64748b` | `#e0e7ff` / `#94a3b8` |
-| `--border` | `#e5e7eb` | `#2d2a5e` |
-| `--sec-indigo … --sec-lavender` | sju pastella sektionsbakgrunder | djupa motsvarigheter |
-| `--shadow`, `--shadow-lg` | indigo-tonade flerlagersskuggor | svarta, djupare |
-| `--gold` | `#fbbf24` (CTA-knapp, café-titlar) | samma |
+| `--primary` / `--primary-dark` / `--primary-light` | `#293c35` / `#1e3028` / `#a8b5a0` | samma |
+| `--bg` | `#f4f2ea` (elfenben) | `#121d1c` (grönsvart) |
+| `--surface` / `--surface-2` | `#fcfbf7` / `#e8ebe1` | `#1b2925` / `#24352d` |
+| `--text` / `--text-muted` | `#293c35` / `#58685e` | `#f4f2ea` / `#b1bdb2` |
+| `--border` | `#d9ddd1` | `#3b4d42` |
+| `--sec-*` (äldre sektionsnamn) | `#eceee5` | `#17241f` |
+| `--shadow`, `--shadow-lg` | gröntonade skuggor | svarta, djupare |
+| `--gold` / champagne | `#bc9566` (små accenter) | samma |
 
 Typografi: `--font-display` (DM Serif Display) för rubriker, `--font-body` (Inter) för allt annat, rem-baserade storlekar med `clamp()`. Radier: piller (`999px`), kort `1.5rem`, medium `1rem`. Rörelse: `--ease-out: cubic-bezier(.22,1,.36,1)`.
 
@@ -110,14 +105,13 @@ npx serve .
 npx live-server
 ```
 
-Sidan fungerar även om `index.html` öppnas direkt (`file://`). Den egna Lottie-kompositionen laddas som ett lokalt script (`animations/flow-orbit.js`) och använder den lokala spelaren i `js/vendor/`; inga fetch-anrop krävs för den. Internet krävs fortfarande för sidans externa typsnitt och GSAP.
+Sidan fungerar även om `index.html` öppnas direkt (`file://`). Den egna Lottie-kompositionen laddas som ett lokalt script (`animations/flow-orbit.js`) och använder den lokala spelaren i `js/vendor/`; inga fetch-anrop krävs för den. Internet krävs fortfarande för sidans externa typsnitt och GSAP. Navigationen och Tech Lab fungerar också utan GSAP.
 
 ## Anpassning
 
 | Vill du … | Gör så här |
 |-----------|-----------|
 | Byta färger | Ändra tokens i `:root` i `css/style.css` (båda värdena i `light-dark()`) |
-| Byta namn i intron | `.splash__name` i `index.html` – JS delar upp texten i tecken automatiskt |
 | Ändra Lottie-skulpturen | Ändra `scripts/build-orbit.cjs` och kör `node scripts/build-orbit.cjs`; JSON och webbläsarscript genereras tillsammans |
 | Ändra telefonfinalens lägen | Texter i `modes` i `js/premium.js`, färger och tempo i `.finale[data-mode]` i `css/premium.css` |
 | Byta chattpersona | `SYSTEM_PROMPT` och `localBrain` i `js/chat.js` |
@@ -153,6 +147,16 @@ De äldre Rive-filerna (`vehicles`, `off_road_car_v7`, `juice_v7`) och Lottie-fi
 Chrome/Edge 123+, Firefox 120+, Safari 17.5+ (kräver `light-dark()`). Äldre webbläsare får ljust tema utan mörka varianter men i övrigt fungerande sida.
 
 ## Ändringslogg
+
+### 3.0 (2026-09-17) – A little more room to live
+
+- Nytt tydligt produktkoncept: personlig planering, fokus och återhämtning. Telefontexter, navigation, planer och chattbeskrivningar följer konceptet.
+- Gemensam palett i elfenben, skogsgrönt, salvia och champagne; även skärmar, SVG-illustrationer och den genererade Lottie-kompositionen har samordnats.
+- Första vyn kombinerar budskap, huvudknapp och telefoner. Glasnavigationen syns direkt.
+- Kortare huvudflöde; nio experimentsektioner samlade under Tech Lab. Befintliga sektionslänkar fungerar fortfarande.
+- Långsam ljusreflex över telefonerna, varsamma knapptryck och stöd för reducerad rörelse.
+- Verifierat i Chrome vid 320, 390, 768, 1440 och 1920 px: ingen horisontell scroll och inga JavaScript-fel. Mörkt läge, dygnsval, periodval, prisdemo, väntelistedemo, materialval, ljusringar, Lottie-hastighet, finalens lägen och länkar in i Tech Lab kontrollerade.
+
 
 ### 2.5 (2026-09-16) – The TechFlow Signature
 

@@ -81,6 +81,7 @@
             const dark = root.dataset.theme === 'dark';
             btn.setAttribute('aria-pressed', String(dark));
             label.textContent = dark ? 'Light mode' : 'Dark mode';
+            btn.setAttribute('aria-label', label.textContent);
         };
 
         const setTheme = (theme, persist) => {
@@ -126,7 +127,7 @@
 
     function initSplash() {
         const splash = $('.splash');
-        if (!splash) return;
+        if (!splash) { $('#floating-nav')?.classList.add('is-visible'); return; }
 
         const name = $('.splash__name', splash);
         const skip = 'skipSplash' in root.dataset;
@@ -172,7 +173,8 @@
             menu.classList.toggle('is-open', open);
             toggle.setAttribute('aria-expanded', String(open));
             document.body.classList.toggle('menu-open', open);
-            label.textContent = open ? 'Close menu' : 'Learn more';
+            label.textContent = open ? 'Close menu' : 'Explore';
+            toggle.setAttribute('aria-label', open ? 'Close menu' : 'Explore menu');
             animateItems(open);
 
             if (open) {
@@ -285,7 +287,7 @@
             }
             btn.disabled = true;
             btn.textContent = 'Tack!';
-            showToast('Tack! Du står nu på väntelistan. (Demo – inget skickas.)', { duration: 6000 });
+            showToast('Tack! Så skulle anmälan fungera. Demo – inget skickas eller sparas.', { duration: 6000 });
             setTimeout(() => {
                 form.reset();
                 btn.disabled = false;
@@ -328,27 +330,20 @@
             y: 30, opacity: 0, duration: 0.8, stagger: 0.15,
             scrollTrigger: revealOnce('.hero', 'top 70%'),
         });
-        gsap.from('.hero__layer', {
-            y: 50, opacity: 0, duration: 1, stagger: 0.1, ease: 'power2.out',
-            scrollTrigger: revealOnce('.hero', 'top 70%'),
-        });
-        pauseOffscreen('.hero', [
-            gsap.to('.hero__logo', { y: -10, duration: 2, ease: 'sine.inOut', repeat: -1, yoyo: true, paused: true }),
-        ]);
     }
 
     function initSectionReveals() {
-        $$('.section-badge').forEach((badge) => {
+        $$('.section-badge').filter(el => !el.closest('.tech-lab')).forEach((badge) => {
             gsap.from(badge, { y: 20, opacity: 0, duration: 0.6, scrollTrigger: revealOnce(badge, 'top 85%') });
         });
-        $$('main h2').forEach((heading) => {
+        $$('main h2').filter(el => !el.closest('.tech-lab')).forEach((heading) => {
             gsap.from(heading, { y: 50, opacity: 0, duration: 0.8, scrollTrigger: revealOnce(heading) });
         });
         const paragraphs = $$([
             '.end-content p', '.caring-content p', '.circuit-content p', '.stack-content p', '.predictive-content p',
             '.layers-header p', '.lab-intro p', '.rive-demo-header p', '.chart-demo-header p', '.cafe-header p', '.showcase-header p',
         ].join(','));
-        paragraphs.forEach((p) => {
+        paragraphs.filter(el => !el.closest('.tech-lab')).forEach((p) => {
             gsap.from(p, { y: 30, opacity: 0, duration: 0.6, delay: 0.2, scrollTrigger: revealOnce(p, 'top 85%') });
         });
     }

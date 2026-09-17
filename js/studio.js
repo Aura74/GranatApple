@@ -4,7 +4,7 @@
     const care = document.getElementById('caring');
     const day = {
         morning: { time: '09:41', greeting: 'A little room to begin.', note: 'Time for your best idea.', sub: 'Your focus time is protected.', message: "Start with a clear head. We'll take care of the background.", weather: '☀' },
-        afternoon: { time: '14:30', greeting: 'Right in your rhythm.', note: 'Everything, coming together.', sub: 'Your team is on the same page.', message: 'Good ideas, moving forward. Your people and your tools, in sync.', weather: '◒' },
+        afternoon: { time: '14:30', greeting: 'Right in your rhythm.', note: 'Everything, coming together.', sub: 'A little room between your plans.', message: 'One thing at a time. Leave a little space between your plans.', weather: '◒' },
         evening: { time: '18:05', greeting: 'A little space to switch off.', note: 'A good place to pause.', sub: 'Tomorrow is already in order.', message: 'Close the day with a little peace of mind. The rest can wait.', weather: '☾' }
     };
     if (care) care.querySelectorAll('[data-care-day]').forEach(button => button.addEventListener('click', () => {

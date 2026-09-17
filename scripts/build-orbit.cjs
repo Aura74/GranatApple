@@ -18,24 +18,24 @@ function ellipse(size, color, width, opacity = 100, position = [0,0]) {
 // Slowly rotating meridians create the depth of a luminous, woven sphere.
 for (let i = 0; i < 22; i++) {
     const angle = i * 180 / 22;
-    const color = [0.40 + i * .014, .83 - i * .012, .91, 1];
+    const color = [.66 + i * .007, .71 + i * .005, .63 + i * .006, 1];
     const shapes = [{ ty: 'gr', nm: `Meridian ${i + 1}`, it: [...ellipse([112 + Math.sin(i / 22 * Math.PI) * 110, 340], color, 1.5, 80), transform(key(angle, angle + 180))] }];
     layer(`Silk meridian ${i + 1}`, shapes, prop(-28));
 }
 // Elliptical paths and orbiting satellites share the same rotated plane.
 for (let i = 0; i < 3; i++) {
     const angle = i * 60 + 15;
-    layer(`Outer orbit ${i}`, [{ ty: 'gr', it: [...ellipse([440, 220], [.60,.70,.88,1], .8, 35), transform(prop(angle))] }]);
+    layer(`Outer orbit ${i}`, [{ ty: 'gr', it: [...ellipse([440, 220], [.74,.58,.40,1], .8, 35), transform(prop(angle))] }]);
     const frames = [];
     for (let n = 0; n <= 72; n++) {
         const a = n / 72 * Math.PI * 2 + i * 2;
         const x = Math.cos(a) * 220, y = Math.sin(a) * 110, r = angle * Math.PI / 180;
         frames.push({ t: n * 5, s: [x * Math.cos(r) - y * Math.sin(r), x * Math.sin(r) + y * Math.cos(r)], o: {x:.33,y:.33}, i: {x:.67,y:.67} });
     }
-    layer(`Satellite ${i}`, [{ty:'el',d:1,s:prop([8,8]),p:{a:1,k:frames}}, {ty:'fl',c:prop([.80,.98,.90,1]),o:prop(100),r:1}]);
+    layer(`Satellite ${i}`, [{ty:'el',d:1,s:prop([8,8]),p:{a:1,k:frames}}, {ty:'fl',c:prop([.96,.94,.86,1]),o:prop(100),r:1}]);
 }
 layer('Quiet central light', [
-    {ty:'gr',it:[...ellipse([56,56],[.70,.98,.89,1],1,55),transform()]},
+    {ty:'gr',it:[...ellipse([56,56],[.83,.88,.78,1],1,55),transform()]},
     {ty:'gr',it:[{ty:'el',d:1,s:prop([10,10]),p:prop([0,0])},{ty:'fl',c:prop([.8,1,.94,1]),o:prop(90),r:1},transform()]},
 ]);
 const animation = { v: '5.12.2', fr: 60, ip: 0, op: 360, w: 600, h: 600, nm: 'TechFlow — Orbital intelligence', ddd: 0, assets: [], layers, markers: [] };
